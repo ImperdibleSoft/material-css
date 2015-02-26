@@ -1,0 +1,131 @@
+
+	/* -------------------------------------------------------------------------------------- */
+	/* --- MATERIAL CSS ---------------------------------------------------------------- */
+	/* -------------------------------------------------------------------------------------- */
+	/* --- Light CSS framework for creating a Material Design look&feel ----------- */
+	/* --- aplicable to webapps. Supports any JS framework ------------------------ */
+	/* -------------------------------------------------------------------------------------- */
+	/* --- Developed by:				------------------------------------------------------ */
+	/* ---   Rafael Pérez García		------------------------------------------------------ */
+	/* ---   at ImperdibleSoft		------------------------------------------------------ */
+	/* -------------------------------------------------------------------------------------- */
+	/* --- http://www.imperdiblesoft.com						---------------------------- */
+	/* --- http://imperdiblesoft.github.io/material-css		---------------------------- */
+	/* -------------------------------------------------------------------------------------- */
+
+v0.3
+	+ Fixed: Share layout.
+	
+v0.2.0222
+	+ Added: Share layout.
+	+ Fixed: Chat layout.
+	+ Fixed: Multimedia Theme.
+	
+v0.2.0220
+	+ Added: Multimedia layout.
+	+ Fixed: Chat layout.
+	+ Fixed: Spotify Theme.
+	
+v0.2.0219
+	+ Added: Chat layout.
+	+ Fixed: Header account info menu.
+	+ Fixed: Floating windows.
+	
+v0.2.0218
+	+ Added: New icons (forums, notifications, external, play, pause, stop, music-next, music-prev, playilst, volume-up, volume-down, volume-off, facebook, google-plus, twitter, skype, imperdiblesoft, github, soundcloud, youtube, instagram, linkedin).
+	+ Added: New colors (spotify).
+	+ Added: Header account info menu.
+	+ Added: Floating windows.
+	+ Added: Spotify Theme.
+	+ Fixed: Dropdowns. Now a blocker is displayed on background.
+	+ Fixed: Default Theme.
+	+ Fixed: Android Theme.
+	+ Fixed: ImperdibleSoft Theme.
+	+ Fixed: Google+ Theme.
+	+ Fixed: Facebook Theme.
+	+ Fixed: Twitter Theme.
+	
+v0.2.0213
+	+ Added: Footer.
+	+ Fixed: Minor fixes.
+	
+v0.2.0212
+	+ Fixed: Tabs bar scrolling delay.
+	+ Fixed: Slider scroll delay.
+	
+v0.2 / v0.2.0210
+	+ Fixed: Colors on default framework style.
+	
+v0.1.0209
+	+ Added: New icons (whatsapp).
+	+ Fixed: Scroll between tabs.
+	+ Fixed: Open/Close navigation menu.
+	
+v0.1.0208
+	+ Added: New colors (imperdiblesoft, facebook, google, twitter)
+	+ Added: ImperdibleSoft Theme.
+	+ Added: Google+ Theme.
+	+ Added: Twitter Theme.
+	+ Fixed: Combined buttons.
+	+ Fixed: Tooltips.
+	+ Fixed: Android Lollipop Theme.
+	+ Fixed: Facebook Theme.
+	
+v0.1.0207
+	+ Added: Dropdowns.
+	+ Added: New icons (account, picker).
+	+ Added: Default Theme.
+	+ Added: Android Lollipop Theme.
+	+ Added: Facebook Theme.
+	
+v0.1.0206
+	+ Added: Tabs.
+	+ Fixed: Dialogs.
+	
+v0.1.0205
+	+ Added: New icons (email, phone, message, user, cut, copy, paste, list, layout, popup).
+	+ Added: Tooltips.
+	+ Fixed: Radio Buttons.
+	+ Fixed: Checkboxes.
+	+ Fixed: Switchers.
+	+ Fixed: List layout.
+	
+v0.1.0204
+	+ Added: Sliders.
+	+ Added: Text inputs.
+	+ Added: Textareas.
+	+ Added: List layout.
+	
+v0.1.0203
+	+ Added: Notifications.
+	+ Added: Radio Buttons.
+	+ Added: Checkboxes.
+	+ Added: Switchers.
+	+ Added: Progress Bar.
+	+ Added: Spinners.
+	
+v0.1.0202
+	+ Added: Dialogs (Falling dialogs, Bottom dialogs).
+	+ Added: New icons (undo, redo).
+	+ Fixed: Scrolling.
+	
+v0.1.0201
+	+ Added: Layouts (One column, Two columns, Three columns, Front page).
+	+ Fixed: Text buttons.
+	
+v0.1.0131
+	+ Fixed: Card headers, Floating buttons.
+	
+v0.1.0130
+	+ Added: New colors (grey, yellow, darkyellow, orange, red, pink, purple, darkpurple, lightblue, blue, darkblue, lightgren, green, darkgreen, brown).
+	+ Added: New icons (button, cancel, cards, colors, location, navigation, text).
+	+ Added: Open/Close navigation effect.
+	+ Added: Gesture to launch open/close navigation effect.
+	+ Fixed: Navigation, Card widths.
+	+ Removed: Icons (close).
+	
+v0.1.0129
+	+ Added: Colors (white, black, green).
+	+ Added: Icons (add, close, comment, delete, done, download, edit, favorite, gallery, help, home, info, like, menu, next, options-h, options-v, prev, refresh, remove, search, send, settings, share, sync, upload).
+	+ Added: Buttons (Icon buttons, Text buttons, Comb. buttons, Floating buttons.)
+	+ Added: Normal cards, Cards with header images, Cards with images at left, Cards with images at right, Cards with grid of images.
