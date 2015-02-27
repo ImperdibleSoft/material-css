@@ -22,10 +22,10 @@ function debug(param){
 var mc = {}
 
 mc.isMobile = function(){
-	return (window.innerWidth <= 768) ? true : false;
+	return (window.innerWidth < 768) ? true : false;
 }
 mc.isTablet = function(){
-	return (window.innerWidth > 768 && window.innerWidth <= 1024) ? true : false;
+	return (window.innerWidth >= 768 && window.innerWidth <= 1024) ? true : false;
 }
 mc.isPC = function(){
 	return (window.innerWidth > 1025 && window.innerWidth <= 1279) ? true : false;
@@ -821,14 +821,16 @@ $(document).ready(function(){
 	
 		setTimeout(function(){
 		
-			if( $(".mc-dialog")[0] && $(".mc-dialog > .mc-content")[0] ){
+			if( $(".mc-dialog")[0] && $(".mc-dialog .mc-content")[0] ){
 				
 				$(".mc-dialog").each(function(){
 					
 					var footerHeight = parseInt( $(this).children(".mc-footer").height() ) + parseInt( $(this).children(".mc-footer").css("padding-top") ) + parseInt( $(this).children(".mc-footer").css("padding-bottom") );
 					var newHeight = parseInt( window.innerHeight ) - 100 - footerHeight;
 					$(this).children(".mc-content").css("max-height", newHeight);
+					$(this).children().children(".mc-content").css("max-height", newHeight);
 					$(this).children(".mc-content").css("margin-bottom", footerHeight);
+					$(this).children().children(".mc-content").css("margin-bottom", footerHeight);
 				});
 				
 			}
