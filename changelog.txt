@@ -13,6 +13,11 @@
 	/* --- http://imperdiblesoft.github.io/material-css		---------------------------- */
 	/* -------------------------------------------------------------------------------------- */
 
+v0.3.1
+	+ Added: Splash screen.
+	+ Fixed: Application gets disabled when Navigation bar is opened on Mobile versions.
+	+ Fixed: MC Javascript functions.
+	
 v0.3
 	+ Fixed: Share layout.
 	

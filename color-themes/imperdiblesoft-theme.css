@@ -76,6 +76,11 @@ body > .mc-header .mc-dropdown .mc-dropdown-value{
 	color: #2b8d17;
 }
 
+/*	SPLASH	*/
+.mc-splash{
+	background-color: #2b8d17;
+}
+
 /*	LISTS	*/
 [mc-layout="list"] > .mc-title, [mc-layout="list"] > .mc-subtitle{
 	color: #2b8d17;

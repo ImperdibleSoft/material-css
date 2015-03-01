@@ -131,6 +131,11 @@ body > .mc-floating-window .mc-window-content > .mc-title, body > .mc-floating-w
 	color: #FFFFFF;
 }
 
+/*	SPLASH	*/
+.mc-splash{
+	background-color: #121314;
+}
+
 /*	LISTS	*/
 [mc-layout="list"] > .mc-title, [mc-layout="list"] > .mc-subtitle{
 	color: #84BD00;

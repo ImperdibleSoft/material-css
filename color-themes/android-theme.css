@@ -85,6 +85,11 @@ body > .mc-floating .mc-button.mc-clickable:active{
 	color: #009688;
 }
 
+/*	SPLASH	*/
+.mc-splash{
+	background-color: #273238;
+}
+
 /*	LISTS	*/
 [mc-layout="list"] > .mc-title, [mc-layout="list"] > .mc-subtitle{
 	color: #273238;

@@ -76,6 +76,11 @@ body > .mc-header .mc-dropdown .mc-dropdown-value{
 	background-color: transparent;
 }
 
+/*	SPLASH	*/
+.mc-splash{
+	background-color: #FF9800;
+}
+
 /*	LISTS	*/
 [mc-layout="list"] > .mc-title, [mc-layout="list"] > .mc-subtitle{
 	color: #FF9800;

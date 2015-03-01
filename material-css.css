@@ -573,7 +573,8 @@ body > .mc-footer{
 	z-index: 50;
 }
 body:not([mc-layout="front"]) > .mc-content.mc-untabbed ~ .mc-footer{
-	top: 56px;
+	top: 0px;
+	margin-top: 56px;
 }
 body[mc-layout="front"] > .mc-footer{
 	width: 60%;
@@ -824,6 +825,49 @@ body[mc-layout="front"] .mc-floating{
 }
 .mc-notification-container .mc-notification .mc-button:active{
 	background-color: #515151;
+}
+
+.mc-splash{
+	position: fixed;
+	display: inline-block;
+	float: left;
+	
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	
+	background-color: #f7f7f7;
+	border: none;
+	opacity: 1;
+	z-index: 500;
+}
+.mc-splash .mc-content{
+	position: relative;
+	display: inline-block;
+	float: left;
+	
+	width: 100%;
+	top: 0px;
+	left: 0px;
+	right: auto;
+	bottom: auto;
+	padding: 20px;
+	margin: 0px;
+	
+	text-align: center;
+	
+	box-sizing: border-box;
+}
+.mc-splash .mc-content img{
+	position: relative;
+	display: inline-block;
+	float: none;
+	
+	width: auto;
+	max-width: 50%;
+	padding: 0px;
+	margin: 0px auto;
 }
 
 .mc-blocker, .mc-content-blocker{
@@ -4229,7 +4273,7 @@ body > .mc-floating-window[mc-layout="share"] > .mc-window-footer{
 		left: 0px;
 	}
 	body:not([mc-layout="front"]) > .mc-content.mc-untabbed ~ .mc-footer{
-		margin-top: 20px;
+		/* margin-top: 20px; */
 	}
 	body[mc-layout="front"] > .mc-footer{
 		width: calc(100% - 96px);
@@ -4312,6 +4356,13 @@ body > .mc-floating-window[mc-layout="share"] > .mc-window-footer{
 	
 	body > .mc-floating-window .mc-window-footer{
 	
+	}
+	
+	.mc-menu-blocker{
+		display: block;
+		
+		opacity: 1;
+		z-index: 290;
 	}
 	
 	.mc-radiobutton, .mc-checkbox, .mc-switcher{
@@ -4533,6 +4584,10 @@ body > .mc-floating-window[mc-layout="share"] > .mc-window-footer{
 /*	Tablet, PC	& TV */
 @media only screen and (min-width: 721px){
 
+	.mc-splash .mc-content img{
+		width: 250px;
+	}
+	
 	body > .mc-floating-window[mc-layout="share"]{
 		float: none;
 		
