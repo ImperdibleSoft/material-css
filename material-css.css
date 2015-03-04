@@ -650,12 +650,15 @@ body[mc-layout="front"] .mc-floating{
 }
 .mc-dialog.mc-bottom-dialog:not(.mc-opened){
 	top: 100%;
+	
+	opacity: 0;
 }
 .mc-dialog.mc-opened{
 	top: 50px;
 	left: 50%;
 	margin-left: -250px;
 	
+	opacity: 1;
 	z-index: 400;
 }
 .mc-dialog .mc-content, .mc-dialog .mc-footer{
@@ -4450,6 +4453,13 @@ body > .mc-floating-window[mc-layout="share"] > .mc-window-footer{
 			margin-right: 5%;
 		}
 		
+		body[mc-layout="front"] > .mc-content{
+			width: 80%;
+			top: 0px;
+			left: 10%;
+			margin-top: 0px;
+			padding-top: 40px;	
+		}
 	}
 }
 
@@ -4533,6 +4543,13 @@ body > .mc-floating-window[mc-layout="share"] > .mc-window-footer{
 		margin-right: 0px;
 	}
 	
+	body[mc-layout="front"] > .mc-content{
+		width: 80%;
+		top: 0px;
+		left: 10%;
+		margin-top: 0px;
+		padding-top: 40px;	
+	}
 	@media screen and (orientation: landscape) {
 		
 		.mc-navigation{
