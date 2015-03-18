@@ -13,6 +13,16 @@
 	/* --- http://imperdiblesoft.github.io/material-css		---------------------------- */
 	/* -------------------------------------------------------------------------------------- */
 
+v0.3.2
+	+ Added: Autocomplete dropdown.
+	+ Added: New icons (details, animal).
+	+ Added: New themes (MyPetcard).
+	+ Added: Disabled form elements.
+	+ Removed: Stadistics ajax call.
+	+ Fixed: mc-input width.
+	+ Fixed: mc-tab sizes.
+	+ Fixed. Navigation panel behaivour.
+	
 v0.3.1
 	+ Added: Splash screen.
 	+ Fixed: Application gets disabled when Navigation bar is opened on Mobile versions.

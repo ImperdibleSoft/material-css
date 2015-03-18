@@ -1,0 +1,874 @@
+
+	/* -------------------------------------------------------------------------------------- */
+	/* --- MATERIAL CSS ---------------------------------------------------------------- */
+	/* -------------------------------------------------------------------------------------- */
+	/* --- Light CSS framework for creating a Material Design look&feel ----------- */
+	/* --- aplicable to webapps. Supports any JS framework ------------------------ */
+	/* -------------------------------------------------------------------------------------- */
+	/* --- Developed by:				------------------------------------------------------ */
+	/* ---   Rafael Pérez García		------------------------------------------------------ */
+	/* ---   at ImperdibleSoft		------------------------------------------------------ */
+	/* -------------------------------------------------------------------------------------- */
+	/* --- http://www.imperdiblesoft.com						---------------------------- */
+	/* --- http://imperdiblesoft.github.io/material-css		---------------------------- */
+	/* -------------------------------------------------------------------------------------- */
+
+	/* -------------------------------------------------------------------------------------- */
+	/* --- ImperdibleSoft Theme							----------------------------------- */
+	/* --- Created by: Imperdiblesoft					----------------------------------- */
+	/* -------------------------------------------------------------------------------------- */
+	/* --- Main color:						#009688;		----------------------------------- */
+	/* --- Main color clicked:				#00796B;		----------------------------------- */
+	/* --- Main color bg: 					#80CBC4;		----------------------------------- */
+	/* --- Secondary color:				#FF5722;		----------------------------------- */
+	/* --- Secondary color clicked:	#E64A19;		----------------------------------- */
+	/* --- Secondary color bg:			#FFAB91;		----------------------------------- */
+	/* -------------------------------------------------------------------------------------- */
+
+/*	GENERALS	*/
+.mc-button{
+	color: #FFFFFF;
+	background-color: #FF5722;
+}
+.mc-button.mc-clickable:active{
+	background-color: #E64A19;
+}
+.mc-title{
+	color: #009688;
+}
+
+/*	NAVIGATION	*/
+body > .mc-navigation .mc-header-menu, body > .mc-navigation .mc-header-menu .mc-button{
+	background-color: #009688;
+}
+body > .mc-navigation .mc-header-menu .mc-button.mc-clickable:active{
+	background-color: #00796B;
+}
+body > .mc-navigation .mc-header-menu .mc-title{
+	color: #FFFFFF;
+}
+
+/*	HEADER	*/
+body > .mc-header, body > .mc-header .mc-button{
+	background-color: #009688;
+}
+body > .mc-header .mc-button.mc-clickable:active{
+	background-color: #00796B;
+}
+body > .mc-header .mc-title, body > .mc-header .mc-tabs-bar .mc-tab{
+	color: #FFFFFF;
+}
+body > .mc-header .mc-dropdown .mc-dropdown-bg:hover{
+	background-color: #00796B;
+}
+body > .mc-header .mc-dropdown .mc-dropdown-value{
+	color: #FFFFFF;
+}
+
+/*	DIALOGS	*/
+.mc-dialog .mc-button{
+	background-color: transparent;
+}
+.mc-dialog .mc-button:active{
+	background-color: transparent;
+}
+.mc-dialog .mc-footer .mc-button:hover{
+	color: #009688;
+}
+
+/*	SPLASH	*/
+.mc-splash{
+	background-color: #009688;
+}
+
+/*	LISTS	*/
+[mc-layout="list"] > .mc-title, [mc-layout="list"] > .mc-subtitle{
+	color: #009688;
+}
+[mc-layout="list"] .mc-list-item .mc-title{
+	color: #212121;
+}
+[mc-layout="list"] .mc-list-item .mc-button{
+	background-color: transparent;
+}
+[mc-layout="list"] .mc-list-item .mc-button:active{
+	background-color: transparent;
+}
+
+/*	CHAT	*/
+[mc-layout="chat"] .mc-message.mc-own .mc-title, [mc-layout="chat"] .mc-message.mc-own .mc-subtitle, [mc-layout="chat"] .mc-message.mc-own .mc-text, [mc-layout="chat"] .mc-message.mc-own .mc-note{
+	background-color: #94C38A;
+}
+
+/*	MULTIMEDIA	*/
+body > .mc-floating-window .mc-window-header .mc-button-icon:active, body > .mc-floating-window .mc-window-content .mc-button-icon:active, body > .mc-floating-window .mc-window-footer .mc-button-icon:active{
+	background-color: #94C38A!important;
+}
+
+/*	CARDS	*/
+.mc-card .mc-title{
+	color: #212121;
+}
+.mc-card[mc-layout="header-image"] .mc-header .mc-title{
+	color: #FFFFFF;
+}
+.mc-card .mc-footer .mc-button{
+	background-color: transparent;
+}
+.mc-card .mc-footer .mc-button:active{
+	background-color: transparent;
+}
+
+/*	INPUTS BACKGROUNDS	*/
+.mc-input input:focus, .mc-input textarea:focus{
+	border-color: #FF5722;
+}
+.mc-input input:focus ~ .mc-label, .mc-input textarea:focus ~ .mc-label{
+	color: #FF5722;
+}
+
+/*	RADIO BACKGROUNDS	*/
+.mc-radiobutton input[type="radio"]:checked ~ .mc-radio-bg{
+	border-color: #FF5722;
+}
+.mc-radiobutton input[type="radio"]:checked ~ .mc-radio-bg > .mc-radio{
+	background-color: #FF5722;
+}
+
+/*	CHECKBOXES BACKGROUNDS	*/
+.mc-checkbox input[type="checkbox"]:checked ~ .mc-checkbox-bg{
+	border-color: #FF5722;
+	background-color: #FF5722;
+}
+
+/*	SWITCHERS BACKGROUNDS	*/
+.mc-switcher input[type="checkbox"]:checked ~ .mc-switch-bg{
+	background-color: #FFAB91;
+}
+.mc-switcher input[type="checkbox"]:checked ~ .mc-switch-bg > .mc-switch{
+	background-color: #FF5722;
+}
+
+/*	SLIDERS BACKGROUNDS	*/
+.mc-slider input[type="range"] ~ .mc-slider-bg{
+	background-color: #E9E9E9;
+}
+.mc-slider input[type="range"] ~ .mc-slider-bg > .mc-slider-progress{
+	background-color: #FF5722;
+}
+.mc-slider:active input[type="range"] ~ .mc-slider-bg > .mc-slider-progress, .mc-slider input[type="range"] ~ .mc-slider-bg:active > .mc-slider-progress, .mc-slider input[type="range"] ~ .mc-slider-bg > .mc-slider-progress:active{
+	background-color: #FF5722;
+	border-color: #FF5722;
+}
+.mc-slider input[type="range"] ~ .mc-slider-bg > .mc-slider-picker{
+	background-color: #FF5722;
+	border-color: #FF5722;
+}
+.mc-slider:active input[type="range"] ~ .mc-slider-bg > .mc-slider-picker, .mc-slider input[type="range"] ~ .mc-slider-bg:active > .mc-slider-picker, .mc-slider input[type="range"] ~ .mc-slider-bg > .mc-slider-picker:active{
+	background-color: #FF5722;
+	border-color: #FF5722;
+}
+
+/*	PROGRESS BAR BACKGROUNDS	*/
+.mc-progressbar{
+	background-color: #FFAB91;
+}
+.mc-progressbar > .mc-progress{
+	background-color: #FF5722;
+}
+
+/*	SPINNERS BACKGROUNDS	*/
+.mc-spinner{
+	background: -moz-linear-gradient(left, #FF5722 10%, rgba(255, 255, 255, 0) 85%);
+	background: -webkit-linear-gradient(left, #FF5722 10%, rgba(255, 255, 255, 0) 85%);
+	background: -o-linear-gradient(left, #FF5722 10%, rgba(255, 255, 255, 0) 85%);
+	background: -ms-linear-gradient(left, #FF5722 10%, rgba(255, 255, 255, 0) 85%);
+	background: linear-gradient(to right, #FF5722 10%, rgba(255, 255, 255, 0) 85%);
+}
+.mc-spinner:after{
+	background-color: #F9F9F9;
+}
+
+/*	ICONS	*/
+*[mc-action="menu"]{
+	background-image: url('../material-icons/mc-menu-dark.png');
+}
+*[mc-action="help"]{
+	background-image: url('../material-icons/mc-help-dark.png');
+}
+*[mc-action="info"]{
+	background-image: url('../material-icons/mc-info-dark.png');
+}
+*[mc-action="home"]{
+	background-image: url('../material-icons/mc-home-dark.png');
+}
+*[mc-action="gallery"]{
+	background-image: url('../material-icons/mc-gallery-dark.png');
+}
+*[mc-action="prev"]{
+	background-image: url('../material-icons/mc-prev-dark.png');
+}
+*[mc-action="next"]{
+	background-image: url('../material-icons/mc-next-dark.png');
+}
+*[mc-action="scroll-top"]{
+	background-image: url('../material-icons/mc-scrolltop-dark.png');
+}
+*[mc-action="scroll-down"]{
+	background-image: url('../material-icons/mc-scrollbottom-dark.png');
+}
+*[mc-action="done"]{
+	background-image: url('../material-icons/mc-done-dark.png');
+}
+*[mc-action="search"]{
+	background-image: url('../material-icons/mc-search-dark.png');
+}
+*[mc-action="refresh"]{
+	background-image: url('../material-icons/mc-refresh-dark.png');
+}
+*[mc-action="cancel"]{
+	background-image: url('../material-icons/mc-cancel-dark.png');
+}
+*[mc-action="options-h"]{
+	background-image: url('../material-icons/mc-options-h-dark.png');
+}
+*[mc-action="options-v"]{
+	background-image: url('../material-icons/mc-options-v-dark.png');
+}
+*[mc-action="settings"]{
+	background-image: url('../material-icons/mc-settings-dark.png');
+}
+*[mc-action="add"]{
+	background-image: url('../material-icons/mc-add-dark.png');
+}
+*[mc-action="edit"]{
+	background-image: url('../material-icons/mc-edit-dark.png');
+}
+*[mc-action="undo"]{
+	background-image: url('../material-icons/mc-undo-dark.png');
+}
+*[mc-action="redo"]{
+	background-image: url('../material-icons/mc-redo-dark.png');
+}
+*[mc-action="delete"]{
+	background-image: url('../material-icons/mc-delete-dark.png');
+}
+*[mc-action="remove"]{
+	background-image: url('../material-icons/mc-remove-dark.png');
+}
+*[mc-action="upload"]{
+	background-image: url('../material-icons/mc-upload-dark.png');
+}
+*[mc-action="download"]{
+	background-image: url('../material-icons/mc-download-dark.png');
+}
+*[mc-action="sync"]{
+	background-image: url('../material-icons/mc-sync-dark.png');
+}
+*[mc-action="favorite"]{
+	background-image: url('../material-icons/mc-favorite-dark.png');
+}
+*[mc-action="like"]{
+	background-image: url('../material-icons/mc-like-dark.png');
+}
+*[mc-action="share"]{
+	background-image: url('../material-icons/mc-share-dark.png');
+}
+*[mc-action="send"]{
+	background-image: url('../material-icons/mc-send-dark.png');
+}
+*[mc-action="comment"]{
+	background-image: url('../material-icons/mc-comment-dark.png');
+}
+*[mc-action="colors"]{
+	background-image: url('../material-icons/mc-colors-dark.png');
+}
+*[mc-action="text"]{
+	background-image: url('../material-icons/mc-text-dark.png');
+}
+*[mc-action="button"]{
+	background-image: url('../material-icons/mc-button-dark.png');
+}
+*[mc-action="cards"]{
+	background-image: url('../material-icons/mc-cards-dark.png');
+}
+*[mc-action="icon"]{
+	background-image: url('../material-icons/mc-icon-dark.png');
+}
+*[mc-action="navigation"]{
+	background-image: url('../material-icons/mc-navigation-dark.png');
+}
+*[mc-action="location"]{
+	background-image: url('../material-icons/mc-location-dark.png');
+}
+*[mc-action="email"]{
+	background-image: url('../material-icons/mc-email-dark.png');
+}
+*[mc-action="phone"]{
+	background-image: url('../material-icons/mc-phone-dark.png');
+}
+*[mc-action="message"]{
+	background-image: url('../material-icons/mc-message-dark.png');
+}
+*[mc-action="user"]{
+	background-image: url('../material-icons/mc-user-dark.png');
+}
+*[mc-action="list"]{
+	background-image: url('../material-icons/mc-list-dark.png');
+}
+*[mc-action="layout"]{
+	background-image: url('../material-icons/mc-layout-dark.png');
+}
+*[mc-action="popup"]{
+	background-image: url('../material-icons/mc-popup-dark.png');
+}
+*[mc-action="cut"]{
+	background-image: url('../material-icons/mc-cut-dark.png');
+}
+*[mc-action="copy"]{
+	background-image: url('../material-icons/mc-copy-dark.png');
+}
+*[mc-action="paste"]{
+	background-image: url('../material-icons/mc-paste-dark.png');
+}
+*[mc-action="arrow-down"]{
+	background-image: url('../material-icons/mc-arrow-down-dark.png');
+}
+*[mc-action="picker"]{
+	background-image: url('../material-icons/mc-picker-dark.png');
+}
+*[mc-action="account"]{
+	background-image: url('../material-icons/mc-account-dark.png');
+}
+*[mc-action="forums"]{
+	background-image: url('../material-icons/mc-forums-dark.png');
+}
+*[mc-action="notifications"]{
+	background-image: url('../material-icons/mc-notifications-dark.png');
+}
+*[mc-action="external"]{
+	background-image: url('../material-icons/mc-external-dark.png');
+}
+*[mc-action="play"]{
+	background-image: url('../material-icons/mc-play-dark.png');
+}
+*[mc-action="pause"]{
+	background-image: url('../material-icons/mc-pause-dark.png');
+}
+*[mc-action="stop"]{
+	background-image: url('../material-icons/mc-stop-dark.png');
+}
+*[mc-action="music-next"]{
+	background-image: url('../material-icons/mc-music-next-dark.png');
+}
+*[mc-action="music-prev"]{
+	background-image: url('../material-icons/mc-music-previous-dark.png');
+}
+*[mc-action="playlist"]{
+	background-image: url('../material-icons/mc-playlist-dark.png');
+}
+*[mc-action="volume-up"]{
+	background-image: url('../material-icons/mc-volume-up-dark.png');
+}
+*[mc-action="volume-down"]{
+	background-image: url('../material-icons/mc-volume-down-dark.png');
+}
+*[mc-action="volume-off"]{
+	background-image: url('../material-icons/mc-volume-off-dark.png');
+}
+*[mc-action="facebook"]{
+	background-image: url('../material-icons/mc-facebook-dark.png');
+}
+*[mc-action="google-plus"]{
+	background-image: url('../material-icons/mc-google-plus-dark.png');
+}
+*[mc-action="twitter"]{
+	background-image: url('../material-icons/mc-twitter-dark.png');
+}
+*[mc-action="whatsapp"]{
+	background-image: url('../material-icons/mc-whatsapp-dark.png');
+}
+*[mc-action="instagram"]{
+	background-image: url('../material-icons/mc-instagram-dark.png');
+}
+*[mc-action="youtube"]{
+	background-image: url('../material-icons/mc-youtube-dark.png');
+}
+*[mc-action="soundcloud"]{
+	background-image: url('../material-icons/mc-soundcloud-dark.png');
+}
+*[mc-action="imperdiblesoft"]{
+	background-image: url('../material-icons/mc-imperdiblesoft-dark.png');
+}
+*[mc-action="skype"]{
+	background-image: url('../material-icons/mc-skype-dark.png');
+}
+*[mc-action="linkedin"]{
+	background-image: url('../material-icons/mc-linkedin-dark.png');
+}
+*[mc-action="github"]{
+	background-image: url('../material-icons/mc-github-dark.png');
+}
+
+/*	NAVIGATION ICONS	*/
+body > .mc-navigation .mc-nav-item[mc-action="menu"], [mc-layout="list"] *[mc-action="menu"], body .mc-card .mc-footer .mc-button[mc-action="menu"], .mc-dialog .mc-button[mc-action="menu"], .mc-floating-window .mc-button[mc-action="menu"]{
+	background-image: url('../material-icons/mc-menu-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="help"], [mc-layout="list"] *[mc-action="help"], body .mc-card .mc-footer .mc-button[mc-action="help"], .mc-dialog .mc-button[mc-action="help"], .mc-floating-window .mc-button[mc-action="help"]{
+	background-image: url('../material-icons/mc-help-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="info"], [mc-layout="list"] *[mc-action="info"], body .mc-card .mc-footer .mc-button[mc-action="info"], .mc-dialog .mc-button[mc-action="info"], .mc-floating-window .mc-button[mc-action="info"]{
+	background-image: url('../material-icons/mc-info-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="home"], [mc-layout="list"] *[mc-action="home"], body .mc-card .mc-footer .mc-button[mc-action="home"], .mc-dialog .mc-button[mc-action="home"], .mc-floating-window .mc-button[mc-action="home"]{
+	background-image: url('../material-icons/mc-home-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="gallery"], [mc-layout="list"] *[mc-action="gallery"], body .mc-card .mc-footer .mc-button[mc-action="gallery"], .mc-dialog .mc-button[mc-action="gallery"], .mc-floating-window .mc-button[mc-action="gallery"]{
+	background-image: url('../material-icons/mc-gallery-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="prev"], [mc-layout="list"] *[mc-action="prev"], body .mc-card .mc-footer .mc-button[mc-action="prev"], .mc-dialog .mc-button[mc-action="prev"], .mc-floating-window .mc-button[mc-action="prev"]{
+	background-image: url('../material-icons/mc-prev-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="next"], [mc-layout="list"] *[mc-action="next"], body .mc-card .mc-footer .mc-button[mc-action="next"], .mc-dialog .mc-button[mc-action="next"], .mc-floating-window .mc-button[mc-action="next"]{
+	background-image: url('../material-icons/mc-next-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="scroll-top"], [mc-layout="list"] *[mc-action="scroll-top"], body .mc-card .mc-footer .mc-button[mc-action="scroll-top"], .mc-dialog .mc-button[mc-action="scroll-top"], .mc-floating-window .mc-button[mc-action="scroll-top"]{
+	background-image: url('../material-icons/mc-scrolltop-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="scroll-down"], [mc-layout="list"] *[mc-action="scroll-down"], body .mc-card .mc-footer .mc-button[mc-action="scroll-down"], .mc-dialog .mc-button[mc-action="scroll-down"], .mc-floating-window .mc-button[mc-action="scroll-down"]{
+	background-image: url('../material-icons/mc-scrollbottom-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="done"], [mc-layout="list"] *[mc-action="done"], body .mc-card .mc-footer .mc-button[mc-action="done"], .mc-dialog .mc-button[mc-action="done"], .mc-floating-window .mc-button[mc-action="done"]{
+	background-image: url('../material-icons/mc-done-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="search"], [mc-layout="list"] *[mc-action="search"], body .mc-card .mc-footer .mc-button[mc-action="search"], .mc-dialog .mc-button[mc-action="search"], .mc-floating-window .mc-button[mc-action="search"]{
+	background-image: url('../material-icons/mc-search-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="refresh"], [mc-layout="list"] *[mc-action="refresh"], body .mc-card .mc-footer .mc-button[mc-action="refresh"], .mc-dialog .mc-button[mc-action="refresh"], .mc-floating-window .mc-button[mc-action="refresh"]{
+	background-image: url('../material-icons/mc-refresh-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="cancel"], [mc-layout="list"] *[mc-action="cancel"], body .mc-card .mc-footer .mc-button[mc-action="cancel"], .mc-dialog .mc-button[mc-action="cancel"], .mc-floating-window .mc-button[mc-action="cancel"]{
+	background-image: url('../material-icons/mc-cancel-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="options-h"], [mc-layout="list"] *[mc-action="options-h"], body .mc-card .mc-footer .mc-button[mc-action="options-h"], .mc-dialog .mc-button[mc-action="options-h"], .mc-floating-window .mc-button[mc-action="options-h"]{
+	background-image: url('../material-icons/mc-options-h-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="options-v"], [mc-layout="list"] *[mc-action="options-v"], body .mc-card .mc-footer .mc-button[mc-action="options-v"], .mc-dialog .mc-button[mc-action="options-v"], .mc-floating-window .mc-button[mc-action="options-v"]{
+	background-image: url('../material-icons/mc-options-v-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="settings"], [mc-layout="list"] *[mc-action="settings"], body .mc-card .mc-footer .mc-button[mc-action="settings"], .mc-dialog .mc-button[mc-action="settings"], .mc-floating-window .mc-button[mc-action="settings"]{
+	background-image: url('../material-icons/mc-settings-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="add"], [mc-layout="list"] *[mc-action="add"], body .mc-card .mc-footer .mc-button[mc-action="add"], .mc-dialog .mc-button[mc-action="add"], .mc-floating-window .mc-button[mc-action="add"]{
+	background-image: url('../material-icons/mc-add-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="edit"], [mc-layout="list"] *[mc-action="edit"], body .mc-card .mc-footer .mc-button[mc-action="edit"], .mc-dialog .mc-button[mc-action="edit"], .mc-floating-window .mc-button[mc-action="edit"]{
+	background-image: url('../material-icons/mc-edit-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="undo"], [mc-layout="list"] *[mc-action="undo"], body .mc-card .mc-footer .mc-button[mc-action="undo"], .mc-dialog .mc-button[mc-action="undo"], .mc-floating-window .mc-button[mc-action="undo"]{
+	background-image: url('../material-icons/mc-undo-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="redo"], [mc-layout="list"] *[mc-action="redo"], body .mc-card .mc-footer .mc-button[mc-action="redo"], .mc-dialog .mc-button[mc-action="redo"], .mc-floating-window .mc-button[mc-action="redo"]{
+	background-image: url('../material-icons/mc-redo-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="delete"], [mc-layout="list"] *[mc-action="delete"], body .mc-card .mc-footer .mc-button[mc-action="delete"], .mc-dialog .mc-button[mc-action="delete"], .mc-floating-window .mc-button[mc-action="delete"]{
+	background-image: url('../material-icons/mc-delete-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="remove"], [mc-layout="list"] *[mc-action="remove"], body .mc-card .mc-footer .mc-button[mc-action="remove"], .mc-dialog .mc-button[mc-action="remove"], .mc-floating-window .mc-button[mc-action="remove"]{
+	background-image: url('../material-icons/mc-remove-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="upload"], [mc-layout="list"] *[mc-action="upload"], body .mc-card .mc-footer .mc-button[mc-action="upload"], .mc-dialog .mc-button[mc-action="upload"], .mc-floating-window .mc-button[mc-action="upload"]{
+	background-image: url('../material-icons/mc-upload-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="download"], [mc-layout="list"] *[mc-action="download"], body .mc-card .mc-footer .mc-button[mc-action="download"], .mc-dialog .mc-button[mc-action="download"], .mc-floating-window .mc-button[mc-action="download"]{
+	background-image: url('../material-icons/mc-download-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="sync"], [mc-layout="list"] *[mc-action="sync"], body .mc-card .mc-footer .mc-button[mc-action="sync"], .mc-dialog .mc-button[mc-action="sync"], .mc-floating-window .mc-button[mc-action="sync"]{
+	background-image: url('../material-icons/mc-sync-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="favorite"], [mc-layout="list"] *[mc-action="favorite"], body .mc-card .mc-footer .mc-button[mc-action="favorite"], .mc-dialog .mc-button[mc-action="favorite"], .mc-floating-window .mc-button[mc-action="favorite"]{
+	background-image: url('../material-icons/mc-favorite-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="like"], [mc-layout="list"] *[mc-action="like"], body .mc-card .mc-footer .mc-button[mc-action="like"], .mc-dialog .mc-button[mc-action="like"], .mc-floating-window .mc-button[mc-action="like"]{
+	background-image: url('../material-icons/mc-like-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="share"], [mc-layout="list"] *[mc-action="share"], body .mc-card .mc-footer .mc-button[mc-action="share"], .mc-dialog .mc-button[mc-action="share"], .mc-floating-window .mc-button[mc-action="share"]{
+	background-image: url('../material-icons/mc-share-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="send"], [mc-layout="list"] *[mc-action="send"], body .mc-card .mc-footer .mc-button[mc-action="send"], .mc-dialog .mc-button[mc-action="send"], .mc-floating-window .mc-button[mc-action="send"]{
+	background-image: url('../material-icons/mc-send-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="comment"], [mc-layout="list"] *[mc-action="comment"], body .mc-card .mc-footer .mc-button[mc-action="comment"], .mc-dialog .mc-button[mc-action="comment"], .mc-floating-window .mc-button[mc-action="comment"]{
+	background-image: url('../material-icons/mc-comment-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="colors"], [mc-layout="list"] *[mc-action="colors"], body .mc-card .mc-footer .mc-button[mc-action="colors"], .mc-dialog .mc-button[mc-action="colors"], .mc-floating-window .mc-button[mc-action="colors"]{
+	background-image: url('../material-icons/mc-colors-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="text"], [mc-layout="list"] *[mc-action="text"], body .mc-card .mc-footer .mc-button[mc-action="text"], .mc-dialog .mc-button[mc-action="text"], .mc-floating-window .mc-button[mc-action="text"]{
+	background-image: url('../material-icons/mc-text-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="button"], [mc-layout="list"] *[mc-action="button"], body .mc-card .mc-footer .mc-button[mc-action="button"], .mc-dialog .mc-button[mc-action="button"], .mc-floating-window .mc-button[mc-action="button"]{
+	background-image: url('../material-icons/mc-button-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="cards"], [mc-layout="list"] *[mc-action="cards"], body .mc-card .mc-footer .mc-button[mc-action="cards"], .mc-dialog .mc-button[mc-action="cards"], .mc-floating-window .mc-button[mc-action="cards"]{
+	background-image: url('../material-icons/mc-cards-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="icon"], [mc-layout="list"] *[mc-action="icon"], body .mc-card .mc-footer .mc-button[mc-action="icon"], .mc-dialog .mc-button[mc-action="icon"], .mc-floating-window .mc-button[mc-action="icon"]{
+	background-image: url('../material-icons/mc-icon-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="navigation"], [mc-layout="list"] *[mc-action="navigation"], body .mc-card .mc-footer .mc-button[mc-action="navigation"], .mc-dialog .mc-button[mc-action="navigation"], .mc-floating-window .mc-button[mc-action="navigation"]{
+	background-image: url('../material-icons/mc-navigation-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="location"], [mc-layout="list"] *[mc-action="location"], body .mc-card .mc-footer .mc-button[mc-action="location"], .mc-dialog .mc-button[mc-action="location"], .mc-floating-window .mc-button[mc-action="location"]{
+	background-image: url('../material-icons/mc-location-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="email"], [mc-layout="list"] *[mc-action="email"], body .mc-card .mc-footer .mc-button[mc-action="email"], .mc-dialog .mc-button[mc-action="email"], .mc-floating-window .mc-button[mc-action="email"]{
+	background-image: url('../material-icons/mc-email-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="phone"], [mc-layout="list"] *[mc-action="phone"], body .mc-card .mc-footer .mc-button[mc-action="phone"], .mc-dialog .mc-button[mc-action="phone"], .mc-floating-window .mc-button[mc-action="phone"]{
+	background-image: url('../material-icons/mc-phone-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="message"], [mc-layout="list"] *[mc-action="message"], body .mc-card .mc-footer .mc-button[mc-action="message"], .mc-dialog .mc-button[mc-action="message"], .mc-floating-window .mc-button[mc-action="message"]{
+	background-image: url('../material-icons/mc-message-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="user"], [mc-layout="list"] *[mc-action="user"], body .mc-card .mc-footer .mc-button[mc-action="user"], .mc-dialog .mc-button[mc-action="user"], .mc-floating-window .mc-button[mc-action="user"]{
+	background-image: url('../material-icons/mc-user-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="list"], [mc-layout="list"] *[mc-action="list"], body .mc-card .mc-footer .mc-button[mc-action="list"], .mc-dialog .mc-button[mc-action="list"], .mc-floating-window .mc-button[mc-action="list"]{
+	background-image: url('../material-icons/mc-list-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="layout"], [mc-layout="list"] *[mc-action="layout"], body .mc-card .mc-footer .mc-button[mc-action="layout"], .mc-dialog .mc-button[mc-action="layout"], .mc-floating-window .mc-button[mc-action="layout"]{
+	background-image: url('../material-icons/mc-layout-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="popup"], [mc-layout="list"] *[mc-action="popup"], body .mc-card .mc-footer .mc-button[mc-action="popup"], .mc-dialog .mc-button[mc-action="popup"], .mc-floating-window .mc-button[mc-action="popup"]{
+	background-image: url('../material-icons/mc-popup-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="cut"], [mc-layout="list"] *[mc-action="cut"], body .mc-card .mc-footer .mc-button[mc-action="cut"], .mc-dialog .mc-button[mc-action="cut"], .mc-floating-window .mc-button[mc-action="cut"]{
+	background-image: url('../material-icons/mc-cut-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="copy"], [mc-layout="list"] *[mc-action="copy"], body .mc-card .mc-footer .mc-button[mc-action="copy"], .mc-dialog .mc-button[mc-action="copy"], .mc-floating-window .mc-button[mc-action="copy"]{
+	background-image: url('../material-icons/mc-copy-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="paste"], [mc-layout="list"] *[mc-action="paste"], body .mc-card .mc-footer .mc-button[mc-action="paste"], .mc-dialog .mc-button[mc-action="paste"], .mc-floating-window .mc-button[mc-action="paste"]{
+	background-image: url('../material-icons/mc-paste-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="arrow-down"], [mc-layout="list"] *[mc-action="arrow-down"], body .mc-card .mc-footer .mc-button[mc-action="arrow-down"], .mc-dialog .mc-button[mc-action="arrow-down"], .mc-floating-window .mc-button[mc-action="arrow-down"]{
+	background-image: url('../material-icons/mc-arrow-down-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="picker"], [mc-layout="list"] *[mc-action="picker"], body .mc-card .mc-footer .mc-button[mc-action="picker"], .mc-dialog .mc-button[mc-action="picker"], .mc-floating-window .mc-button[mc-action="picker"]{
+	background-image: url('../material-icons/mc-picker-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="account"], [mc-layout="list"] *[mc-action="account"], body .mc-card .mc-footer .mc-button[mc-action="account"], .mc-dialog .mc-button[mc-action="account"], .mc-floating-window .mc-button[mc-action="account"]{
+	background-image: url('../material-icons/mc-account-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="forums"], [mc-layout="list"] *[mc-action="forums"], body .mc-card .mc-footer .mc-button[mc-action="forums"], .mc-dialog .mc-button[mc-action="forums"], .mc-floating-window .mc-button[mc-action="forums"]{
+	background-image: url('../material-icons/mc-forums-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="notifications"], [mc-layout="list"] *[mc-action="notifications"], body .mc-card .mc-footer .mc-button[mc-action="notifications"], .mc-dialog .mc-button[mc-action="notifications"], .mc-floating-window .mc-button[mc-action="notifications"]{
+	background-image: url('../material-icons/mc-notifications-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="external"], [mc-layout="list"] *[mc-action="external"], body .mc-card .mc-footer .mc-button[mc-action="external"], .mc-dialog .mc-button[mc-action="external"], .mc-floating-window .mc-button[mc-action="external"]{
+	background-image: url('../material-icons/mc-external-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="play"], [mc-layout="list"] *[mc-action="play"], body .mc-card .mc-footer .mc-button[mc-action="play"], .mc-dialog .mc-button[mc-action="play"], .mc-floating-window .mc-button[mc-action="play"]{
+	background-image: url('../material-icons/mc-play-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="pause"], [mc-layout="list"] *[mc-action="pause"], body .mc-card .mc-footer .mc-button[mc-action="pause"], .mc-dialog .mc-button[mc-action="pause"], .mc-floating-window .mc-button[mc-action="pause"]{
+	background-image: url('../material-icons/mc-pause-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="stop"], [mc-layout="list"] *[mc-action="stop"], body .mc-card .mc-footer .mc-button[mc-action="stop"], .mc-dialog .mc-button[mc-action="stop"], .mc-floating-window .mc-button[mc-action="stop"]{
+	background-image: url('../material-icons/mc-stop-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="music-next"], [mc-layout="list"] *[mc-action="music-next"], body .mc-card .mc-footer .mc-button[mc-action="music-next"], .mc-dialog .mc-button[mc-action="music-next"], .mc-floating-window .mc-button[mc-action="music-next"]{
+	background-image: url('../material-icons/mc-music-next-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="music-prev"], [mc-layout="list"] *[mc-action="music-prev"], body .mc-card .mc-footer .mc-button[mc-action="music-prev"], .mc-dialog .mc-button[mc-action="music-prev"], .mc-floating-window .mc-button[mc-action="music-prev"]{
+	background-image: url('../material-icons/mc-music-previous-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="playlist"], [mc-layout="list"] *[mc-action="playlist"], body .mc-card .mc-footer .mc-button[mc-action="playlist"], .mc-dialog .mc-button[mc-action="playlist"], .mc-floating-window .mc-button[mc-action="playlist"]{
+	background-image: url('../material-icons/mc-playlist-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="volume-up"], [mc-layout="list"] *[mc-action="volume-up"], body .mc-card .mc-footer .mc-button[mc-action="volume-up"], .mc-dialog .mc-button[mc-action="volume-up"], .mc-floating-window .mc-button[mc-action="volume-up"]{
+	background-image: url('../material-icons/mc-volume-up-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="volume-down"], [mc-layout="list"] *[mc-action="volume-down"], body .mc-card .mc-footer .mc-button[mc-action="volume-down"], .mc-dialog .mc-button[mc-action="volume-down"], .mc-floating-window .mc-button[mc-action="volume-down"]{
+	background-image: url('../material-icons/mc-volume-down-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="volume-off"], [mc-layout="list"] *[mc-action="volume-off"], body .mc-card .mc-footer .mc-button[mc-action="volume-off"], .mc-dialog .mc-button[mc-action="volume-off"], .mc-floating-window .mc-button[mc-action="volume-off"]{
+	background-image: url('../material-icons/mc-volume-off-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="facebook"], [mc-layout="list"] *[mc-action="facebook"], body .mc-card .mc-footer .mc-button[mc-action="facebook"], .mc-dialog .mc-button[mc-action="facebook"], .mc-floating-window .mc-button[mc-action="facebook"]{
+	background-image: url('../material-icons/mc-facebook-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="google-plus"], [mc-layout="list"] *[mc-action="google-plus"], body .mc-card .mc-footer .mc-button[mc-action="google-plus"], .mc-dialog .mc-button[mc-action="google-plus"], .mc-floating-window .mc-button[mc-action="google-plus"]{
+	background-image: url('../material-icons/mc-google-plus-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="twitter"], [mc-layout="list"] *[mc-action="twitter"], body .mc-card .mc-footer .mc-button[mc-action="twitter"], .mc-dialog .mc-button[mc-action="twitter"], .mc-floating-window .mc-button[mc-action="twitter"]{
+	background-image: url('../material-icons/mc-twitter-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="whatsapp"], [mc-layout="list"] *[mc-action="whatsapp"], body .mc-card .mc-footer .mc-button[mc-action="whatsapp"], .mc-dialog .mc-button[mc-action="whatsapp"], .mc-floating-window .mc-button[mc-action="whatsapp"]{
+	background-image: url('../material-icons/mc-whatsapp-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="instagram"], [mc-layout="list"] *[mc-action="instagram"], body .mc-card .mc-footer .mc-button[mc-action="instagram"], .mc-dialog .mc-button[mc-action="instagram"], .mc-floating-window .mc-button[mc-action="instagram"]{
+	background-image: url('../material-icons/mc-instagram-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="youtube"], [mc-layout="list"] *[mc-action="youtube"], body .mc-card .mc-footer .mc-button[mc-action="youtube"], .mc-dialog .mc-button[mc-action="youtube"], .mc-floating-window .mc-button[mc-action="youtube"]{
+	background-image: url('../material-icons/mc-youtube-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="soundcloud"], [mc-layout="list"] *[mc-action="soundcloud"], body .mc-card .mc-footer .mc-button[mc-action="soundcloud"], .mc-dialog .mc-button[mc-action="soundcloud"], .mc-floating-window .mc-button[mc-action="soundcloud"]{
+	background-image: url('../material-icons/mc-soundcloud-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="imperdiblesoft"], [mc-layout="list"] *[mc-action="imperdiblesoft"], body .mc-card .mc-footer .mc-button[mc-action="imperdiblesoft"], .mc-dialog .mc-button[mc-action="imperdiblesoft"], .mc-floating-window .mc-button[mc-action="imperdiblesoft"]{
+	background-image: url('../material-icons/mc-imperdiblesoft-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="skype"], [mc-layout="list"] *[mc-action="skype"], body .mc-card .mc-footer .mc-button[mc-action="skype"], .mc-dialog .mc-button[mc-action="skype"], .mc-floating-window .mc-button[mc-action="skype"]{
+	background-image: url('../material-icons/mc-skype-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="linkedin"], [mc-layout="list"] *[mc-action="linkedin"], body .mc-card .mc-footer .mc-button[mc-action="linkedin"], .mc-dialog .mc-button[mc-action="linkedin"], .mc-floating-window .mc-button[mc-action="linkedin"]{
+	background-image: url('../material-icons/mc-linkedin-light.png');
+}
+body > .mc-navigation .mc-nav-item[mc-action="github"], [mc-layout="list"] *[mc-action="github"], body .mc-card .mc-footer .mc-button[mc-action="github"], .mc-dialog .mc-button[mc-action="github"], .mc-floating-window .mc-button[mc-action="github"]{
+	background-image: url('../material-icons/mc-github-light.png');
+}
+
+/*	HEADER DROPDOWN ICONS	*/
+body > .mc-header .mc-dropdown-bg{
+	background-image: url('../material-icons/mc-arrow-down-dark.png');
+}
+
+/*	Tablet, PC	& TV */
+@media only screen and (min-width: 721px){
+
+	body > .mc-navigation .mc-header-menu, body > .mc-navigation .mc-header-menu .mc-button{
+		background-color: #009688;
+	}
+	body > .mc-navigation .mc-header-menu .mc-button.mc-clickable:active{
+		background-color: #00796B;
+	}
+	body > .mc-navigation .mc-header-menu .mc-title{
+		color: #FFFFFF;
+	}
+
+	/*	NAVIGATION ICONS	*/
+	body > .mc-navigation .mc-nav-item[mc-action="menu"]{
+		background-image: url('../material-icons/mc-menu-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="help"]{
+		background-image: url('../material-icons/mc-help-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="info"]{
+		background-image: url('../material-icons/mc-info-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="home"]{
+		background-image: url('../material-icons/mc-home-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="gallery"]{
+		background-image: url('../material-icons/mc-gallery-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="prev"]{
+		background-image: url('../material-icons/mc-prev-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="next"]{
+		background-image: url('../material-icons/mc-next-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="scroll-top"]{
+		background-image: url('../material-icons/mc-scrolltop-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="scroll-down"]{
+		background-image: url('../material-icons/mc-scrollbottom-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="done"]{
+		background-image: url('../material-icons/mc-done-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="search"]{
+		background-image: url('../material-icons/mc-search-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="refresh"]{
+		background-image: url('../material-icons/mc-refresh-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="cancel"]{
+		background-image: url('../material-icons/mc-cancel-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="options-h"]{
+		background-image: url('../material-icons/mc-options-h-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="options-v"]{
+		background-image: url('../material-icons/mc-options-v-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="settings"]{
+		background-image: url('../material-icons/mc-settings-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="add"]{
+		background-image: url('../material-icons/mc-add-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="edit"]{
+		background-image: url('../material-icons/mc-edit-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="undo"]{
+		background-image: url('../material-icons/mc-undo-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="redo"]{
+		background-image: url('../material-icons/mc-redo-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="delete"]{
+		background-image: url('../material-icons/mc-delete-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="remove"]{
+		background-image: url('../material-icons/mc-remove-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="upload"]{
+		background-image: url('../material-icons/mc-upload-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="download"]{
+		background-image: url('../material-icons/mc-download-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="sync"]{
+		background-image: url('../material-icons/mc-sync-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="favorite"]{
+		background-image: url('../material-icons/mc-favorite-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="like"]{
+		background-image: url('../material-icons/mc-like-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="share"]{
+		background-image: url('../material-icons/mc-share-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="send"]{
+		background-image: url('../material-icons/mc-send-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="comment"]{
+		background-image: url('../material-icons/mc-comment-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="colors"]{
+		background-image: url('../material-icons/mc-colors-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="text"]{
+		background-image: url('../material-icons/mc-text-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="button"]{
+		background-image: url('../material-icons/mc-button-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="cards"]{
+		background-image: url('../material-icons/mc-cards-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="icon"]{
+		background-image: url('../material-icons/mc-icon-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="navigation"]{
+		background-image: url('../material-icons/mc-navigation-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="location"]{
+		background-image: url('../material-icons/mc-location-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="email"]{
+		background-image: url('../material-icons/mc-email-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="phone"]{
+		background-image: url('../material-icons/mc-phone-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="message"]{
+		background-image: url('../material-icons/mc-message-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="user"]{
+		background-image: url('../material-icons/mc-user-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="list"]{
+		background-image: url('../material-icons/mc-list-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="layout"]{
+		background-image: url('../material-icons/mc-layout-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="popup"]{
+		background-image: url('../material-icons/mc-popup-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="cut"]{
+		background-image: url('../material-icons/mc-cut-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="copy"]{
+		background-image: url('../material-icons/mc-copy-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="paste"]{
+		background-image: url('../material-icons/mc-paste-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="arrow-down"]{
+		background-image: url('../material-icons/mc-arrow-down-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="picker"]{
+		background-image: url('../material-icons/mc-picker-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="account"]{
+		background-image: url('../material-icons/mc-account-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="forums"]{
+		background-image: url('../material-icons/mc-forums-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="notifications"]{
+		background-image: url('../material-icons/mc-notifications-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="external"]{
+		background-image: url('../material-icons/mc-external-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="play"]{
+		background-image: url('../material-icons/mc-play-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="pause"]{
+		background-image: url('../material-icons/mc-pause-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="stop"]{
+		background-image: url('../material-icons/mc-stop-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="music-next"]{
+		background-image: url('../material-icons/mc-music-next-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="music-prev"]{
+		background-image: url('../material-icons/mc-music-previous-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="playlist"]{
+		background-image: url('../material-icons/mc-playlist-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="volume-up"]{
+		background-image: url('../material-icons/mc-volume-up-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="volume-down"]{
+		background-image: url('../material-icons/mc-volume-down-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="volume-off"]{
+		background-image: url('../material-icons/mc-volume-off-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="facebook"]{
+		background-image: url('../material-icons/mc-facebook-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="google-plus"]{
+		background-image: url('../material-icons/mc-google-plus-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="twitter"]{
+		background-image: url('../material-icons/mc-twitter-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="whatsapp"]{
+		background-image: url('../material-icons/mc-whatsapp-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="instagram"]{
+		background-image: url('../material-icons/mc-instagram-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="youtube"]{
+		background-image: url('../material-icons/mc-youtube-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="soundcloud"]{
+		background-image: url('../material-icons/mc-soundcloud-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="imperdiblesoft"]{
+		background-image: url('../material-icons/mc-imperdiblesoft-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="skype"]{
+		background-image: url('../material-icons/mc-skype-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="linkedin"]{
+		background-image: url('../material-icons/mc-linkedin-dark.png');
+	}
+	body > .mc-navigation .mc-nav-item[mc-action="github"]{
+		background-image: url('../material-icons/mc-github-dark.png');
+	}
+
+}
+

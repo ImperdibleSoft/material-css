@@ -13,6 +13,9 @@
 	/* --- http://imperdiblesoft.github.io/material-css		---------------------------- */
 	/* -------------------------------------------------------------------------------------- */
 	
+*{
+	line-heigh: normal;
+}
 body{color:#000;}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
 table{border-collapse:collapse;border-spacing:0;}
@@ -94,6 +97,9 @@ a{
     -moz-user-select: initial;
     -ms-user-select: initial;
     user-select: initial;
+}
+.mc-clickable{
+	cursor: pointer;
 }
 .mc-divider{
 	position: relative;
@@ -209,7 +215,8 @@ body > .mc-navigation .mc-nav-item, .mc-navigation .mc-nav-subitem{
 	cursor: pointer;
 }
 body > .mc-navigation .mc-nav-item{
-	padding: 12px 12px;
+	padding: 12px;
+	padding-top: 14px;
 	
 	font-size: 16px;
 	font-weight: bold;
@@ -218,7 +225,7 @@ body > .mc-navigation .mc-nav-item{
 	border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
 body > .mc-navigation .mc-nav-item[mc-action]{
-	padding-left: 37px;
+	padding-left: 47px;
 	
 	background-size: 24px;
 	background-position: 10px 10px;
@@ -228,7 +235,7 @@ body > .mc-navigation .mc-nav-item:hover{
 	padding-left: 20px;
 }
 body > .mc-navigation .mc-nav-item[mc-action]:hover{
-	padding-left: 47px;
+	padding-left: 57px;
 	
 	background-position: 20px 10px;
 }
@@ -370,6 +377,7 @@ body > .mc-header > .mc-tabs-bar > .mc-tab{
 	float: left;
 	
 	width: auto;
+	height: 56px;
 	padding: 17px 20px;
 	padding-bottom: 16px;
 	margin: 0px;
@@ -837,6 +845,8 @@ body[mc-layout="front"] .mc-floating{
 	
 	width: 100%;
 	height: 100%;
+	top: 0px;
+	left: 0px;
 	margin: 0px;
 	padding: 0px;
 	
@@ -870,7 +880,15 @@ body[mc-layout="front"] .mc-floating{
 	width: auto;
 	max-width: 50%;
 	padding: 0px;
-	margin: 0px auto;
+	margin: 10px auto;
+}
+.mc-splash .mc-content .mc-spinner{
+	float: none;
+	
+	margin: 10px auto;
+}
+.mc-splash .mc-content .mc-title, .mc-splash .mc-content .mc-subtitle, .mc-splash .mc-content .mc-text, .mc-splash .mc-content .mc-subtext{
+	text-align: center;
 }
 
 .mc-blocker, .mc-content-blocker{
@@ -1016,6 +1034,31 @@ body[mc-layout="front"] .mc-floating{
     user-select: initial;
 }
 
+/*	AUTOCOMPLETE	*/
+.mc-autocomplete{
+	position: absolute;
+	display: block;
+	float: left;
+	
+	width: 100%;
+	height: auto;
+	max-height: 250px;
+	top: 0px;
+	left: 0px;
+	padding: 0px;
+	margin: 0px;
+	margin-top: 30px;
+	
+	border: 1px solid #BDBDBD;
+	border-top: none;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+	box-sizing: border-box;
+	cursor: pointer;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	z-index: 250;
+}
+
 /*	BUTTONS	*/
 .mc-button{
 	position: relative;
@@ -1040,6 +1083,12 @@ body[mc-layout="front"] .mc-floating{
 	appearance: none;
 	-moz-appearance: none;
 	-webkit-appearance: none;
+}
+.mc-button:disabled{
+	/*color: #BDBDBD!important;*/
+	
+	background-color: rgba(128, 128, 128, 0.2)!important;
+	box-shadow: none!important;
 }
 .mc-button-raised{
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
@@ -1104,6 +1153,7 @@ body[mc-layout="front"] .mc-floating{
 	float: left;
 	
 	width: 100%;
+	max-width: 100%;
 	margin: 0px;
 	padding: 5px 0px;
 	
@@ -1124,6 +1174,24 @@ body[mc-layout="front"] .mc-floating{
     -ms-user-select: initial;
     user-select: initial;
 }
+.mc-input select{
+	position: relative;
+	display: inline-block;
+	float: left;
+	
+	width: 100%;
+	max-width: 100%;
+	margin: 0px;
+	padding: 5px 0px;
+	
+	background: none;
+	
+	box-sizing: border-box;
+	z-index: 100;
+}
+.mc-input input:disabled{
+	border-bottom: 2px dotted #BDBDBD!important;
+}
 .mc-input input::-webkit-input-placeholder {
 	color: transparent;
 }
@@ -1136,7 +1204,7 @@ body[mc-layout="front"] .mc-floating{
 .mc-input input:-ms-input-placeholder {  
 	color: transparent;
 }
-.mc-input input ~ .mc-label{
+.mc-input input ~ .mc-label, .mc-input select ~ .mc-label{
 	position: absolute;
 	display: block;
 	float: left;
@@ -1149,14 +1217,14 @@ body[mc-layout="front"] .mc-floating{
 	
 	z-index: 50;
 }
-.mc-input input:focus ~ .mc-label, .mc-input input ~ .mc-label.mc-floating-label, .mc-input input ~ .mc-label.mc-completed-label{
+.mc-input input:focus ~ .mc-label, .mc-input select:focus ~ .mc-label, .mc-input input ~ .mc-label.mc-floating-label, .mc-input select ~ .mc-label.mc-floating-label, .mc-input input ~ .mc-label.mc-completed-label, .mc-input select ~ .mc-label.mc-completed-label{
 	margin-top: -15px;
 	
 	font-size: 75%;
 	
 	z-index: 50;
 }
-.mc-input input ~ .mc-input-message{
+.mc-input input ~ .mc-input-message, .mc-input select ~ .mc-input-message{
 	position: absolute;
 	display: block;
 	float: left;
@@ -1173,7 +1241,7 @@ body[mc-layout="front"] .mc-floating{
 	
 	z-index: 50;
 }
-.mc-input input ~ .mc-input-error{
+.mc-input input ~ .mc-input-error, .mc-input select ~ .mc-input-error{
 	position: absolute;
 	display: none;
 	float: left;
@@ -1190,7 +1258,7 @@ body[mc-layout="front"] .mc-floating{
 	
 	z-index: 50;
 }
-.mc-input input:invalid ~ .mc-input-error{
+.mc-input input:invalid ~ .mc-input-error, .mc-input select:invalid ~ .mc-input-error{
 	display: block;
 }
 
@@ -1398,6 +1466,9 @@ body[mc-layout="front"] .mc-floating{
 	background-color: transparent;
 	border: 2px solid #9E9E9E;
 }
+.mc-radiobutton > input[type="radio"]:disabled ~ .mc-radio-bg{
+	border: 2px solid #BDBDBD!important;
+}
 .mc-radiobutton > input[type="radio"] ~ .mc-radio-bg > .mc-radio{
 	position: relative;
 	display: inline-block;
@@ -1417,6 +1488,9 @@ body[mc-layout="front"] .mc-floating{
 	height: 10px;
 	left: 0px;
 	top: 0px;
+}
+.mc-radiobutton > input[type="radio"]:disabled:checked ~ .mc-radio-bg > .mc-radio{
+	background-color: #BDBDBD!important;
 }
 .mc-radiobutton > input[type="radio"] ~ .mc-label{
 	position: relative;
@@ -1455,8 +1529,14 @@ body[mc-layout="front"] .mc-floating{
 	background-color: transparent;
 	border: 2px solid #9E9E9E;
 }
-.mc-checkbox > input[type="checkbox"] ~ .mc-checkbox-bg:checked{
+.mc-checkbox > input[type="checkbox"]:checked ~ .mc-checkbox-bg{
 	background-color: #9E9E9E;
+}
+.mc-checkbox > input[type="checkbox"]:disabled ~ .mc-checkbox-bg{
+	border: 2px solid #BDBDBD!important;
+}
+.mc-checkbox > input[type="checkbox"]:disabled:checked ~ .mc-checkbox-bg{
+	background-color: #BDBDBD!important;
 }
 .mc-checkbox > input[type="checkbox"] ~ .mc-checkbox-bg > .mc-checkbox-check{
 	position: relative;
@@ -1514,6 +1594,9 @@ body[mc-layout="front"] .mc-floating{
 
 	border-radius: 10px;
 }
+.mc-switcher > input[type="checkbox"]:disabled ~ .mc-switch-bg{
+	background-color: #D5D5D5!important;
+}
 .mc-switcher > input[type="checkbox"] ~ .mc-switch-bg > .mc-switch{
 	position: relative;
 	display: inline-block;
@@ -1534,6 +1617,10 @@ body[mc-layout="front"] .mc-floating{
 	margin-left: 9px;
 
 	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
+}
+.mc-switcher > input[type="checkbox"]:disabled:checked ~ .mc-switch-bg > .mc-switch{
+	background-color: #BDBDBD!important;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3)!important;
 }
 .mc-switcher > input[type="checkbox"] ~ .mc-label{
 	position: relative;
@@ -1570,6 +1657,9 @@ body[mc-layout="front"] .mc-floating{
 
 	border-radius: 0px;
 }
+.mc-slider > input[type="range"]:disabled ~ .mc-slider-bg{
+	background-color: #BDBDBD!important;
+}
 .mc-slider > input[type="range"] ~ .mc-slider-bg > .mc-slider-progress{
 	position: relative;
 	display: inline-block;
@@ -1585,6 +1675,9 @@ body[mc-layout="front"] .mc-floating{
 	-webkit-transition: 0s all;
 	-mozz-transition: 0s all;
 }
+.mc-slider > input[type="range"]:disabled ~ .mc-slider-bg > .mc-slider-progress{
+	background-color: #BDBDBD!important;
+}
 .mc-slider > input[type="range"] ~ .mc-slider-bg > .mc-slider-picker{
 	position: absolute;
 	display: block;
@@ -1594,7 +1687,7 @@ body[mc-layout="front"] .mc-floating{
 	height: 8px;
 	left: 0px;
 	top: 0px;
-	margin-top: -4px;
+	margin-top: -5px;
 	margin-left: -4px;
 
 	border-radius: 50%;
@@ -1604,7 +1697,14 @@ body[mc-layout="front"] .mc-floating{
 	-webkit-transition: 0s all;
 	-mozz-transition: 0s all;
 }
-.mc-slider:active > input[type="range"] ~ .mc-slider-bg > .mc-slider-picker, .mc-slider > input[type="range"] ~ .mc-slider-bg > .mc-slider-progress:active ~ .mc-slider-picker,  .mc-slider > input[type="range"] ~ .mc-slider-bg:active > .mc-slider-picker, .mc-slider > input[type="range"] ~ .mc-slider-bg > .mc-slider-picker:active{
+.mc-slider > input[type="range"]:disabled ~ .mc-slider-bg > .mc-slider-picker{
+	margin-top: -5px;
+
+	background-color: #BDBDBD!important;
+	border: 2px solid #F9F9F9!important;
+	box-shadow: none!important;
+}
+.mc-slider:active > input[type="range"]:not(:disabled) ~ .mc-slider-bg > .mc-slider-picker, .mc-slider > input[type="range"]:not(:disabled) ~ .mc-slider-bg > .mc-slider-progress:active ~ .mc-slider-picker,  .mc-slider > input[type="range"]:not(:disabled) ~ .mc-slider-bg:active > .mc-slider-picker, .mc-slider > input[type="range"]:not(:disabled) ~ .mc-slider-bg > .mc-slider-picker:active{
 	position: absolute;
 	display: block;
 	float: none;
@@ -1613,7 +1713,7 @@ body[mc-layout="front"] .mc-floating{
 	height: 18px;
 	left: 0px;
 	top: 0px;
-	margin-top: -9px;
+	margin-top: -10px;
 	margin-left: -9px;
 
 	border-radius: 50%;
@@ -3908,6 +4008,12 @@ body > .mc-floating-window[mc-layout="share"] > .mc-window-footer{
 *[mc-action="github"]{
 	background-image: url('material-icons/mc-github-light.png');
 }
+*[mc-action="details"]{
+	background-image: url('material-icons/mc-details-light.png');
+}
+*[mc-action="animal"]{
+	background-image: url('material-icons/mc-animal-light.png');
+}
 
 *[mc-action="menu"].mc-color-white{
 	background-image: url('material-icons/mc-menu-dark.png');
@@ -4128,6 +4234,12 @@ body > .mc-floating-window[mc-layout="share"] > .mc-window-footer{
 *[mc-action="github"].mc-color-white{
 	background-image: url('material-icons/mc-github-dark.png');
 }
+*[mc-action="details"].mc-color-white{
+	background-image: url('material-icons/mc-details-dark.png');
+}
+*[mc-action="animal"].mc-color-white{
+	background-image: url('material-icons/mc-animal-dark.png');
+}
 
 *[mc-action="undo"].mc-color-grey{
 	background-image: url('material-icons/mc-undo-grey.png');
@@ -4179,6 +4291,12 @@ body > .mc-floating-window[mc-layout="share"] > .mc-window-footer{
 }
 *[mc-action="volume-off"].mc-color-grey{
 	background-image: url('material-icons/mc-volume-off-grey.png');
+}
+*[mc-action="details"].mc-color-grey{
+	background-image: url('material-icons/mc-details-grey.png');
+}
+*[mc-action="animal"].mc-color-grey{
+	background-image: url('material-icons/mc-animal-grey.png');
 }
 
 .mc-mobile, .mc-tablet, .mc-pc, .mc-tv{
@@ -4234,6 +4352,7 @@ body > .mc-floating-window[mc-layout="share"] > .mc-window-footer{
 		
 		width: 100%;
 		padding: 12px;
+		padding-top: 14px;
 		
 		font-size: 16px;
 		text-decoration: none;
