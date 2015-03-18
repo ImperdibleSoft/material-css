@@ -10,18 +10,21 @@
 	/* ---   at ImperdibleSoft		------------------------------------------------------ */
 	/* -------------------------------------------------------------------------------------- */
 	/* --- http://www.imperdiblesoft.com						---------------------------- */
-	/* --- http://imperdiblesoft.github.io/material-css		---------------------------- */
+	/* --- http://www.github.io/imperdiblesoft/material-css		---------------------- */
 	/* -------------------------------------------------------------------------------------- */
 
 v0.3.2
-	+ Added: Autocomplete dropdown.
+	+ Added: Autocomplete menu.
 	+ Added: New icons (details, animal).
 	+ Added: New themes (MyPetcard).
 	+ Added: Disabled form elements.
+	+ Added: New layouts (hidden-nav, no-nav).
 	+ Removed: Stadistics ajax call.
 	+ Fixed: mc-input width.
 	+ Fixed: mc-tab sizes.
-	+ Fixed. Navigation panel behaivour.
+	+ Fixed: Navigation panel behaivour.
+	+ Fixed: Grid layout.
+	+ Fixed: Tabs bar on Tablets.
 	
 v0.3.1
 	+ Added: Splash screen.

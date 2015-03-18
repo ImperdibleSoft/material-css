@@ -10,7 +10,7 @@
 	/* ---   at ImperdibleSoft		------------------------------------------------------ */
 	/* -------------------------------------------------------------------------------------- */
 	/* --- http://www.imperdiblesoft.com						---------------------------- */
-	/* --- http://imperdiblesoft.github.io/material-css		---------------------------- */
+	/* --- http://www.github.io/imperdiblesoft/material-css		---------------------- */
 	/* -------------------------------------------------------------------------------------- */
 
 	
@@ -361,9 +361,9 @@ $(document).ready(function(mc){
 			}
 			
 			/*	If the bar is bigger than the screen	*/
-			if( parseInt( $(touchedElem).width() ) >= window.innerWidth){
+			if( parseInt( $(touchedElem).width() ) >= $(".mc-header").width()){
 				var newMargin = initialMargin + parseInt( current ) - parseInt( initial );
-				var minMargin = (parseInt($(touchedElem).width() ) - window.innerWidth + 10) * (-1);
+				var minMargin = (parseInt($(touchedElem).width() ) - $(".mc-header").width() + 10) * (-1);
 				
 				/*	If  try to move to the left too much	*/
 				if(newMargin >= 0){
@@ -416,9 +416,9 @@ $(document).ready(function(mc){
 			}
 			
 			/*	If the bar is bigger than the screen	*/
-			if( parseInt( $(touchedElem).width() ) >= window.innerWidth){
+			if( parseInt( $(touchedElem).width() ) >= $(".mc-header").width()){
 				var newMargin = initialMargin + parseInt( current ) - parseInt( initial );
-				var minMargin = (parseInt($(touchedElem).width() ) - window.innerWidth + 10) * (-1);
+				var minMargin = (parseInt($(touchedElem).width() ) - $(".mc-header").width() + 10) * (-1);
 				
 				/*	If  try to move to the left too much	*/
 				if(newMargin >= 0){
@@ -457,11 +457,11 @@ $(document).ready(function(mc){
 		}
 		
 		/*	If we are on any other place, open the menu	*/
-		else if(last >= (initial + 100)){
+		else if(last >= (initial + 100) && $("body").attr("mc-layout") != "no-nav" ){
 			mc.toogleNavigation( true );
 			
 		/*	Close the menu	*/
-		}else if(initial >= (last + 100)){
+		}else if(initial >= (last + 100) && $("body").attr("mc-layout") != "no-nav"){
 			mc.toogleNavigation( false );
 		}
 		

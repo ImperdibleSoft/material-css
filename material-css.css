@@ -9,7 +9,7 @@
 	/* ---   Rafael Pérez García		------------------------------------------------------ */
 	/* ---   at ImperdibleSoft		------------------------------------------------------ */
 	/* -------------------------------------------------------------------------------------- */
-	/* --- http://www.imperdiblesoft.com						---------------------------- */
+	/* --- http://www.github.io/imperdiblesoft/material-css		---------------------- */
 	/* --- http://imperdiblesoft.github.io/material-css		---------------------------- */
 	/* -------------------------------------------------------------------------------------- */
 	
@@ -305,6 +305,39 @@ body[mc-layout="front"] .mc-navigation .mc-header-content [mc-action="menu"]{
 body[mc-layout="front"] .mc-navigation .mc-header-content .mc-right{
 	margin-right: 20px;
 }
+body[mc-layout="no-nav"] .mc-navigation{
+	display: none;
+}
+body[mc-layout="hidden-nav"] .mc-navigation{
+	position: fixed;
+	display: inline-block;
+	float: left;
+	
+	width: 220px;
+	margin-left: -220px;
+}
+body[mc-layout="hidden-nav"] .mc-navigation .mc-header-menu{
+	width: 220px;
+}
+body[mc-layout="hidden-nav"] .mc-navigation .mc-header-menu  [mc-action="menu"]{
+	display: none;
+}
+body[mc-layout="hidden-nav"] .mc-navigation .mc-header-menu  [mc-action="prev"]{
+	display: inline-block;
+}
+body[mc-layout="hidden-nav"] .mc-navigation .mc-header-menu, body[mc-layout="hidden-nav"] .mc-navigation{
+	margin-left: -220px;
+}
+body[mc-layout="hidden-nav"] .mc-navigation .mc-header-menu.opened, body[mc-layout="hidden-nav"] .mc-navigation.opened{
+	margin-left: 0px;
+}
+body[mc-layout="hidden-nav"] .mc-navigation .mc-header-content [mc-action="menu"]{
+	display: inline-block;
+}
+body[mc-layout="hidden-nav"] .mc-navigation .mc-header-content .mc-right{
+	margin-right: 20px;
+}
+
 
 body > .mc-header{
 	position: fixed;
@@ -335,6 +368,14 @@ body[mc-layout="front"] > .mc-header{
 }
 body[mc-layout="front"] > .mc-header .mc-title, [mc-layout="front"] > .mc-header .mc-right{
 	display: none;
+}
+body[mc-layout="no-nav"] .mc-header{
+	width: 100%;
+	left: 0px;
+}
+body[mc-layout="hidden-nav"] > .mc-header{
+	width: 100%;
+	left: 0px;
 }
 body > .mc-header > .mc-header-line{
 	position: relative;
@@ -397,6 +438,9 @@ body > .mc-header > .mc-tabs-bar.mc-opened > .mc-tab{
 }
 body > .mc-header > .mc-tabs-bar > .mc-tab.mc-selected{
 	border-color: #FFFFFF;
+}
+body[mc-layout="front"] > .mc-header > .mc-tabs-bar{
+	display: none;
 }
 
 body > .mc-floating-window{
@@ -561,6 +605,7 @@ body[mc-layout="front"] > .mc-content{
 	margin-top: 0px;
 	padding-top: 40px;	
 }
+
 
 body > .mc-footer{
 	position: relative;
@@ -2038,7 +2083,7 @@ body[mc-layout="front"] .mc-floating{
 	display: inline-block;
 	float: left;
 	
-	width: calc(33.33% - 8px);
+	width: calc(33.3% - 8px);
 	height: 50px;
 	padding: 0px;
 	margin: 4px;
@@ -4379,6 +4424,9 @@ body > .mc-floating-window[mc-layout="share"] > .mc-window-footer{
 		padding: 18px 20px;
 		padding-bottom: 17px;
 	}
+	body[mc-layout="no-nav"] > .mc-header [mc-action="menu"]{
+		display: none;
+	}
 	
 	.mc-content{
 		left: 0px;
@@ -4724,16 +4772,6 @@ body > .mc-floating-window[mc-layout="share"] > .mc-window-footer{
 		width: 250px;
 	}
 	
-	body > .mc-floating-window[mc-layout="share"]{
-		float: none;
-		
-		left: 50%;
-		right: auto;
-		top: auto;
-		margin: 0px;
-		margin-left: -148px;
-	}
-	
 	.mc-navigation .mc-header-menu  [mc-action="prev"]{
 		display: none;
 	}
@@ -4747,7 +4785,41 @@ body > .mc-floating-window[mc-layout="share"] > .mc-window-footer{
 	body[mc-layout="front"] .mc-header [mc-action="menu"]{
 		display: inline-block;
 	}
+	body[mc-layout="hidden-nav"] > .mc-header [mc-action="menu"]{
+		display: inline-block;
+	}
+
+	body > .mc-floating-window[mc-layout="share"]{
+		float: none;
+		
+		left: 50%;
+		right: auto;
+		top: auto;
+		margin: 0px;
+		margin-left: -148px;
+	}
+
+	body[mc-layout="no-nav"] .mc-content{
+		width: 80%;
+		left: 10%;
+	}
+	body[mc-layout="hidden-nav"] > .mc-content{
+		width: 80%;
+		top: 0px;
+		left: 10%;
+		margin-top: 0px;
+		padding-top: 40px;	
+	}
 	
+	body[mc-layout="no-nav"] .mc-footer{
+		width: 80%;
+		left: 10%;
+	}
+	body[mc-layout="hidden-nav"] > .mc-footer{
+		width: 80%;
+		left: 10%;
+		top: 0px;
+	}
 
 }
 
