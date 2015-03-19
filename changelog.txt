@@ -19,6 +19,7 @@ v0.3.2
 	+ Added: New themes (MyPetcard).
 	+ Added: Disabled form elements.
 	+ Added: New layouts (hidden-nav, no-nav).
+	+ Added: Tables
 	+ Removed: Stadistics ajax call.
 	+ Fixed: mc-input width.
 	+ Fixed: mc-tab sizes.
