@@ -133,7 +133,7 @@ mc.updateFloatingButtons = function(){
 			var floatingWindows = 56;
 		}
 		
-		if( notifications >= floatingWindows){
+		if( !floatingWindows || (floatingWindows && notifications >= floatingWindows)){
 			var newPosition = notifications;
 			
 		}else{
@@ -221,8 +221,11 @@ mc.resizeLayoutImages = function(){
 		/*	Layout = "grid-images"	*/
 		if( $(".mc-grid-item img")[0] && $(".mc-grid-item img")[0].width >= 1 ){
 			
+			if( $(".mc-grid-item").length >= 1){
+				var height = parseInt( $( $(".mc-grid-item")[0] ).width() );
+			}
 			$(".mc-grid-item").each(function(){ 
-				$(this).animate({"height": $(this).width()}, 0, function(){
+				$(this).animate({"height": height }, 0, function(){
 					if( $(this).children("img").width() < $(this).children("img").height()  ){
 						$(this).children("img").width("100%");
 						$(this).children("img").height("auto");
