@@ -60,6 +60,8 @@ html{
 	
 	width: 100%;
 	height: 100%;
+	min-width: 320px;
+	min-height: 320px;
     
     overflow-x: hidden;
     overflow-y: auto;
@@ -70,6 +72,8 @@ body{
 	float: left;
 	
 	width: 100%;
+	min-width: 320px;
+	min-height: 320px;
 	
 	font-family: 'Roboto', sans-serif;
     font-weight: normal;
@@ -101,6 +105,10 @@ a{
 .mc-clickable{
 	cursor: pointer;
 }
+.mc-blured{
+	-webkit-filter: blur(6px);
+	filter: blur(6px);
+}
 .mc-divider{
 	position: relative;
 	display: block;
@@ -118,6 +126,14 @@ a{
 }
 .mc-right{
 	float: right;
+}
+.mc-centered{
+	float: none;
+	
+	margin-left: auto;
+	margin-right: auto;
+	
+	text-align: center;
 }
 .mc-clear{
 	clear: both;
@@ -282,15 +298,24 @@ body > .mc-navigation [mc-submenu].mc-collapsed{
 body > .mc-navigation [mc-submenu]:not(.mc-collapsed){
 	padding-bottom: 10px;
 }
+
 body[mc-layout="front"] .mc-navigation{
 	position: fixed;
 	display: inline-block;
 	float: left;
 	
 	width: 220px;
+	top: 0px;
+	height: 100%;
 	margin-left: -220px;
 }
 body[mc-layout="front"] .mc-navigation .mc-header-menu{
+	position: relative;
+	display: inline-block;
+	float: left;
+	
+	width: 100%;
+	
 	width: 220px;
 }
 body[mc-layout="front"] .mc-navigation .mc-header-menu  [mc-action="menu"]{
@@ -351,6 +376,7 @@ body > .mc-header{
 	float: left;
 	
 	width: 80%;
+	min-width: 320px;
 	left: 20%;
 	top: 0px;
 	margin: 0px;
@@ -364,13 +390,34 @@ body > .mc-header{
 body > .mc-header .mc-button{
 	background-color: #E0E0E0;
 }
+
 body[mc-layout="front"] > .mc-header{
 	width: 100%;
-	height: 150px;
+	height: 300px;
 	left: 0px;
 	top: 0px;
 
+	overflow: hidden;
 	z-index: 1;
+	
+	transition: 0s all;
+	-webkit-transition: 0s all;
+	-mozz-transition: 0s all;
+}
+body[mc-layout="front"] > .mc-header img{
+	position: absolute;
+	display: block;
+	float: none;
+	
+	width: 110%;
+	min-height: 100%;
+	top: 0px;
+	left: 0px;
+	margin-left: -5%;
+	
+	transition: 0s all;
+	-webkit-transition: 0s all;
+	-mozz-transition: 0s all;
 }
 body[mc-layout="front"] > .mc-header .mc-title, [mc-layout="front"] > .mc-header .mc-right{
 	display: none;
@@ -612,7 +659,7 @@ body[mc-layout="front"] > .mc-content{
 	top: 0px;
 	left: 20%;
 	margin-top: 0px;
-	padding-top: 40px;	
+	padding-top: 230px;	
 }
 
 /*	FOOTER	*/
@@ -1142,6 +1189,9 @@ body[mc-layout="front"] .mc-floating{
 	appearance: none;
 	-moz-appearance: none;
 	-webkit-appearance: none;
+}
+body[mc-layout="front"] > .mc-header .mc-button{
+	background-color: transparent!important;
 }
 .mc-button:disabled{
 	/*color: #BDBDBD!important;*/
@@ -4421,6 +4471,7 @@ table.mc-table .mc-table-hidden {
 		float: left;
 		
 		width: calc(100% - 56px);
+		max-width: 220px;
 		height: 100%;
 		top: 0px;
 		margin-left: calc(-100% + 56px);
@@ -4490,7 +4541,7 @@ table.mc-table .mc-table-hidden {
 	body[mc-layout="front"] > .mc-content{
 		width: calc(100% - 96px);
 		left: 48px;
-		top: 56px;
+		top: 230px;
 		padding: 0px;
 	}
 	
@@ -4676,12 +4727,15 @@ table.mc-table .mc-table-hidden {
 			margin-right: 5%;
 		}
 		
+		body[mc-layout="front"] > .mc-header{
+			height: 200px;
+		}
 		body[mc-layout="front"] > .mc-content{
 			width: 80%;
 			top: 0px;
 			left: 10%;
 			margin-top: 0px;
-			padding-top: 40px;	
+			padding-top: 130px;	
 		}
 	}
 }
@@ -4767,12 +4821,15 @@ table.mc-table .mc-table-hidden {
 		margin-right: 0px;
 	}
 	
+	body[mc-layout="front"] > .mc-header{
+		height: 300px;
+	}
 	body[mc-layout="front"] > .mc-content{
 		width: 80%;
 		top: 0px;
 		left: 10%;
 		margin-top: 0px;
-		padding-top: 40px;	
+		padding-top: 230px;	
 	}
 	@media screen and (orientation: landscape) {
 		

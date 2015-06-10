@@ -282,6 +282,7 @@ $(document).ready(function(mc){
 	
 	/*	Vars for control the scrolling	*/
 	var prevScroll, currentScroll;
+	var initialHeight = 0;
 	
 	/*	Vars for resize images	*/
 	var element = document.querySelector("body");
@@ -675,6 +676,46 @@ $(document).ready(function(mc){
 		/*	If we scroll up, the header appears	*/
 		if(currentScroll <= prevScroll || $("body[mc-layout='front']")[0]){
 			$("body > .mc-header").css("margin-top", "0px");
+		}
+		
+		/*	If there is a front layout	*/
+		if( $("body[mc-layout='front']")[0] && $("body[mc-layout='front'] > .mc-header")[0] ){
+			
+			/*	Set the initial height of the element	*/
+			if(initialHeight == 0){
+				initialHeight = $("body[mc-layout='front'] > .mc-header").height();
+			}
+			
+			/*	Reduces the height, and move the image	*/
+			if((initialHeight - currentScroll) > 56){
+				$("body[mc-layout='front'] > .mc-header").css("height", (initialHeight - currentScroll));
+				
+				if(( $("body[mc-layout='front'] > .mc-header img").height() - $("body[mc-layout='front'] > .mc-header").height() ) > 0 ){
+					var newMargin = ($("body[mc-layout='front'] > .mc-header img").height() - $("body[mc-layout='front'] > .mc-header").height());
+					$("body[mc-layout='front'] > .mc-header img").css("margin-top", (newMargin * (-0.5)));
+				}
+			}
+			
+			/*	Modify the opacity	*/
+			if((initialHeight - currentScroll) >= 56 && (initialHeight - currentScroll) <= 96){
+				var newOpacity = ((initialHeight - currentScroll - 56) * 0.025);
+				$("body[mc-layout='front'] > .mc-header img").css("opacity", newOpacity);
+				
+			}
+			else if((initialHeight - currentScroll) < 56){
+				var newOpacity = 0;
+				$("body[mc-layout='front'] > .mc-header img").css("opacity", newOpacity);
+				$("body[mc-layout='front'] > .mc-header").css("height", 56);
+				
+			}else if((initialHeight - currentScroll) > 96){
+				var newOpacity = 1;
+				$("body[mc-layout='front'] > .mc-header img").css("opacity", newOpacity);
+				
+			}
+			
+			if(currentScroll <= 0){
+				$("body[mc-layout='front'] > .mc-header img").css("margin-top", 0);
+			}
 		}
 		
 		prevScroll = currentScroll;
