@@ -9,10 +9,15 @@
 	/* ---   Rafael Pérez García		------------------------------------------------------ */
 	/* ---   at ImperdibleSoft		------------------------------------------------------ */
 	/* -------------------------------------------------------------------------------------- */
-	/* --- http://www.imperdiblesoft.com						---------------------------- */
-	/* --- http://www.github.io/imperdiblesoft/material-css		---------------------- */
+	/* --- http://www.imperdiblesoft.com		----------------------------------------- */
+	/* --- https://github.com/ImperdibleSoft/material-css		---------------------- */
 	/* -------------------------------------------------------------------------------------- */
 
+v0.3.3
+	+Added: Image on header supported when body has "Front" layout.
+	+Fixed: Animations
+	
+	
 v0.3.2
 	+ Added: Autocomplete menu.
 	+ Added: New icons (details, animal).
