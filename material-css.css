@@ -1465,6 +1465,11 @@ body[mc-layout="front"] > .mc-header .mc-button{
 	display: block;
 }
 
+.mc-input.mc-invisible input:not(:focus), .mc-input.mc-invisible textarea:not(:focus){
+  border-color: transparent;
+  cursor: default;
+}
+
 .mc-dropdown{
 	position: relative;
 	display: inline-block;

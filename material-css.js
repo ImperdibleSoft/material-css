@@ -910,6 +910,11 @@ $(document).ready(function(mc){
 		mc.updateFloatingButtons();
 	});
 	
+	/*	Detect location change	*/
+	window.addEventListener("hashchange", function(){
+		$("body > .mc-header").removeAttr("style");
+	})
+	
 	function animateSlider(elem, touch){
 		
 		/*	Calculate the element width	*/
