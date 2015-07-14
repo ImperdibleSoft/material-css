@@ -16,6 +16,8 @@
 v0.3.3
 	+Added: Image on header supported when body has "Front" layout.
 	+Added: Invisible inputs
+	+Added: Click animations
+	+Added: Hover animations on cards
 	+Fixed: Animations
 	
 	

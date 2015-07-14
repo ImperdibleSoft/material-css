@@ -89,6 +89,7 @@ a{
 	color: #2196F3;
 	
 	cursor: pointer;
+	overflow: hidden;
 }
 .mc-selectable{
 	-webkit-touch-callout: initial;
@@ -97,9 +98,6 @@ a{
     -moz-user-select: initial;
     -ms-user-select: initial;
     user-select: initial;
-}
-.mc-clickable{
-	cursor: pointer;
 }
 .mc-blured{
 	-webkit-filter: blur(6px);
@@ -123,6 +121,9 @@ a{
 .mc-right{
 	float: right;
 }
+.mc-clickable{
+	position: relative;
+}
 .mc-centered{
 	float: none;
 	
@@ -137,6 +138,26 @@ a{
 
 .mc-hidden{
 	display: none!important;
+}
+
+/*	CLICK EFFECTS	*/
+.ink {
+	position: absolute;
+	display: block; 
+	
+	background: rgba(122, 122, 122, 0.5);
+	border-radius: 100%;
+	transform: scale(0);
+}
+.ink.animate {
+	transition: all 0s;
+	animation: ripple 0.4s linear;
+}
+@keyframes ripple {
+	100% {
+		opacity: 0;
+		transform: scale(2.5)
+	}
 }
 
 /*	NAVIGATION	*/
@@ -1180,6 +1201,7 @@ body[mc-layout="front"] .mc-floating{
 	border: none;
 	background-color: #f9f9f9;
 	cursor: pointer;
+	overflow: hidden;
 	box-sizing: border-box;
 	
 	appearance: none;
@@ -1198,9 +1220,8 @@ body[mc-layout="front"] > .mc-header .mc-button{
 .mc-button-raised{
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
 }
-.mc-button-raised:active{
-	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
-
+.mc-button-raised:hover, .mc-button-raised:active{
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.8);
 }
 .mc-button-icon{
 	width: 38px;
@@ -1918,8 +1939,12 @@ body[mc-layout="front"] > .mc-header .mc-button{
 	padding: 0px;
 	
 	background: white;
+	border-radius: 2px;
 	box-sizing: border-box;
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+}
+.mc-card:hover{
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
 }
 .mc-card:nth-child(2n+1) {
 	clear: both;
