@@ -13,13 +13,17 @@
 	/* --- https://github.com/ImperdibleSoft/material-css		---------------------- */
 	/* -------------------------------------------------------------------------------------- */
 
-v0.3.3
+v0.4
 	+Added: Image on header supported when body has "Front" layout.
 	+Added: Invisible inputs
 	+Added: Click animations
 	+Added: Hover animations on cards
+  +Added: Pills (mc-pill, mc-big-pill)
+  +Added: Text aligns (left, justified, center, right)
+  +Added: Divider (mc-divider)
+  +Added: Blured (mc-blured)
+  +Fixed: Selectable (Now everything is selectable)
 	+Fixed: Animations
-	
 	
 v0.3.2
 	+ Added: Autocomplete menu.
