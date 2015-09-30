@@ -1,0 +1,123 @@
+
+body{
+  .mc-content{
+    position: relative;
+    display: block;
+    float: left;
+
+    width: 80%;
+    top: 114px;
+    left: 20%;
+    padding: 20px;
+
+    box-sizing: border-box;
+    z-index: 50;
+    &.mc-untabbed{
+      top: 56px;
+    }
+  }
+  &:not([mc-layout="front"]) > .mc-content{
+    background: $false-white;
+  }
+  &[mc-layout="front"] > .mc-content{
+    width: 60%;
+    top: 0px;
+    left: 20%;
+    margin-top: 0px;
+    padding-top: 230px;
+  }
+}
+
+// PCs, Tablets, Mobiles and Smartwatches
+@media screen and (max-width: $max-pcs){
+
+  // Tablets, Mobiles and Smartwatches
+  @media screen and (max-width: $max-tablets){
+
+    .mc-content{
+      padding: 4px;
+    }
+
+    // Mobiles and Smartwatches
+    @media screen and (max-width: $max-mobiles){
+
+      body{
+        & > .mc-content{
+          width: 100%;
+          left: 0px;
+        }
+        &[mc-layout="front"] > .mc-content{
+          width: calc(100% - 96px);
+          left: 48px;
+          top: 230px;
+          padding: 0px;
+        }
+      }
+    }
+  }
+}
+
+// Mobiles, Tablets, PCs and TVs
+@media screen and (min-width: $min-mobiles){
+
+  // Tablets, PCs and TVs
+  @media screen and (min-width: $min-tablets){
+
+    body{
+      &[mc-layout="no-nav"] > .mc-content{
+        width: 80%;
+        left: 10%;
+      }
+      &[mc-layout="hidden-nav"] > .mc-content{
+        width: 80%;
+        left: 10%;
+        margin-top: 0px;
+        padding-top: 40px;
+      }
+    }
+    // PCs and TVs
+    @media screen and (min-width: $min-pcs){
+
+    }
+  }
+}
+
+// Smartwatches
+@media screen and (max-width: $max-watches){
+
+}
+
+// Only Mobiles
+@media screen and (min-width: $min-mobiles) and (max-width: $max-mobiles){
+
+  // Landscape
+  @media screen and (orientation: landscape){
+
+  }
+}
+
+// Only Tablets
+@media screen and (min-width: $min-tablets) and (max-width: $max-tablets){
+
+  .mc-content{
+    width: calc(80% - 4px);
+  }
+
+  // Landscape
+  @media screen and (orientation: landscape){
+
+  }
+}
+
+// Only PCs
+@media screen and (min-width: $min-pcs) and (max-width: $max-pcs){
+
+}
+
+// Only TVs
+@media screen and (min-width: $min-tvs){
+  body > .mc-content{
+    width: 85%;
+    left: 15%;
+  }
+}

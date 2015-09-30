@@ -107,6 +107,9 @@ body{
     transition: 0s all;
     -webkit-transition: 0s all;
     -moz-transition: 0s all;
+    *{
+      display: none;
+    }
     img{
       position: absolute;
       display: block;
@@ -121,12 +124,6 @@ body{
       transition: 0s all;
       -webkit-transition: 0s all;
       -moz-transition: 0s all;
-    }
-    .mc-title, .mc-right{
-      display: none;
-    }
-    & > .mc-tabs-bar{
-      display: none;
     }
   }
 
@@ -195,33 +192,40 @@ body{
 
 // Smartwatches
 @media screen and (max-width: $max-watches){
-  body > .mc-header{
-    *{
-      display: none;
+  body{
+    &:not([mc-layout="front"]) > .mc-header{
+      .mc-header-line{
+        display: inline-block;
+      }
     }
-    .mc-header-line{
-      display: inline-block;
-      height: 72px;
-
+    &{
       *{
         display: none;
       }
-      .mc-title, .mc-subtitle, .mc-text, .mc-note{
+      & > .mc-header > .mc-header-line{
         display: inline-block;
+        height: 72px;
 
-        width: 100%;
+        *{
+          display: none;
+        }
+        .mc-title, .mc-subtitle, .mc-text, .mc-note{
+          display: inline-block;
 
-        font-size: 28px;
-        text-align: center;
+          width: 100%;
+
+          font-size: 28px;
+          text-align: center;
+        }
       }
-    }
-    .mc-tabs-bar{
-      &.mc-opened{
-        height: 64px;
-      }
-      .mc-tab{
-        height: 64px;
-        font-size: 24px;
+        & > .mc-header > .mc-tabs-bar{
+        &.mc-opened{
+          height: 64px;
+        }
+        .mc-tab{
+          height: 64px;
+          font-size: 24px;
+        }
       }
     }
   }
