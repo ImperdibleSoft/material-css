@@ -13,6 +13,7 @@ var cached = require('gulp-cached');
 var remember = require('gulp-remember');
 var compass = require('gulp-compass');
 var minifyCSS = require('gulp-minify-css');
+var webserver = require('gulp-webserver');
 
 var jsGlob = 'src/**/*.js';
 var htmlGlob = 'src/modules/**/*.html';
@@ -31,13 +32,13 @@ gulp.src = function() {
   );
 };
 
-gulp.task('default', ['all','watch']);                // gulp will run through everything once first then set the watcher
+gulp.task('default', ['all','watch', 'webserver']);                // gulp will run through everything once first then set the watcher
 gulp.task('all', ['js','sass']);                           // use 'gulp all' to run everything once
 
 gulp.task('watch', function() {
-  var watcher = gulp.watch(jsGlob, ['js']);           // watch the same files in our scripts task
+  var watcher = gulp.watch(jsGlob, ['js']);             // watch the same files in our scripts task
   watcher.on('change', function (event) {
-    if (event.type === 'deleted') {                   // if a file is deleted, forget about it
+    if (event.type === 'deleted') {                         // if a file is deleted, forget about it
       delete cached.caches.scripts[event.path];       // gulp-cached remove api
       remember.forget('scripts', event.path);         // gulp-remember remove api
     }
@@ -65,11 +66,20 @@ gulp.task('sass', function () {
       css: 'dist/css',
       sass: 'src/sass',
       image: 'dist/images',
-      comments: true
+      comments: false
     }))
     .pipe(rename({dirname:'css'}))
     .pipe(gulp.dest(dest))
     .pipe(minifyCSS())
     .pipe(rename({extname: '.min.css'}))
     .pipe(gulp.dest(dest));
+});
+
+gulp.task('webserver', function() {
+  gulp.src('dist')
+    .pipe(webserver({
+      livereload: true,
+      directoryListing: false,
+      open: true
+    }));
 });

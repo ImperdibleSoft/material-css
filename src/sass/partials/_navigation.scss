@@ -389,4 +389,9 @@ body{
 // Only TVs
 @media screen and (min-width: $min-tvs){
 
+  body{
+    & > .mc-navigation .mc-header-menu, & > .mc-navigation{
+      width: 15%;
+    }
+  }
 }

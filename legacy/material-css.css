@@ -3865,22 +3865,8 @@ table.mc-table .mc-table-hidden {
     bottom: 4px;
   }
   
-  body > .mc-header, .mc-header .mc-header-content, .mc-content{
-    width: 100%;
-    left: 0px;
-  }
-  body > .mc-header, .mc-header .mc-header-content{
-    z-index: 250;
-  }
-  body > .mc-header .mc-tabs-bar .mc-tab.mc-selected{
-    padding: 18px 20px;
-    padding-bottom: 17px;
-  }
-  body[mc-layout="no-nav"] > .mc-header [mc-action="menu"]{
-    display: none;
-  }
-  
   .mc-content{
+    width: 100%;
     left: 0px;
   }
   body[mc-layout="front"] > .mc-content{
@@ -4111,9 +4097,6 @@ table.mc-table .mc-table-hidden {
 /*	Tablet	*/
 @media only screen and (min-width: 721px) and (max-width: 1024px){
   
-  .mc-header .mc-header-content{
-    width: 100%;
-  }
   .mc-content{
     width: calc(80% - 4px);
   }
@@ -4210,16 +4193,6 @@ table.mc-table .mc-table-hidden {
     width: 250px;
   }
   
-  .mc-header [mc-action="menu"]{
-    display: none;
-  }
-  body[mc-layout="front"] .mc-header [mc-action="menu"]{
-    display: inline-block;
-  }
-  body[mc-layout="hidden-nav"] > .mc-header [mc-action="menu"]{
-    display: inline-block;
-  }
-  
   body > .mc-floating-window[mc-layout="share"]{
     float: none;
     
@@ -4291,11 +4264,7 @@ table.mc-table .mc-table-hidden {
 /*	TV	*/
 @media only screen and (min-width: 1280px){
   
-  body > .mc-navigation .mc-header-menu, body > .mc-navigation{
-    width: 15%;
-  }
-  
-  body > .mc-header, .mc-content, body > .mc-footer{
+  .mc-content, body > .mc-footer{
     width: 85%;
     left: 15%;
   }

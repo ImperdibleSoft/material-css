@@ -1,0 +1,142 @@
+<html>
+  <head>
+    <title>Material CSS</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <!--Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <!--
+    <link rel="shortcut icon" href="images/material_logo.png" />
+    <link rel="icon" href="images/material_logo.png" sizes="192x192">
+     -->
+    <meta name="theme-color" content="#FF9800">
+
+    <!-- iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- <link rel="apple-touch-icon" href="images/material_logo.png" /> -->
+
+    <!-- Custom files -->
+    <script src="http://www.material-css.com/js/jquery.min.js" type="text/javascript"></script>
+    <script src="http://www.material-css.com/js/custom.js" type="text/javascript"></script>
+    <script src="http://www.material-css.com/material-css.js" type="text/javascript"></script>
+
+    <!-- Material-CSS files -->
+    <link href="css/main.css" type="text/css" rel="stylesheet" />
+    <!-- <link href="http://www.material-css.com/color-themes/default-theme.css" type="text/css" rel="stylesheet" /> -->
+  </head>
+  <body>
+    <div class="mc-smartwatch"></div>
+
+		<nav class="mc-navigation">
+
+			<div id="normalMenuHeader" class="mc-header-menu">
+				<span class="mc-button mc-button-icon" mc-action="menu"></span>
+				<span class="mc-button mc-button-icon mc-clickable" mc-action="prev"></span>
+				<label class="mc-title">Menu</label>
+			</div>
+
+			<div id="accountinfoMenuheader" class="mc-header-menu mc-hidden">
+				<img src="images/material_logo.png" />
+				<h1 class="mc-title">Rafael Perez Garcia</h1>
+				<h1 class="mc-text">real.lord.fido@gmail.com</h1>
+			</div>
+
+			<a href="#/" class="mc-nav-item" mc-action="home">Home</a>
+
+			<a class="mc-nav-item" mc-action="cards" mc-menu="elements">Elements</a>
+			<span class="mc-collapsed" mc-submenu="elements">
+				<a href="#/texts" class="mc-nav-subitem">texts</a>
+				<a href="#/icons" class="mc-nav-subitem">icons</a>
+				<a href="#/navigation" class="mc-nav-subitem">navigation</a>
+				<a href="#/header" class="mc-nav-subitem">header</a>
+				<!-- <a href="#/content" class="mc-nav-subitem">content</a> -->
+				<a href="#/footer" class="mc-nav-subitem">footer</a>
+				<a href="#/layouts" class="mc-nav-subitem">layouts</a>
+				<a href="#/buttons" class="mc-nav-subitem">buttons</a>
+				<a href="#/lists" class="mc-nav-subitem">lists</a>
+				<a href="#/cards" class="mc-nav-subitem">cards</a>
+				<a href="#/dialogs" class="mc-nav-subitem">dialogs</a>
+				<a href="#/notifications" class="mc-nav-subitem">notifications</a>
+				<a href="#/tables" class="mc-nav-subitem">tables</a>
+				<a href="#/forms" class="mc-nav-subitem">forms</a>
+				<a href="#/floating-windows" class="mc-nav-subitem">Floating windows</a>
+			</span>
+
+			<a class="mc-nav-item" mc-action="colors" mc-menu="colorize">Colorize</a>
+			<span class="mc-collapsed" mc-submenu="colorize">
+				<a href="#/color-classes" class="mc-nav-subitem">Color classes</a>
+				<a href="#/custom-colors" class="mc-nav-subitem">Custom Colors</a>
+				<a href="#/color-themes" class="mc-nav-subitem">Color Themes</a>
+			<!-- <a href="#/theme-creator" class="mc-nav-item" mc-action="settings">Theme Creator</a> -->
+			</span>
+
+			<a href="#/tricks" class="mc-nav-item" mc-action="settings">MC-Tricks</a>
+			<a href="#/about" class="mc-nav-item" mc-action="info">About</a>
+			<a href="#/support" class="mc-nav-item" mc-action="help">support</a>
+		</nav>
+
+    <header class="mc-header" style="margin-top: 0px;">
+			<div class="mc-header-line">
+				<span class="mc-button mc-button-icon mc-clickable" mc-action="menu"><span class="ink animate" style="height: 38px; width: 38px; top: 1px; left: 6px;"></span></span>
+				<label class="mc-title">texts</label>
+				<div class="mc-right">
+					<a href="#/?download" class="mc-button mc-button-icon mc-clickable" mc-action="download" mc-tooltip="download"></a>
+					<div class="mc-tooltip" mc-item="download">Download</div>
+
+					<span class="mc-button mc-button-icon mc-clickable" mc-action="share" onclick="javascript:openShare()" mc-tooltip="share"></span>
+					<div class="mc-tooltip" mc-item="share">Share</div>
+				</div>
+			</div>
+			<div class="mc-tabs-bar mc-opened" style="min-width: 506px; left: 0px;">
+        <a href="#/texts?titles" class="mc-tab" mc-section="titles">Titles</a>
+        <a href="#/texts?subtitles" class="mc-tab" mc-section="subtitles">Subtitles</a>
+        <a href="#/texts?normal" class="mc-tab" mc-section="normal">Normal text</a>
+        <a href="#/texts?notes" class="mc-tab" mc-section="notes">Notes</a>
+        <a href="#/texts?others" class="mc-tab" mc-section="others">Others</a>
+        <a href="#/texts?titles" class="mc-tab" mc-section="titles">Titles</a>
+        <a href="#/texts?subtitles" class="mc-tab" mc-section="subtitles">Subtitles</a>
+        <a href="#/texts?normal" class="mc-tab" mc-section="normal">Normal text</a>
+        <a href="#/texts?notes" class="mc-tab" mc-section="notes">Notes</a>
+        <a href="#/texts?others" class="mc-tab" mc-section="others">Others</a>
+      </div>
+		</header>
+
+    <p>Hola</p>
+    <p>Hola</p>
+    <p>Hola</p>
+    <p>Hola</p>
+    <p>Hola</p>
+    <p>Hola</p>
+    <p>Hola</p>
+    <p>Hola</p>
+    <p>Hola</p>
+    <p>Hola</p>
+    <p>Hola</p>
+    <p>Hola</p>
+    <p>Hola</p>
+    <p>Hola</p>
+    <p>Hola</p>
+    <p>Hola</p>
+    <p>Hola</p>
+    <p>Hola</p>
+    <p>Hola</p>
+    <p>Hola</p>
+    <p>Hola</p>
+    <p>Hola</p>
+    <p>Hola</p>
+    <p>Hola</p>
+    <p>Hola</p>
+    <p>Hola</p>
+    <p>Hola</p>
+    <p>Hola</p>
+    <p>Hola</p>
+    <p>Hola</p>
+    <p>Hola</p>
+    <p>Hola</p>
+    <p>Hola</p>
+    <p>Hola</p>
+    <p>Hola</p>
+
+  </body>
+</html>

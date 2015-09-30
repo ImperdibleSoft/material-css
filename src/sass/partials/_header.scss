@@ -152,6 +152,21 @@ body{
     // Mobiles and Smartwatches
     @media screen and (max-width: $max-mobiles){
 
+        body > .mc-header, .mc-header .mc-header-content{
+          width: 100%;
+          left: 0px;
+        }
+        body > .mc-header, .mc-header .mc-header-content{
+          z-index: 250;
+        }
+        body > .mc-header .mc-tabs-bar .mc-tab.mc-selected{
+          padding: 18px 20px;
+          padding-bottom: 17px;
+        }
+        body[mc-layout="no-nav"] > .mc-header [mc-action="menu"]{
+          display: none;
+        }
+
     }
   }
 }
@@ -162,6 +177,15 @@ body{
   // Tablets, PCs and TVs
   @media screen and (min-width: $min-tablets){
 
+    body{
+      & > .mc-header [mc-action="menu"]{
+        display: none;
+      }
+      &[mc-layout="front"] > .mc-header [mc-action="menu"], &[mc-layout="hidden-nav"] > .mc-header [mc-action="menu"]{
+        display: inline-block;
+      }
+    }
+
     // PCs and TVs
     @media screen and (min-width: $min-pcs){
 
@@ -171,7 +195,36 @@ body{
 
 // Smartwatches
 @media screen and (max-width: $max-watches){
+  body > .mc-header{
+    *{
+      display: none;
+    }
+    .mc-header-line{
+      display: inline-block;
+      height: 72px;
 
+      *{
+        display: none;
+      }
+      .mc-title, .mc-subtitle, .mc-text, .mc-note{
+        display: inline-block;
+
+        width: 100%;
+
+        font-size: 28px;
+        text-align: center;
+      }
+    }
+    .mc-tabs-bar{
+      &.mc-opened{
+        height: 64px;
+      }
+      .mc-tab{
+        height: 64px;
+        font-size: 24px;
+      }
+    }
+  }
 }
 
 // Only Mobiles
@@ -185,6 +238,10 @@ body{
 
 // Only Tablets
 @media screen and (min-width: $min-tablets) and (max-width: $max-tablets){
+
+  .mc-header .mc-header-content{
+    width: 100%;
+  }
 
   // Landscape
   @media screen and (orientation: landscape){
@@ -200,4 +257,8 @@ body{
 // Only TVs
 @media screen and (min-width: $min-tvs){
 
+  body > .mc-header{
+    width: 85%;
+    left: 15%;
+  }
 }
