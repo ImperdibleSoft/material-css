@@ -15,17 +15,18 @@ $nav-bar: 220px;
 // Default colors
 $white: #fff;
 $false-white: #f9f9f9;
-$tone-0: #f0f0f0;
-$tone-1: #eee;
-$tone-2: #e0e0e0;
+$header-bg: #e0e0e0;
+$nav-bg: #eee;
+$buttons-bg: #f0f0f0;
 $black: #000;
 
 // Material colors
 
 // text colors
+$light-text: #f7f7f7;
 $dark-text: #212121;
 
 // misc
 $light-border: 1px solid rgba($black, 0.2);
 $shadow: rgba($black, 0.2);
-$default-background: 'images/material-09.jpg';
+$default-background: url('images/material-09.jpg');

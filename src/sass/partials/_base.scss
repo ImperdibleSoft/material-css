@@ -216,25 +216,29 @@ body .mc-smartwatch{
 // Smartwatches
 @media screen and (max-width: $max-watches){
   .mc-watch{display: inline-block!important;}
-  body .mc-smartwatch{
-    position: fixed;
-    display: block;
-    float: left;
 
-    width: 320px;
-    height: 320px;
-    top: 0;
-    left: 0;
-    padding: 0px;
-    margin: 0px;
+  body{
+    font-size: 20px;
+    .mc-smartwatch{
+      position: fixed;
+      display: block;
+      float: left;
 
-    background: -moz-radial-gradient(transparent 159px, rgba(0,0,0,1) 159px);
-    background: -webkit-radial-gradient(transparent 159px, rgba(0,0,0,1) 159px);
-    background: -ms-radial-gradient(transparent 159px, rgba(0,0,0,1) 159px);
-    background: -o-radial-gradient(159px);
-    opacity: 1;
-    pointer-events: none;
-    z-index: 100000;
+      width: 320px;
+      height: 320px;
+      top: 0;
+      left: 0;
+      padding: 0px;
+      margin: 0px;
+
+      background: -moz-radial-gradient(transparent 159px, rgba(0,0,0,1) 159px);
+      background: -webkit-radial-gradient(transparent 159px, rgba(0,0,0,1) 159px);
+      background: -ms-radial-gradient(transparent 159px, rgba(0,0,0,1) 159px);
+      background: -o-radial-gradient(159px);
+      opacity: 1;
+      pointer-events: none;
+      z-index: 100000;
+    }
   }
 }
 

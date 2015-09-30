@@ -1,5 +1,4 @@
 
-/*	NAVIGATION	*/
 body{
 
   // Standard navigation
@@ -15,7 +14,7 @@ body{
     padding: 0px;
     padding-bottom: 56px;
 
-    background-color: $tone-1;
+    background-color: $nav-bg;
     box-sizing: border-box;
     box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
     overflow-x: hidden;
@@ -34,12 +33,12 @@ body{
       left: 0px;
       top: 0px;
 
-      background-color: $tone-2;
+      background-color: $header-bg;
       box-shadow: 1px 0px 6px $shadow;
       box-sizing: border-box;
       z-index: 250;
       .mc-button{
-        background-color: $tone-2;
+        background-color: $header-bg;
       }
     }
     &.mc-accountinfo{
@@ -52,7 +51,7 @@ body{
         height: auto;
         padding-bottom: 12px;
 
-        background: url($default-background) no-repeat center center;
+        background: $default-background no-repeat center center;
         background-size: 120%;
         *{
           clear: both;
