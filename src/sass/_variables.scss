@@ -12,19 +12,51 @@ $min-tvs: $max-pcs + 1px;
 // Sizes
 $nav-bar: 220px;
 
-// Default colors
+// Standard colors
 $white: #fff;
 $false-white: #f9f9f9;
+$black: #000;
+
+// Text colors
+$light-text: #f7f7f7;
+$dark-text: #212121;
+
+// Material colors
+$white: #fff;
+$grey: #9E9E9E;
+$black: #000;
+$yellow: #FFEB3B;
+$darkyellow: #FFC107;
+$orange: #FF9800;
+$darkorange: #FF5722;
+$red: #F44336;
+$darkred: #C62828;
+$pink: #E91E63;
+$purple: #9C27B0;
+$darkpurple: #584064;
+$lightblue: #03A9F4;
+$blue: #2196F3;
+$darkblue: #3F51B5;
+$lightgreen: #8BC34A;
+$green: #4CAF50;
+$darkgreen: #009688;
+$brown: #795548;
+
+$imperdiblesoft: #2b8d17;
+$imperdiblesoft-active: #257a14;
+$facebook: #3B5998;
+$facebook-active: #324C81;
+$google: #DB4437;
+$google-active: #C53929;
+$twitter: #55ACEE;
+$twitter-active: #88C9F9;
+$spotify: #84BD00;
+$spotify-active: #84BD00;
+
+// Section colors
 $header-bg: #e0e0e0;
 $nav-bg: #eee;
 $buttons-bg: #f0f0f0;
-$black: #000;
-
-// Material colors
-
-// text colors
-$light-text: #f7f7f7;
-$dark-text: #212121;
 
 // misc
 $light-border: 1px solid rgba($black, 0.2);

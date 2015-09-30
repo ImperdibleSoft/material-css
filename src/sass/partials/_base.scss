@@ -170,7 +170,10 @@ body .mc-smartwatch{
 @import "partials/header";
 @import "partials/texts";
 @import "partials/buttons";
+@import "partials/colors";
 
+// No implemented
+/*
 @import "partials/cards";
 @import "partials/dialogs";
 @import "partials/floating-windows";
@@ -181,7 +184,7 @@ body .mc-smartwatch{
 @import "partials/lists";
 @import "partials/notifications";
 @import "partials/tables";
-
+*/
 
 .mc-watch, .mc-mobile, .mc-tablet, .mc-pc, .mc-tv{
   display: none!important;

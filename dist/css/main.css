@@ -903,6 +903,312 @@ body[mc-layout="front"] > .mc-header .mc-button {
   background-repeat: no-repeat;
 }
 
+.mc-color-white {
+  color: #fff !important;
+}
+
+.mc-color-grey {
+  color: #9E9E9E !important;
+}
+
+.mc-color-black {
+  color: #000 !important;
+}
+
+.mc-color-yellow {
+  color: #FFEB3B !important;
+}
+
+.mc-color-darkyellow {
+  color: #FFC107 !important;
+}
+
+.mc-color-orange {
+  color: #FF9800 !important;
+}
+
+.mc-color-darkorange {
+  color: #FF5722 !important;
+}
+
+.mc-color-red {
+  color: #F44336 !important;
+}
+
+.mc-color-darkred {
+  color: #C62828 !important;
+}
+
+.mc-color-pink {
+  color: #E91E63 !important;
+}
+
+.mc-color-purple {
+  color: #9C27B0 !important;
+}
+
+.mc-color-darkpurple {
+  color: #584064 !important;
+}
+
+.mc-color-lightblue {
+  color: #03A9F4 !important;
+}
+
+.mc-color-blue {
+  color: #2196F3 !important;
+}
+
+.mc-color-darkblue {
+  /*	Indigo	*/
+  color: #3F51B5 !important;
+}
+
+.mc-color-lightgreen {
+  color: #8BC34A !important;
+}
+
+.mc-color-green {
+  color: #4CAF50 !important;
+}
+
+.mc-color-darkgreen {
+  /*	Teal	*/
+  color: #009688 !important;
+}
+
+.mc-color-brown {
+  color: #795548 !important;
+}
+
+.mc-color-imperdiblesoft {
+  color: #2b8d17 !important;
+}
+
+.mc-color-facebook {
+  color: #3B5998 !important;
+}
+
+.mc-color-twitter {
+  color: #55ACEE !important;
+}
+
+.mc-color-google {
+  color: #DB4437 !important;
+}
+
+.mc-color-spotify {
+  color: #84BD00 !important;
+}
+
+/*	COMMON BACKGROUNDS	*/
+.mc-bg-transparent {
+  background-color: transparent !important;
+}
+
+.mc-bg-white {
+  background-color: #fff !important;
+}
+
+.mc-clickable.mc-bg-white:active {
+  background-color: #fff !important;
+}
+
+.mc-bg-grey {
+  background-color: #9E9E9E !important;
+}
+
+.mc-clickable.mc-bg-grey:active {
+  background-color: #858585 !important;
+}
+
+.mc-bg-black {
+  background-color: #000 !important;
+}
+
+.mc-bg-yellow {
+  background-color: #FFEB3B !important;
+}
+
+.mc-clickable.mc-bg-yellow:active {
+  background-color: #ffe608 !important;
+}
+
+.mc-bg-darkyellow {
+  /*	Amber	*/
+  background-color: #FFC107 !important;
+}
+
+.mc-clickable.mc-bg-darkyellow:active {
+  background-color: #d39e00 !important;
+}
+
+.mc-bg-orange {
+  background-color: #FF9800 !important;
+}
+
+.mc-clickable.mc-bg-orange:active {
+  background-color: #cc7a00 !important;
+}
+
+.mc-bg-darkorange {
+  background-color: #FF5722 !important;
+}
+
+.mc-clickable.mc-bg-darkorange:active {
+  background-color: #ee3900 !important;
+}
+
+.mc-bg-red {
+  background-color: #F44336 !important;
+}
+
+.mc-clickable.mc-bg-red:active {
+  background-color: #ea1c0d !important;
+}
+
+.mc-bg-darkred {
+  background-color: #C62828 !important;
+}
+
+.mc-clickable.mc-bg-darkred:active {
+  background-color: #9c1f1f !important;
+}
+
+.mc-bg-pink {
+  background-color: #E91E63 !important;
+}
+
+.mc-clickable.mc-bg-pink:active {
+  background-color: #c1134e !important;
+}
+
+.mc-bg-purple {
+  background-color: #9C27B0 !important;
+}
+
+.mc-clickable.mc-bg-purple:active {
+  background-color: #771e86 !important;
+}
+
+.mc-bg-darkpurple {
+  background-color: #584064 !important;
+}
+
+.mc-clickable.mc-bg-darkpurple:active {
+  background-color: #3d2c45 !important;
+}
+
+.mc-bg-lightblue {
+  background-color: #03A9F4 !important;
+}
+
+.mc-clickable.mc-bg-lightblue:active {
+  background-color: #0286c2 !important;
+}
+
+.mc-bg-blue {
+  background-color: #2196F3 !important;
+}
+
+.mc-clickable.mc-bg-blue:active {
+  background-color: #0c7cd5 !important;
+}
+
+.mc-bg-darkblue {
+  /*	Indigo	*/
+  background-color: #3F51B5 !important;
+}
+
+.mc-clickable.mc-bg-darkblue:active {
+  background-color: #32408f !important;
+}
+
+.mc-bg-lightgreen {
+  background-color: #8BC34A !important;
+}
+
+.mc-clickable.mc-bg-lightgreen:active {
+  background-color: #71a436 !important;
+}
+
+.mc-bg-green {
+  background-color: #4CAF50 !important;
+}
+
+.mc-clickable.mc-bg-green:active {
+  background-color: #3d8b40 !important;
+}
+
+.mc-bg-darkgreen {
+  /*	Teal	*/
+  background-color: #009688 !important;
+}
+
+.mc-clickable.mc-bg-darkgreen:active {
+  background-color: #00635a !important;
+}
+
+.mc-bg-brown {
+  background-color: #795548 !important;
+}
+
+.mc-clickable.mc-bg-brown:active {
+  background-color: #593f35 !important;
+}
+
+.mc-bg-imperdiblesoft {
+  background-color: #2b8d17 !important;
+}
+
+.mc-clickable.mc-bg-imperdiblesoft:active {
+  background-color: #257a14 !important;
+}
+
+.mc-bg-facebook {
+  background-color: #3B5998 !important;
+}
+
+.mc-clickable.mc-bg-facebook:active {
+  background-color: #324C81 !important;
+}
+
+.mc-bg-google {
+  background-color: #DB4437 !important;
+}
+
+.mc-clickable.mc-bg-google:active {
+  background-color: #C53929 !important;
+}
+
+.mc-bg-twitter {
+  background-color: #55ACEE !important;
+}
+
+.mc-clickable.mc-bg-twitter:active {
+  background-color: #88C9F9 !important;
+}
+
+.mc-bg-spotify {
+  background-color: #84BD00 !important;
+}
+
+.mc-clickable.mc-bg-spotify:active {
+  background-color: #84BD00 !important;
+}
+
+/*
+@import "partials/cards";
+@import "partials/dialogs";
+@import "partials/floating-windows";
+@import "partials/footer";
+@import "partials/forms";
+@import "partials/icons";
+@import "partials/layouts";
+@import "partials/lists";
+@import "partials/notifications";
+@import "partials/tables";
+*/
 .mc-watch, .mc-mobile, .mc-tablet, .mc-pc, .mc-tv {
   display: none !important;
 }

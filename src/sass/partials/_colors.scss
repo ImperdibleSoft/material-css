@@ -1,0 +1,220 @@
+.mc-color-white{
+  color: $white!important;
+}
+.mc-color-grey{
+  color: $grey!important;
+}
+.mc-color-black{
+  color: $black!important;
+}
+.mc-color-yellow{
+  color: $yellow!important;
+}
+.mc-color-darkyellow{
+  color: $darkyellow!important;
+}
+.mc-color-orange{
+  color: $orange!important;
+}
+.mc-color-darkorange{
+  color: $darkorange!important;
+}
+.mc-color-red{
+  color: $red!important;
+}
+.mc-color-darkred{
+  color: $darkred!important;
+}
+.mc-color-pink{
+  color: $pink!important;
+}
+.mc-color-purple{
+  color: $purple!important;
+}
+.mc-color-darkpurple{
+  color: $darkpurple!important;
+}
+.mc-color-lightblue{
+  color: $lightblue!important;
+}
+.mc-color-blue{
+  color: $blue!important;
+}
+.mc-color-darkblue{ /*	Indigo	*/
+  color: $darkblue!important;
+}
+.mc-color-lightgreen{
+  color: $lightgreen!important;
+}
+.mc-color-green{
+  color: $green!important;
+}
+.mc-color-darkgreen{ /*	Teal	*/
+  color: $darkgreen!important;
+}
+.mc-color-brown{
+  color: $brown!important;
+}
+
+.mc-color-imperdiblesoft{
+  color: $imperdiblesoft!important;
+}
+.mc-color-facebook{
+  color: $facebook!important;
+}
+.mc-color-twitter{
+  color: $twitter!important;
+}
+.mc-color-google{
+  color: $google!important;
+}
+.mc-color-spotify{
+  color: $spotify!important;
+}
+
+/*	COMMON BACKGROUNDS	*/
+.mc-bg-transparent{
+  background-color: transparent!important;
+}
+.mc-bg-white{
+  background-color: $white!important;
+}
+.mc-clickable.mc-bg-white:active{
+  background-color: $white!important;
+}
+.mc-bg-grey{
+  background-color: $grey!important;
+}
+.mc-clickable.mc-bg-grey:active{
+  background-color: darken($grey, 10%)!important;
+}
+.mc-bg-black{
+  background-color: $black!important;
+}
+.mc-bg-yellow{
+  background-color: $yellow!important;
+}
+.mc-clickable.mc-bg-yellow:active{
+  background-color: darken($yellow, 10%)!important;
+}
+.mc-bg-darkyellow{ /*	Amber	*/
+  background-color: $darkyellow!important;
+}
+.mc-clickable.mc-bg-darkyellow:active{
+  background-color: darken($darkyellow, 10%)!important;
+}
+.mc-bg-orange{
+  background-color: $orange!important;
+}
+.mc-clickable.mc-bg-orange:active{
+  background-color: darken($orange, 10%)!important;
+}
+.mc-bg-darkorange{
+  background-color: $darkorange!important;
+}
+.mc-clickable.mc-bg-darkorange:active{
+  background-color: darken($darkorange, 10%)!important;
+}
+.mc-bg-red{
+  background-color: $red!important;
+}
+.mc-clickable.mc-bg-red:active{
+  background-color: darken($red, 10%)!important;
+}
+.mc-bg-darkred{
+  background-color: $darkred!important;
+}
+.mc-clickable.mc-bg-darkred:active{
+  background-color: darken($darkred, 10%)!important;
+}
+.mc-bg-pink{
+  background-color: $pink!important;
+}
+.mc-clickable.mc-bg-pink:active{
+  background-color: darken($pink, 10%)!important;
+}
+.mc-bg-purple{
+  background-color: $purple!important;
+}
+.mc-clickable.mc-bg-purple:active{
+  background-color: darken($purple, 10%)!important;
+}
+.mc-bg-darkpurple{
+  background-color: $darkpurple!important;
+}
+.mc-clickable.mc-bg-darkpurple:active{
+  background-color: darken($darkpurple, 10%)!important;
+}
+.mc-bg-lightblue{
+  background-color: $lightblue!important;
+}
+.mc-clickable.mc-bg-lightblue:active{
+  background-color: darken($lightblue, 10%)!important;
+}
+.mc-bg-blue{
+  background-color: $blue!important;
+}
+.mc-clickable.mc-bg-blue:active{
+  background-color: darken($blue, 10%)!important;
+}
+.mc-bg-darkblue{ /*	Indigo	*/
+  background-color: $darkblue!important;
+}
+.mc-clickable.mc-bg-darkblue:active{
+  background-color: darken($darkblue, 10%)!important;
+}
+.mc-bg-lightgreen{
+  background-color: $lightgreen!important;
+}
+.mc-clickable.mc-bg-lightgreen:active{
+  background-color: darken($lightgreen, 10%)!important;
+}
+.mc-bg-green{
+  background-color: $green!important;
+}
+.mc-clickable.mc-bg-green:active{
+  background-color: darken($green, 10%)!important;
+}
+.mc-bg-darkgreen{ /*	Teal	*/
+  background-color: $darkgreen!important;
+}
+.mc-clickable.mc-bg-darkgreen:active{
+  background-color: darken($darkgreen, 10%)!important;
+}
+.mc-bg-brown{
+  background-color: $brown!important;
+}
+.mc-clickable.mc-bg-brown:active{
+  background-color: darken($brown, 10%)!important;
+}
+
+.mc-bg-imperdiblesoft{
+  background-color: $imperdiblesoft!important;
+}
+.mc-clickable.mc-bg-imperdiblesoft:active{
+  background-color: $imperdiblesoft-active!important;
+}
+.mc-bg-facebook{
+  background-color: $facebook!important;
+}
+.mc-clickable.mc-bg-facebook:active{
+  background-color: $facebook-active!important;
+}
+.mc-bg-google{
+  background-color: $google!important;
+}
+.mc-clickable.mc-bg-google:active{
+  background-color: $google-active!important;
+}
+.mc-bg-twitter{
+  background-color: $twitter!important;
+}
+.mc-clickable.mc-bg-twitter:active{
+  background-color: $twitter-active!important;
+}
+.mc-bg-spotify{
+  background-color: $spotify!important;
+}
+.mc-clickable.mc-bg-spotify:active{
+  background-color: $spotify-active!important;
+}
