@@ -1,0 +1,31 @@
+// Media query sizes
+$min-watches: 0px;
+$max-watches: 320px;
+$min-mobiles: $max-watches + 1px;
+$max-mobiles: 720px;
+$min-tablets: $max-mobiles + 1px;
+$max-tablets: 1024px;
+$min-pcs: $max-tablets + 1px;
+$max-pcs: 1366px;
+$min-tvs: $max-pcs + 1px;
+
+// Sizes
+$nav-bar: 220px;
+
+// Default colors
+$white: #fff;
+$false-white: #f9f9f9;
+$tone-0: #f0f0f0;
+$tone-1: #eee;
+$tone-2: #e0e0e0;
+$black: #000;
+
+// Material colors
+
+// text colors
+$dark-text: #212121;
+
+// misc
+$light-border: 1px solid rgba($black, 0.2);
+$shadow: rgba($black, 0.2);
+$default-background: 'images/material-09.jpg';

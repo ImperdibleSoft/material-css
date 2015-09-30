@@ -1,0 +1,144 @@
+
+// Standard buttons
+.mc-button{
+  position: relative;
+  display: inline-block;
+  float: left;
+
+  height: 38px;
+  margin: 9px 5px;
+  padding: 10px;
+
+  font-size:14px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none!important;
+
+  border: none;
+  background-color: $tone-0;
+  cursor: default!important;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  &:disabled{
+    /*color: #BDBDBD!important;*/
+
+    background-color: rgba(128, 128, 128, 0.2)!important;
+    box-shadow: none!important;
+    cursor: not-allowed!important;
+  }
+}
+
+// Header buttons on Front layout
+body[mc-layout="front"] > .mc-header .mc-button{
+  background-color: transparent!important;
+}
+
+// Raised buttons
+.mc-button-raised{
+  box-shadow: 0px 1px 3px $shadow;
+  &:hover, &:active{
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.8);
+  }
+}
+
+// Icon buttons
+.mc-button-icon{
+  width: 38px;
+  height: 38px;
+
+  border-radius: 50%;
+  background-size: 24px;
+  background-position: 7px 7px;
+  background-repeat: no-repeat;
+}
+.mc-floating .mc-button-icon{
+  position: relative;
+  display: block;
+  float: right;
+
+  width: 56px;
+  height: 56px;
+  margin-top: 10px;
+
+  background-size: 42px;
+  clear: both;
+}
+
+// Text buttons, Combined buttons
+.mc-button-text, .mc-button-comb{
+  padding: 10px 20px;
+  padding-top: 11px;
+
+  border-radius: 2px;
+}
+.mc-button-comb{
+  padding-left: 40px;
+
+  background-size: 24px;
+  background-position: 10px 7px;
+  background-repeat: no-repeat;
+}
+
+// PCs, Tablets, Mobiles and Smartwatches
+@media screen and (max-width: $max-pcs){
+
+  // Tablets, Mobiles and Smartwatches
+  @media screen and (max-width: $max-tablets){
+
+    // Mobiles and Smartwatches
+    @media screen and (max-width: $max-mobiles){
+
+    }
+  }
+}
+
+// Mobiles, Tablets, PCs and TVs
+@media screen and (min-width: $min-mobiles){
+
+  // Tablets, PCs and TVs
+  @media screen and (min-width: $min-tablets){
+
+    // PCs and TVs
+    @media screen and (min-width: $min-pcs){
+
+    }
+  }
+}
+
+// Smartwatches
+@media screen and (max-width: $max-watches){
+
+}
+
+// Only Mobiles
+@media screen and (min-width: $min-mobiles) and (max-width: $max-mobiles){
+
+  // Landscape
+  @media screen and (orientation: landscape){
+
+  }
+}
+
+// Only Tablets
+@media screen and (min-width: $min-tablets) and (max-width: $max-tablets){
+
+  // Landscape
+  @media screen and (orientation: landscape){
+
+  }
+}
+
+// Only PCs
+@media screen and (min-width: $min-pcs) and (max-width: $max-pcs){
+
+}
+
+// Only TVs
+@media screen and (min-width: $min-tvs){
+
+}

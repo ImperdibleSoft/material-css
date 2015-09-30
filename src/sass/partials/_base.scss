@@ -1,0 +1,271 @@
+// Typografy
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,500,700);
+
+// Bases
+*{
+  color: #212121;
+  line-height: normal;
+
+  transition: 0.4s all;
+  -webkit-transition: 0.4s all;
+  -moz-transition: 0.4s all;
+}
+html{
+  position: relative;
+  display: block;
+  float: left;
+
+  width: 100%;
+  height: 100%;
+  min-width: 320px;
+  min-height: 320px;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+body{
+  position: relative;
+  display: block;
+  float: left;
+
+  width: 100%;
+  height: 100%;
+  min-width: 320px;
+  min-height: 320px;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+
+  background: #f9f9f9;
+  /* -webkit-transform: translate3d(0,0,0); */
+}
+body.mc-noscroll{
+  position:fixed;
+
+  overflow:hidden;
+}
+br{
+  clear: both;
+}
+a{
+  color: #2196F3;
+
+  cursor: pointer;
+  overflow: hidden;
+}
+
+// Floats
+.mc-left{
+  float: left;
+}
+.mc-right{
+  float: right;
+}
+.mc-centered{
+  float: none;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+}
+
+// Text alignament
+.mc-text-left{
+  text-align: left;
+}
+.mc-text-justified{
+  text-align: justify;
+}
+.mc-text-center{
+  text-align: center;
+}
+.mc-text-right{
+  text-align: right;
+}
+
+// Pills
+.mc-pill, .mc-big-pill{
+  position: relative;
+  display: inline-block;
+  float: none;
+
+  color: white;
+  text-transform: uppercase;
+
+  background-color: grey;
+}
+.mc-pill{
+  top: -10px;
+  padding: 1px 5px;
+
+  font-size: 60%;
+
+  border-radius: 4px;
+}
+.mc-big-pill{
+  padding: 2px 8px;
+
+  font-size: 80%;
+
+  border-radius: 5px;
+}
+
+// Statuses and options
+.mc-clickable{
+  position: relative;
+  cursor: pointer;
+}
+.mc-blured{
+  -webkit-filter: blur(6px);
+  filter: blur(6px);
+}
+.mc-divider{
+  position: relative;
+  display: block;
+  float: left;
+
+  width: 100%;
+  height: 1px;
+  margin: 4px 0px;
+
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.mc-hidden{
+  display: none!important;
+}
+.mc-clear{
+  clear: both;
+}
+
+/*	CLICK EFFECTS	*/
+.ink {
+  position: absolute;
+  display: block;
+
+  background: rgba(122, 122, 122, 0.5);
+  border-radius: 100%;
+  transform: scale(0);
+}
+.ink.animate {
+  transition: all 0s;
+  animation: ripple 0.4s linear;
+}
+@keyframes ripple {
+  100% {
+    opacity: 0;
+    transform: scale(2.5)
+  }
+}
+
+// Smartwarches simulators
+body .mc-smartwatch{
+  display: none;
+}
+
+// Imports
+@import "partials/navigation";
+@import "partials/header";
+@import "partials/texts";
+@import "partials/buttons";
+
+@import "partials/cards";
+@import "partials/dialogs";
+@import "partials/floating-windows";
+@import "partials/footer";
+@import "partials/forms";
+@import "partials/icons";
+@import "partials/layouts";
+@import "partials/lists";
+@import "partials/notifications";
+@import "partials/tables";
+
+
+.mc-watch, .mc-mobile, .mc-tablet, .mc-pc, .mc-tv{
+  display: none!important;
+}
+
+// PCs, Tablets, Mobiles and Smartwatches
+@media screen and (max-width: $max-pcs){
+
+  // Tablets, Mobiles and Smartwatches
+  @media screen and (max-width: $max-tablets){
+
+    // Mobiles and Smartwatches
+    @media screen and (max-width: $max-mobiles){
+
+    }
+  }
+}
+
+// Mobiles, Tablets, PCs and TVs
+@media screen and (min-width: $min-mobiles){
+
+  // Tablets, PCs and TVs
+  @media screen and (min-width: $min-tablets){
+
+    // PCs and TVs
+    @media screen and (min-width: $min-pcs){
+
+    }
+  }
+}
+
+// Smartwatches
+@media screen and (max-width: $max-watches){
+  .mc-watch{display: inline-block!important;}
+  body .mc-smartwatch{
+    position: fixed;
+    display: block;
+    float: left;
+
+    width: 320px;
+    height: 320px;
+    top: 0;
+    left: 0;
+    padding: 0px;
+    margin: 0px;
+
+    background: -moz-radial-gradient(transparent 159px, rgba(0,0,0,1) 159px);
+    background: -webkit-radial-gradient(transparent 159px, rgba(0,0,0,1) 159px);
+    background: -ms-radial-gradient(transparent 159px, rgba(0,0,0,1) 159px);
+    background: -o-radial-gradient(159px);
+    opacity: 1;
+    pointer-events: none;
+    z-index: 100000;
+  }
+}
+
+// Only Mobiles
+@media screen and (min-width: $min-mobiles) and (max-width: $max-mobiles){
+
+  .mc-mobile{display: inline-block!important;}
+
+  // Landscape
+  @media screen and (orientation: landscape){
+
+  }
+}
+
+// Only Tablets
+@media screen and (min-width: $min-tablets) and (max-width: $max-tablets){
+
+  .mc-tablet{display: inline-block!important;}
+
+  // Landscape
+  @media screen and (orientation: landscape){
+
+  }
+}
+
+// Only PCs
+@media screen and (min-width: $min-pcs) and (max-width: $max-pcs){
+  .mc-pc{display: inline-block!important;}
+}
+
+// Only TVs
+@media screen and (min-width: $min-tvs){
+  .mc-tv{display: inline-block!important;}
+}
