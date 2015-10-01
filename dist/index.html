@@ -97,9 +97,66 @@
       </div>
 		</header>
 
-    <section class="mc-content">
-      <p class="mc-text">Here is the content</p>
-    </section>
+    <div class="mc-content ng-scope">
+      <div class="mc-layout ng-scope" mc-layout="1">
+      	<div class="mc-layout" mc-layout-size="big">
+      		<div class="mc-card">
+      			<div class="mc-header">
+              <img src="images/material_logo.png">
+      				<h1 class="mc-title">Material CSS</h1>
+      			</div>
+      			<div class="mc-content">
+      				<p class="mc-text">Material CSS is a light framework that allows you to create webs with Material Design look&amp;feel. </p>
+      				<p class="mc-text">This is a responsive design framework, that will allow you to create websites prepeared for be displayed on mobiles, tablets, PCs and TVs.</p>
 
+      				<div class="mc-right">
+      					<a class="mc-button mc-button-comb mc-clickable mc-button-raised" href="#/texts" mc-action="next">Read more</a>
+      				</div>
+      			</div>
+      			<div class="mc-footer">
+      				<a class="mc-button mc-button-text mc-clickable" onclick="javascript:scrollToSection('use-it')">Use It</a>
+      				<a class="mc-button mc-button-text mc-clickable" onclick="javascript:scrollToSection('install-it')">Install It</a>
+      				<a class="mc-button mc-button-text mc-clickable" onclick="javascript:scrollToSection('download')">Download</a>
+      			</div>
+      		</div>
+
+      		<div class="mc-card" alt="use-it">
+      			<div class="mc-content">
+      				<h2 class="mc-title">Use it</h2>
+      				<p class="mc-text">If you want, you can use our hosted files.</p>
+      				<h2 class="mc-subtitle">CSS File</h2>
+      				<p class="mc-text">The main framework, that allows you to use special classes.</p>
+      				<p class="mc-note mc-selectable">&lt;link href="http://www.material-css.com/material-css.css" type="text/css" rel="stylesheet" /&gt;</p>
+
+      				<h2 class="mc-subtitle">JS File</h2>
+      				<p class="mc-text">Open/close the menu bar in movile enviroments and resize some images.</p>
+      				<p class="mc-note mc-selectable">&lt;script src="http://www.material-css.com/material-css.js" type="text/javascript"&gt;&lt;/script&gt;</p>
+      			</div>
+      		</div>
+
+      		<div class="mc-card" alt="install-it">
+      			<div class="mc-content">
+      				<h2 class="mc-title">Install it</h2>
+      				<p class="mc-text">You can install our NPM module by running the next command.</p>
+      				<p class="mc-note mc-selectable">npm install materialcss</p>
+      			</div>
+      		</div>
+
+      		<div class="mc-card" alt="download">
+      			<div class="mc-content">
+      				<h2 class="mc-title">Download</h2>
+      				<p class="mc-text">Download Material CSS and use it where you want!</p>
+      				<!-- ngIf: versions.stable --><a data-ng-if="versions.stable" href="downloads/material-css-v0.4.zip" class="mc-button mc-button-comb mc-clickable mc-button-raised ng-scope" mc-action="download">Stable</a><!-- end ngIf: versions.stable -->
+      				<!-- ngIf: versions.beta --><a data-ng-if="versions.beta" href="downloads/material-css-v0.4b.zip" class="mc-button mc-button-comb mc-clickable mc-button-raised ng-scope" mc-action="download">Beta</a><!-- end ngIf: versions.beta -->
+      				<!-- ngIf: versions.nightly --><a data-ng-if="versions.nightly" href="downloads/material-css-v0.4n.zip" class="mc-button mc-button-comb mc-clickable mc-button-raised ng-scope" mc-action="download">Nightly</a><!-- end ngIf: versions.nightly -->
+      				<br>
+      				<!-- ngIf: versions.stable --><p class="mc-note ng-binding ng-scope" data-ng-if="versions.stable">Stable version: v0.4</p><!-- end ngIf: versions.stable -->
+      				<!-- ngIf: versions.beta --><p class="mc-note ng-binding ng-scope" data-ng-if="versions.beta">Beta version: v0.4b</p><!-- end ngIf: versions.beta -->
+      				<!-- ngIf: versions.nightly --><p class="mc-note ng-binding ng-scope" data-ng-if="versions.nightly">Nightly version (web): v0.4n</p><!-- end ngIf: versions.nightly -->
+      			</div>
+      		</div>
+      	</div>
+      </div>
+    </div>
   </body>
 </html>

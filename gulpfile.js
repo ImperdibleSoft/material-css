@@ -1,18 +1,18 @@
 'use strict';
 
 var gulp = require('gulp');
-var gutil = require('gulp-util');
-var plumber = require('gulp-plumber');
-var uglify = require('gulp-uglify');
-var concat = require('gulp-concat');
-var jshint = require('gulp-jshint');
-var rename = require('gulp-rename');
-var header = require('gulp-header');
-var footer = require('gulp-footer');
 var cached = require('gulp-cached');
-var remember = require('gulp-remember');
 var compass = require('gulp-compass');
+var concat = require('gulp-concat');
+var footer = require('gulp-footer');
+var header = require('gulp-header');
+var jshint = require('gulp-jshint');
 var minifyCSS = require('gulp-minify-css');
+var plumber = require('gulp-plumber');
+var remember = require('gulp-remember');
+var rename = require('gulp-rename');
+var uglify = require('gulp-uglify');
+var gutil = require('gulp-util');
 var webserver = require('gulp-webserver');
 
 var jsGlob = 'src/**/*.js';

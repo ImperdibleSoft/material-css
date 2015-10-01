@@ -677,17 +677,17 @@ body[mc-layout="hidden-nav"] > .mc-header {
   }
 }
 @media screen and (max-width: 320px) {
-  body:not([mc-layout="front"]) > .mc-header .mc-header-line {
-    display: inline-block;
-  }
-  body * {
-    display: none;
-  }
-  body > .mc-header > .mc-header-line {
+  body:not([mc-layout="front"]) > .mc-header > .mc-header-line {
     display: inline-block;
     height: 72px;
   }
-  body > .mc-header > .mc-header-line * {
+  body:not([mc-layout="front"]) > .mc-header > .mc-header-line * {
+    display: none;
+  }
+  body:not([mc-layout="front"]) > .mc-header > .mc-tabs-bar.mc-opened {
+    height: 64px;
+  }
+  body[mc-layout="front"] > .mc-header * {
     display: none;
   }
   body > .mc-header > .mc-header-line .mc-title, body > .mc-header > .mc-header-line .mc-subtitle, body > .mc-header > .mc-header-line .mc-text, body > .mc-header > .mc-header-line .mc-note {
@@ -696,10 +696,7 @@ body[mc-layout="hidden-nav"] > .mc-header {
     font-size: 28px;
     text-align: center;
   }
-  body > .mc-header > .mc-tabs-bar.mc-opened {
-    height: 64px;
-  }
-  body > .mc-header > .mc-tabs-bar .mc-tab {
+  body > .mc-header > .mc-tabs-bar > .mc-tab {
     height: 64px;
     font-size: 24px;
   }
@@ -715,7 +712,7 @@ body[mc-layout="hidden-nav"] > .mc-header {
     left: 15%;
   }
 }
-body .mc-content {
+body > .mc-content {
   position: relative;
   display: block;
   float: left;
@@ -726,7 +723,7 @@ body .mc-content {
   box-sizing: border-box;
   z-index: 50;
 }
-body .mc-content.mc-untabbed {
+body > .mc-content.mc-untabbed {
   top: 56px;
 }
 body:not([mc-layout="front"]) > .mc-content {
@@ -767,6 +764,11 @@ body[mc-layout="front"] > .mc-content {
     left: 10%;
     margin-top: 0px;
     padding-top: 40px;
+  }
+}
+@media screen and (max-width: 320px) {
+  body > .mc-content {
+    top: 136px;
   }
 }
 @media screen and (min-width: 721px) and (max-width: 1024px) {
@@ -1310,6 +1312,7 @@ body[mc-layout="front"] > .mc-header .mc-button {
   body .mc-smartwatch {
     position: fixed;
     display: block;
+    /* display: none; */
     float: left;
     width: 320px;
     height: 320px;

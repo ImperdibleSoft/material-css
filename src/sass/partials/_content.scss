@@ -1,6 +1,6 @@
 
 body{
-  .mc-content{
+  & > .mc-content{
     position: relative;
     display: block;
     float: left;
@@ -84,7 +84,9 @@ body{
 
 // Smartwatches
 @media screen and (max-width: $max-watches){
-
+  body > .mc-content{
+    top: 136px;
+  }
 }
 
 // Only Mobiles

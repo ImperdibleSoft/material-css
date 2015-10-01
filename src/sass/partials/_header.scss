@@ -194,21 +194,24 @@ body{
 @media screen and (max-width: $max-watches){
   body{
     &:not([mc-layout="front"]) > .mc-header{
-      .mc-header-line{
-        display: inline-block;
-      }
-    }
-    &{
-      *{
-        display: none;
-      }
-      & > .mc-header > .mc-header-line{
+      & > .mc-header-line{
         display: inline-block;
         height: 72px;
-
         *{
           display: none;
         }
+      }
+      & > .mc-tabs-bar.mc-opened{
+        height: 64px;
+      }
+    }
+    &[mc-layout="front"] > .mc-header{
+      *{
+        display: none;
+      }
+    }
+    & > .mc-header{
+      & > .mc-header-line{
         .mc-title, .mc-subtitle, .mc-text, .mc-note{
           display: inline-block;
 
@@ -218,14 +221,9 @@ body{
           text-align: center;
         }
       }
-        & > .mc-header > .mc-tabs-bar{
-        &.mc-opened{
-          height: 64px;
-        }
-        .mc-tab{
-          height: 64px;
-          font-size: 24px;
-        }
+      & > .mc-tabs-bar > .mc-tab{
+        height: 64px;
+        font-size: 24px;
       }
     }
   }
