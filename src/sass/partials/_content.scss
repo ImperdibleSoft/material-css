@@ -72,7 +72,6 @@ body{
         width: 80%;
         left: 10%;
         margin-top: 0px;
-        padding-top: 40px;
       }
     }
     // PCs and TVs
@@ -101,13 +100,27 @@ body{
 // Only Tablets
 @media screen and (min-width: $min-tablets) and (max-width: $max-tablets){
 
-  .mc-content{
-    width: calc(80% - 4px);
+  body{
+    & > .mc-content{
+      width: 80%;
+    }
+    &[mc-layout="front"] > .mc-content{
+      width: 80%;
+      top: 0px;
+      left: 10%;
+      margin-top: 0px;
+      padding-top: 230px;
+    }
   }
 
   // Landscape
   @media screen and (orientation: landscape){
 
+    body > .mc-content{
+      width: 80%;
+      left: 20%;
+      padding: 20px;
+    }
   }
 }
 

@@ -2,11 +2,13 @@
 
 var gulp = require('gulp');
 var cached = require('gulp-cached');
+var clean = require('gulp-clean');
 var compass = require('gulp-compass');
 var concat = require('gulp-concat');
-var footer = require('gulp-footer');
-var header = require('gulp-header');
+var filter = require('gulp-filter');
+var inject = require('gulp-inject');
 var jshint = require('gulp-jshint');
+var mainBowerFiles = require('main-bower-files');
 var minifyCSS = require('gulp-minify-css');
 var plumber = require('gulp-plumber');
 var remember = require('gulp-remember');
@@ -15,72 +17,159 @@ var uglify = require('gulp-uglify');
 var gutil = require('gulp-util');
 var webserver = require('gulp-webserver');
 
-var jsGlob = 'src/**/*.js';
-var htmlGlob = 'src/modules/**/*.html';
-var sassGlob = 'src/**/*.scss';
-var dest = 'dist';
+var devEnv = './src';
+var prodEnv = './dist';
+var bowerGlob = './bower_components';
+var libGlob = './src/lib/**/*.min.js';
+var htmlGlob = './src/modules/**/*.html';
+var sassGlob = './src/**/*.scss';
+var jsGlob = './src/modules/**/*.js';
 
-var gulp_src = gulp.src;
-gulp.src = function() {
-  return gulp_src.apply(gulp, arguments)
-    .pipe(plumber(function(error) {
-      // Output an error message
-      gutil.log(gutil.colors.red('Error (' + error.plugin + '): ' + error.message));
-      // emit the end event, to properly end the task
-      this.emit('end');
-    })
-  );
-};
+// Parse all ./src files into ./dist folder
+gulp.task('build', ['index', 'html', 'sass', 'vendorCSS', 'js', 'vendorJS']);
 
-gulp.task('default', ['all','watch', 'webserver']);                // gulp will run through everything once first then set the watcher
-gulp.task('all', ['js','sass']);                           // use 'gulp all' to run everything once
+// Inject dependencies on index.html and launc webserver
+gulp.task('default', ['inject', 'webserver']);
 
-gulp.task('watch', function() {
-  var watcher = gulp.watch(jsGlob, ['js']);             // watch the same files in our scripts task
-  watcher.on('change', function (event) {
-    if (event.type === 'deleted') {                         // if a file is deleted, forget about it
-      delete cached.caches.scripts[event.path];       // gulp-cached remove api
-      remember.forget('scripts', event.path);         // gulp-remember remove api
-    }
-  });
-  gulp.watch(sassGlob, ['sass']);
+// Clean production directory
+gulp.task('clean', function(){
+  gulp.src(prodEnv + '/*', {read: false})
+    .pipe(clean());
+
+  console.log("Cleaning...");
 });
 
-gulp.task('js', function() {
-  gulp.src(jsGlob)
-		.pipe(cached('scripts'))            // only pass through changed files
-		.pipe(jshint())                     // do special things to the changed files...
-		.pipe(jshint.reporter())            // Dump results
-		.pipe(remember('scripts'))          // add back all files to the stream
-		.pipe(header('(function () {\n'))
-		.pipe(footer('\n})();\n'))
-		.pipe(gulp.dest(dest))
-		.pipe(uglify())
-		.pipe(rename({extname: '.min.js'}))
-		.pipe(gulp.dest(dest));
+// Parse index.html file and save it into ./dist/
+gulp.task('index', function() {
+	gulp.src('src/index.html')
+		.pipe(gulp.dest(prodEnv));
+
+  console.log("Moving index.html...");
 });
 
+// Parse html files and save them into ./dist/templates
+gulp.task('html', function() {
+  gulp.src(htmlGlob, {base: devEnv + '/modules'})
+    .pipe(rename(function(path) {
+      path.dirname += '/../';
+    }))
+    .pipe(gulp.dest(prodEnv+'/templates'));
+
+  console.log("Moving HTML files...");
+});
+
+// Parse sass files and save them into ./dist/css
+// Also move images and fonts
 gulp.task('sass', function () {
   gulp.src(sassGlob)
     .pipe(compass({
-      css: 'dist/css',
-      sass: 'src/sass',
-      image: 'dist/images',
-      comments: false
-    }))
-    .pipe(rename({dirname:'css'}))
-    .pipe(gulp.dest(dest))
-    .pipe(minifyCSS())
-    .pipe(rename({extname: '.min.css'}))
-    .pipe(gulp.dest(dest));
+      css: prodEnv + '/css',
+      image: prodEnv + '/images',
+      sass: devEnv + '/sass',
+      comments: true
+    }));
+
+	gulp.src(devEnv + '/images/*.*')
+		.pipe(gulp.dest(prodEnv + '/images'));
+
+	gulp.src(devEnv + '/fonts/*.*')
+		.pipe(gulp.dest(prodEnv + '/fonts'));
+
+  console.log("Moving CSS files...");
 });
 
-gulp.task('webserver', function() {
-  gulp.src('dist')
+// Copy all vendor CSS files into ./dist/css
+gulp.task('vendorCSS', function(){
+  gulp.src([bowerGlob + '/**/*.css', '!**/*.min.css'])
+    .pipe(rename({dirname:'css', extname: '-v.css'}))
+    .pipe(gulp.dest(prodEnv));
+});
+
+// Parse js files and save them into ./dist/js
+gulp.task('js', function(){
+  gulp.src(jsGlob)
+    .pipe(rename({dirname:'js'}))
+    .pipe(gulp.dest(prodEnv));
+
+  console.log("Moving JS files...");
+});
+
+// Copy all vendor JS files into ./dist/lib
+gulp.task('vendorJS', function(){
+  gulp.src(mainBowerFiles(['**/*.js', '!**/index.*']))
+    .pipe(gulp.dest(prodEnv + '/lib'));
+});
+
+// Inject files into ./dist/index.html
+gulp.task('inject', function(){
+  gulp.src(prodEnv + '/index.html')
+    .pipe(inject(
+      gulp.src([
+        prodEnv + '/lib/jquery.js',
+        prodEnv + '/lib/angular.js',
+        prodEnv + '/lib/*.js',
+        prodEnv + '/js/core.js',
+        prodEnv + '/js/*.js'
+      ]), {ignorePath: 'dist', addRootSlash: false}
+    ))
+    .pipe(inject(
+      gulp.src([
+        prodEnv + '/**/*-v.css',
+        prodEnv + '/css/master.css',
+        prodEnv + '/css/master.min.css'
+      ]), {ignorePath: 'dist', addRootSlash: false}
+    ))
+    .pipe(gulp.dest(prodEnv));
+
+  console.log("Injecting files into index.html...");
+});
+
+// Concat all CSS, Libraries and JS files on ./dist/css/main.css
+gulp.task('compact', function(){
+
+  // Compact CSS
+  gulp.src(prodEnv + '/css/*.css')
+    .pipe(clean())
+    .pipe(minifyCSS())
+    .pipe(concat('master.min.css'))
+    .pipe(gulp.dest(prodEnv + '/css'));
+
+  // Compact JS
+  gulp.src([
+    prodEnv + '/js/core.js',
+    prodEnv + '/js/*.js'
+  ])
+    .pipe(clean())
+    .pipe(concat('app.min.js'))
+		.pipe(uglify())
+    .pipe(gulp.dest(prodEnv + '/js'));
+
+  // Compact Libs
+  gulp.src([
+    prodEnv + '/lib/jquery.js',
+    prodEnv + '/lib/angular.js',
+    prodEnv + '/lib/*.js'
+  ])
+    .pipe(clean())
+    .pipe(concat('vendors.min.js'))
+		.pipe(uglify())
+    .pipe(gulp.dest(prodEnv + '/lib'));
+
+  console.log("Minimizing files...");
+});
+
+// Watch for changes into ./src and make a new build
+gulp.task('watcher', function(){
+  gulp.watch([devEnv + '/**/*.scss'], ['sass']);
+  gulp.watch([devEnv + '/**/*.js'], ['js']);
+  gulp.watch([devEnv + '/**/*.html'], ['html']);
+})
+
+// Launch webserver
+gulp.task('webserver', ['watcher'], function() {
+  gulp.src(prodEnv)
     .pipe(webserver({
-      port: 8081,
       livereload: true,
-      directoryListing: false,
       open: true
     }));
 });

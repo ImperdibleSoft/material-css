@@ -205,7 +205,7 @@ body{
   }
 
   // Hidden-nav layout
-  [mc-layout="hidden-nav"] > .mc-navigation{
+  &[mc-layout="hidden-nav"] > .mc-navigation{
     position: fixed;
     display: inline-block;
     float: left;
@@ -222,7 +222,7 @@ body{
         display: inline-block;
       }
     }
-    &, &.mc-header-menu{
+    &, & > .mc-header-menu{
       margin-left: -$nav-bar;
       &.opened{
         margin-left: 0px;

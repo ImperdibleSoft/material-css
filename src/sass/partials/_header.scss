@@ -106,9 +106,7 @@ body{
     transition: 0s all;
     -webkit-transition: 0s all;
     -moz-transition: 0s all;
-    *{
-      display: none;
-    }
+
     img{
       position: absolute;
       display: block;
@@ -123,6 +121,9 @@ body{
       transition: 0s all;
       -webkit-transition: 0s all;
       -moz-transition: 0s all;
+    }
+    & > .mc-header-line *:not([mc-action="menu"]), & > .mc-tabs-bar{
+      display: none;
     }
   }
 
@@ -242,6 +243,9 @@ body{
 
   .mc-header .mc-header-content{
     width: 100%;
+  }
+  body[mc-layout="front"] > .mc-header{
+    height: 300px;
   }
 
   // Landscape

@@ -1,4 +1,40 @@
 
+// Tables
+table.mc-table{
+  position: relative;
+  display: inline-block;
+  float: left;
+
+  width: 100%;
+  height: auto;
+  padding: 0px;
+  margin: 10px 0px;
+  th, td{
+    position: relative;
+
+    padding: 5px 10px;
+
+    background-color: #F9F9F9;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  th{
+    font-weight: bold;
+    text-align: center;
+
+    background-color: #E0E0E0;
+  }
+  &.mc-horizontal tr:nth-child(2n+1) td{
+    background-color: #F0F0F0;
+  }
+  &.mc-vertical td:nth-child(2n){
+    background-color: #F0F0F0;
+  }
+  .mc-table-hidden {
+    background-color: transparent!important;
+    border: 0px solid transparent!important;
+  }
+}
+
 // PCs, Tablets, Mobiles and Smartwatches
 @media screen and (max-width: $max-pcs){
 

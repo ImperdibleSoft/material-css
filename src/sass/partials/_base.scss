@@ -162,11 +162,17 @@ body .mc-smartwatch{
 }
 
 // Imports
+// Layouts
 @import "partials/navigation";
 @import "partials/header";
 @import "partials/content";
+@import "partials/footer";
+
+// Components
 @import "partials/texts";
 @import "partials/buttons";
+
+// Misc
 @import "partials/colors";
 
 // No implemented
@@ -174,7 +180,6 @@ body .mc-smartwatch{
 @import "partials/cards";
 @import "partials/dialogs";
 @import "partials/floating-windows";
-@import "partials/footer";
 @import "partials/forms";
 @import "partials/icons";
 @import "partials/layouts";
