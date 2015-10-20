@@ -195,13 +195,10 @@ body{
     &:not([mc-layout="front"]) > .mc-header{
       & > .mc-header-line{
         display: inline-block;
-        height: 72px;
-        *{
-          display: none;
-        }
+        height: 48px;
       }
       & > .mc-tabs-bar.mc-opened{
-        height: 64px;
+        height: 48px;
       }
     }
     &[mc-layout="front"] > .mc-header{
@@ -216,13 +213,13 @@ body{
 
           width: 100%;
 
-          font-size: 28px;
+          font-size: 20px;
           text-align: center;
         }
       }
       & > .mc-tabs-bar > .mc-tab{
-        height: 64px;
-        font-size: 24px;
+        height: 48px;
+        font-size: 16px;
       }
     }
   }

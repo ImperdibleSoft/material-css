@@ -6,7 +6,7 @@
 /* --- aplicable to webapps. Supports any JS framework ----------------------- */
 /* -------------------------------------------------------------------------------------- */
 /* --- Developed by:				----------------------------------------------------------- */
-/* ---   Rafael P├⌐rez Garc├¡a		------------------------------------------------------- */
+/* ---   Rafael P├®rez Garc├¡a		------------------------------------------------------- */
 /* ---   at ImperdibleSoft		--------------------------------------------------------- */
 /* -------------------------------------------------------------------------------------- */
 /* --- http://www.github.io/imperdiblesoft/material-css	----------------------- */
@@ -674,13 +674,10 @@ body[mc-layout="hidden-nav"] > .mc-header {
 @media screen and (max-width: 320px) {
   body:not([mc-layout="front"]) > .mc-header > .mc-header-line {
     display: inline-block;
-    height: 72px;
-  }
-  body:not([mc-layout="front"]) > .mc-header > .mc-header-line * {
-    display: none;
+    height: 48px;
   }
   body:not([mc-layout="front"]) > .mc-header > .mc-tabs-bar.mc-opened {
-    height: 64px;
+    height: 48px;
   }
   body[mc-layout="front"] > .mc-header * {
     display: none;
@@ -688,12 +685,12 @@ body[mc-layout="hidden-nav"] > .mc-header {
   body > .mc-header > .mc-header-line .mc-title, body > .mc-header > .mc-header-line .mc-subtitle, body > .mc-header > .mc-header-line .mc-text, body > .mc-header > .mc-header-line .mc-note {
     display: inline-block;
     width: 100%;
-    font-size: 28px;
+    font-size: 20px;
     text-align: center;
   }
   body > .mc-header > .mc-tabs-bar > .mc-tab {
-    height: 64px;
-    font-size: 24px;
+    height: 48px;
+    font-size: 16px;
   }
 }
 @media screen and (min-width: 721px) and (max-width: 1024px) {
@@ -1306,8 +1303,7 @@ body[mc-layout="front"] > .mc-header .mc-button {
   }
   body .mc-smartwatch {
     position: fixed;
-    display: block;
-    /* display: none; */
+    display: none;
     float: left;
     width: 320px;
     height: 320px;

@@ -10,7 +10,7 @@
     "gulp-cached": "^1.0.4",
     "gulp-compass": "^2.0.4",
     "gulp-concat": "^2.5.2",
-    "gulp-filter": "^3.0.1"
+    "gulp-filter": "^3.0.1",
     "gulp-footer": "^1.0.5",
     "gulp-header": "^1.2.2",
     "gulp-jshint": "^1.9.4",

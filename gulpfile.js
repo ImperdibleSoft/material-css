@@ -78,6 +78,7 @@ gulp.task('sass', function () {
 gulp.task('webserver', function() {
   gulp.src('dist')
     .pipe(webserver({
+      host: '0.0.0.0',
       port: 8081,
       livereload: true,
       directoryListing: false,
