@@ -1,6 +1,8 @@
 // Media query sizes
 $min-watches: 0px;
 $max-watches: 320px;
+$min-watch-ar: 0.8;
+$max-watch-ar: 1/1;
 $min-mobiles: $max-watches + 1px;
 $max-mobiles: 720px;
 $min-tablets: $max-mobiles + 1px;
