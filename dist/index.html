@@ -1,20 +1,11 @@
 <html>
   <head>
     <title>Material CSS</title>
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
     <!--Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <!--
-    <link rel="shortcut icon" href="images/material_logo.png" />
-    <link rel="icon" href="images/material_logo.png" sizes="192x192">
-     -->
-    <meta name="theme-color" content="#FF9800">
 
     <!-- iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <!-- <link rel="apple-touch-icon" href="images/material_logo.png" /> -->
 
     <!-- Custom files -->
     <script src="http://www.material-css.com/js/jquery.min.js" type="text/javascript"></script>
@@ -98,6 +89,26 @@
 		</header>
 
     <div class="mc-content ng-scope">
+
+      <table class="mc-table">
+        <thead>
+          <tr>
+            <th>Head 1</th>
+            <th>Head 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Data 1</td>
+            <td>Data 2</td>
+          </tr>
+          <tr>
+            <td>Data 3</td>
+            <td>Data 4</td>
+          </tr>
+        </tbody>
+      </table>
+
       <div class="mc-layout ng-scope" mc-layout="1">
       	<div class="mc-layout" mc-layout-size="big">
       		<div class="mc-card">
@@ -146,13 +157,13 @@
       			<div class="mc-content">
       				<h2 class="mc-title">Download</h2>
       				<p class="mc-text">Download Material CSS and use it where you want!</p>
-      				<!-- ngIf: versions.stable --><a data-ng-if="versions.stable" href="downloads/material-css-v0.4.zip" class="mc-button mc-button-comb mc-clickable mc-button-raised ng-scope" mc-action="download">Stable</a><!-- end ngIf: versions.stable -->
-      				<!-- ngIf: versions.beta --><a data-ng-if="versions.beta" href="downloads/material-css-v0.4b.zip" class="mc-button mc-button-comb mc-clickable mc-button-raised ng-scope" mc-action="download">Beta</a><!-- end ngIf: versions.beta -->
-      				<!-- ngIf: versions.nightly --><a data-ng-if="versions.nightly" href="downloads/material-css-v0.4n.zip" class="mc-button mc-button-comb mc-clickable mc-button-raised ng-scope" mc-action="download">Nightly</a><!-- end ngIf: versions.nightly -->
+      				<a data-ng-if="versions.stable" href="downloads/material-css-v0.4.zip" class="mc-button mc-button-comb mc-clickable mc-button-raised ng-scope" mc-action="download">Stable</a>
+      				<a data-ng-if="versions.beta" href="downloads/material-css-v0.4b.zip" class="mc-button mc-button-comb mc-clickable mc-button-raised ng-scope" mc-action="download">Beta</a>
+      				<a data-ng-if="versions.nightly" href="downloads/material-css-v0.4n.zip" class="mc-button mc-button-comb mc-clickable mc-button-raised ng-scope" mc-action="download">Nightly</a>
       				<br>
-      				<!-- ngIf: versions.stable --><p class="mc-note ng-binding ng-scope" data-ng-if="versions.stable">Stable version: v0.4</p><!-- end ngIf: versions.stable -->
-      				<!-- ngIf: versions.beta --><p class="mc-note ng-binding ng-scope" data-ng-if="versions.beta">Beta version: v0.4b</p><!-- end ngIf: versions.beta -->
-      				<!-- ngIf: versions.nightly --><p class="mc-note ng-binding ng-scope" data-ng-if="versions.nightly">Nightly version (web): v0.4n</p><!-- end ngIf: versions.nightly -->
+      				<p class="mc-note ng-binding ng-scope" data-ng-if="versions.stable">Stable version: v0.4</p>
+      				<p class="mc-note ng-binding ng-scope" data-ng-if="versions.beta">Beta version: v0.4b</p>
+      				<p class="mc-note ng-binding ng-scope" data-ng-if="versions.nightly">Nightly version (web): v0.4n</p>
       			</div>
       		</div>
       	</div>
