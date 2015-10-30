@@ -209,13 +209,16 @@ body{
     }
     & > .mc-header{
       & > .mc-header-line{
+        & > *{
+          display: none;
+        }
         .mc-title, .mc-subtitle, .mc-text, .mc-note{
           display: inline-block;
 
-          width: 100%;
-
-          font-size: 20px;
-          text-align: center;
+          width: calc(100% - 48px);
+        }
+        .mc-button{
+          display: inline-block;
         }
       }
       & > .mc-tabs-bar > .mc-tab{

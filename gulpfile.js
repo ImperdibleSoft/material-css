@@ -19,14 +19,12 @@ var webserver = require('gulp-webserver');
 
 var devEnv = './src';
 var prodEnv = './dist';
-var bowerGlob = './bower_components';
-var libGlob = './src/lib/**/*.min.js';
-var htmlGlob = './src/modules/**/*.html';
+var htmlGlob = './src/templates/**/*.html';
 var sassGlob = './src/**/*.scss';
-var jsGlob = './src/modules/**/*.js';
+var jsGlob = './src/controllers/**/*.js';
 
 // Parse all ./src files into ./dist folder
-gulp.task('build', ['index', 'html', 'sass', 'vendorCSS', 'js', 'vendorJS']);
+gulp.task('build', ['index', 'html', 'sass', 'js']);
 
 // Inject dependencies on index.html and launc webserver
 gulp.task('default', ['inject', 'webserver']);
@@ -78,13 +76,6 @@ gulp.task('sass', function () {
   console.log("Moving CSS files...");
 });
 
-// Copy all vendor CSS files into ./dist/css
-gulp.task('vendorCSS', function(){
-  gulp.src([bowerGlob + '/**/*.css', '!**/*.min.css'])
-    .pipe(rename({dirname:'css', extname: '-v.css'}))
-    .pipe(gulp.dest(prodEnv));
-});
-
 // Parse js files and save them into ./dist/js
 gulp.task('js', function(){
   gulp.src(jsGlob)
@@ -92,12 +83,6 @@ gulp.task('js', function(){
     .pipe(gulp.dest(prodEnv));
 
   console.log("Moving JS files...");
-});
-
-// Copy all vendor JS files into ./dist/lib
-gulp.task('vendorJS', function(){
-  gulp.src(mainBowerFiles(['**/*.js', '!**/index.*']))
-    .pipe(gulp.dest(prodEnv + '/lib'));
 });
 
 // Inject files into ./dist/index.html

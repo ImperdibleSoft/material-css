@@ -340,23 +340,14 @@ body{
     max-width: none;
     margin-left: -100%;
 
-    .mc-header-menu{
-      height: 72px;
-      [mc-action="prev"], [mc-action="menu"]{
-        display: none;
-      }
-      .mc-title, .mc-subtitle, .mc-text, .mc-note{
-        width: 100%;
-        font-size: 28px;
+    .mc-nav-item, .mc-nav-subitem{
+      &.mc-nav-subitem{
         text-align: center;
       }
-    }
-    .mc-nav-item, .mc-nav-subitem{
-      font-size: 24px;
-      text-align: center;
-
       &, &:hover, &[mc-action], &[mc-action]:hover{
-        padding: 20px 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-right: 10px;
         margin: 0px;
       }
     }
