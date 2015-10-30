@@ -84,7 +84,11 @@ body{
 // Smartwatches
 @media screen and (max-width: $max-watches){
   body > .mc-content{
-    top: 136px;
+    top: 104;
+
+    &.untabbed{
+      top: 56px;
+    }
   }
 }
 

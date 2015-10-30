@@ -126,4 +126,9 @@ body{
 // Only TVs
 @media screen and (min-width: $min-tvs){
 
+  body > .mc-footer{
+    width: 85%;
+    left: 15%;
+  }
+
 }

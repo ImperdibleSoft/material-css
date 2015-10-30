@@ -84,6 +84,23 @@ body[mc-layout="front"] > .mc-header .mc-button{
   background-repeat: no-repeat;
 }
 
+// Floating buttons
+.mc-floating{
+  position: fixed;
+  display: block;
+  float: right;
+
+  bottom: 20px;
+  right: 32px;
+
+  z-index: 250;
+}
+body[mc-layout="front"] .mc-floating{
+  top: 112px;
+  right: 25px;
+}
+
+
 // PCs, Tablets, Mobiles and Smartwatches
 @media screen and (max-width: $max-pcs){
 
@@ -113,6 +130,9 @@ body[mc-layout="front"] > .mc-header .mc-button{
 // Smartwatches
 @media screen and (max-width: $max-watches){
 
+  .mc-floating{
+    display: none!important;
+  }
 }
 
 // Only Mobiles
