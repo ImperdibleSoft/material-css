@@ -332,21 +332,29 @@
 // Smartwatches
 @media screen and (max-width: $max-watches){
   .mc-card{
-    .mc-header, .mc-content, .mc-foter{
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 15px;
+
+    & > .mc-header, & > .mc-content, & > .mc-footer{
       img{
         width: 100%;
         height: auto;
         margin: 0px;
         padding: 0px;
       }
-      *{
+      .mc-button-text, .mc-button-comb{
+        width: 90% !important;
+        height: 46px;
+        padding-top: 15px;
+        padding-bottom: 14px;
+        margin: 9px 5%;
+      }
+      & > .mc-title, & > .mc-subtitle, & > .mc-text, & > .mc-note{
         width: 100%;
         margin: 0px;
       }
-    }
-    .mc-button-text, .mc-button-comb{
-      width: 100%!important;
-      margin: 9px 0px;
     }
   }
 }

@@ -159,7 +159,24 @@ a{
 
 // Smartwarches simulators
 body .mc-smartwatch{
+  position: fixed;
   display: none;
+  float: left;
+
+  width: 200px;
+  height: 200px;
+  top: 0;
+  left: 0;
+  padding: 0px;
+  margin: 0px;
+
+  background: -moz-radial-gradient(transparent 99px, rgba(0,0,0,1) 99px);
+  background: -webkit-radial-gradient(transparent 99px, rgba(0,0,0,1) 99px);
+  background: -ms-radial-gradient(transparent 99px, rgba(0,0,0,1) 99px);
+  background: -o-radial-gradient(99px);
+  opacity: 1;
+  pointer-events: none;
+  z-index: 100000;
 }
 
 // Imports
@@ -224,28 +241,19 @@ body .mc-smartwatch{
 @media screen and (max-width: $max-watches){
   .mc-watch{display: inline-block!important;}
 
+  .mc-right{
+    float: none;
+  }
+  
   body{
     font-size: 20px;
     .mc-smartwatch{
-      position: fixed;
-      // display: block;
-      display: none;
-      float: left;
-
-      width: 320px;
-      height: 320px;
-      top: 0;
-      left: 0;
-      padding: 0px;
-      margin: 0px;
-
-      background: -moz-radial-gradient(transparent 159px, rgba(0,0,0,1) 159px);
-      background: -webkit-radial-gradient(transparent 159px, rgba(0,0,0,1) 159px);
-      background: -ms-radial-gradient(transparent 159px, rgba(0,0,0,1) 159px);
-      background: -o-radial-gradient(159px);
-      opacity: 1;
-      pointer-events: none;
-      z-index: 100000;
+      display: block;
+      // display: none;
+    }
+    .mc-content{
+      padding-left: 0px;
+      padding-right: 0px;
     }
   }
 }
