@@ -169,74 +169,6 @@ body > .mc-floating-window .mc-window-footer{
   cursor: pointer;
 }
 
-/*	NOTIFICATIONS	*/
-.mc-notification-container{
-  position: fixed;
-  display: block;
-  float: left;
-
-  width: auto;
-  left: 30px;
-  bottom: 20px;
-
-  z-index: 400;
-}
-.mc-notification-container .mc-notification{
-  position: relative;
-  display: block;
-  float: left;
-
-  min-width: 300px;
-  max-width: 570px;
-  width: auto;
-  height: auto;
-  margin-bottom: 10px;
-
-  background: #323232;
-  border-radius: 3px;
-  box-sizing: border-box;
-  clear: both;
-}
-.mc-notification-container .mc-notification .mc-button{
-  position: relative;
-  display: inline-block;
-  float: right;
-}
-.mc-notification-container .mc-notification .mc-title, .mc-notification-container .mc-notification .mc-subtitle, .mc-notification-container .mc-notification .mc-text, .mc-notification-container .mc-notification .mc-note{
-  max-width: 100%;
-  padding: 16px;
-  margin: 0px;
-
-  color: #FFFFFF;
-
-  border: none;
-}
-.mc-notification-container .mc-notification .mc-title, .mc-notification-container .mc-notification .mc-subtitle, .mc-notification-container .mc-notification .mc-text{
-  font-size: 14px;
-}
-.mc-notification-container .mc-notification .mc-button-comb + .mc-title, .mc-notification-container .mc-notification .mc-button-comb + .mc-subtitle, .mc-notification-container .mc-notification .mc-button-comb + .mc-text, .mc-notification-container .mc-notification .mc-button-comb + .mc-note{
-  max-width: 440px;
-}
-.mc-notification-container .mc-notification .mc-button-text + .mc-title, .mc-notification-container .mc-notification .mc-button-text + .mc-subtitle, .mc-notification-container .mc-notification .mc-button-text + .mc-text, .mc-notification-container .mc-notification .mc-button-text + .mc-note{
-  max-width: 470px;
-}
-.mc-notification-container .mc-notification .mc-button-icon + .mc-title, .mc-notification-container .mc-notification .mc-button-icon + .mc-subtitle, .mc-notification-container .mc-notification .mc-button-icon + .mc-text, .mc-notification-container .mc-notification .mc-button-icon + .mc-note{
-  max-width: 522px;
-}
-.mc-notification-container .mc-notification .mc-button{
-  float: right;
-
-  margin: 5px;
-
-  color: #ffffff;
-  font-weight: normal;
-
-  background-color: transparent;
-}
-.mc-notification-container .mc-notification .mc-button:active{
-  background-color: #515151;
-}
-
 /*	SPLASH SCREEN	*/
 .mc-splash{
   position: fixed;
@@ -2990,34 +2922,6 @@ body > .mc-floating-window[mc-layout="share"] > .mc-window-footer{
     max-height: calc(95% - 60px);
   }
 
-  .mc-notification-container{
-    width: 100%;
-    max-width: 100%;
-    left: 0px;
-    bottom: 0px;
-  }
-  .mc-notification-container .mc-notification{
-    width: 100%;
-    max-width: 100%;
-    margin: 0px;
-
-    border-radius: 0px;
-  }
-  .mc-notification-container .mc-notification .mc-title, .mc-notification-container .mc-notification .mc-subtitle, .mc-notification-container .mc-notification .mc-text, .mc-notification-container .mc-notification .mc-note{
-    max-width: 100%;
-
-    color: #FFFFFF;
-  }
-  .mc-notification-container .mc-notification .mc-button-comb + .mc-title, .mc-notification-container .mc-notification .mc-button-comb + .mc-subtitle, .mc-notification-container .mc-notification .mc-button-comb + .mc-text, .mc-notification-container .mc-notification .mc-button-comb + .mc-note{
-    max-width: calc(100% - 130px);
-  }
-  .mc-notification-container .mc-notification .mc-button-text + .mc-title, .mc-notification-container .mc-notification .mc-button-text + .mc-subtitle, .mc-notification-container .mc-notification .mc-button-text + .mc-text, .mc-notification-container .mc-notification .mc-button-text + .mc-note{
-    max-width: calc(100% - 100px);
-  }
-  .mc-notification-container .mc-notification .mc-button-icon + .mc-title, .mc-notification-container .mc-notification .mc-button-icon + .mc-subtitle, .mc-notification-container .mc-notification .mc-button-icon + .mc-text, .mc-notification-container .mc-notification .mc-button-icon + .mc-note{
-    max-width: calc(100% - 48px);
-  }
-
   body > .mc-floating-window, body[mc-layout="front"] > .mc-floating-window{
     width: 100%;
     max-height: 100%;
@@ -3172,15 +3076,6 @@ body > .mc-floating-window[mc-layout="share"] > .mc-window-footer{
 
   @media screen and (orientation: landscape) {
 
-    .mc-card{
-      width: calc(50% - 20px);
-      margin: 5px 10px;
-
-      clear: none;
-    }
-    .mc-card:nth-child(even){
-      /* clear: both; */
-    }
     .mc-single-column{
       width: 75%;
     }
