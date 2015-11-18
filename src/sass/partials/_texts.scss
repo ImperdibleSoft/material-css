@@ -55,46 +55,6 @@
   text-align: left;
 }
 
-// Lists
-.mc-list{
-  position: relative;
-  display: block;
-  float: left;
-
-  width: 100%;
-  padding-left: 16px;
-
-  box-sizing: border-box;
-  ul{
-    margin-bottom: 20px;
-    & > li{
-      margin-left: 30px;
-    }
-    & > ul > li{
-      margin-left: 45px;
-    }
-    & > ul > ul > li{
-      margin-left: 60px;
-    }
-  }
-  & > li{
-    width: auto;
-    padding: 2px 0px;
-    margin-left: 15px;
-
-    list-style: disc;
-  }
-  &.mc-list-clean{
-    padding-left: 0px;
-    ul{
-      margin-bottom: 0px;
-    }
-    li{
-      list-style: none;
-    }
-  }
-}
-
 // Code
 .mc-code{
   position: relative;

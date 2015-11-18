@@ -1,4 +1,159 @@
 
+/*	LISTS	*/
+.mc-list{
+  position: relative;
+  display: block;
+  float: left;
+
+  width: 100%;
+  padding-left: 16px;
+
+  box-sizing: border-box;
+  ul{
+    margin-bottom: 20px;
+    & > li{
+      margin-left: 30px;
+    }
+    & > ul > li{
+      margin-left: 45px;
+    }
+    & > ul > ul > li{
+      margin-left: 60px;
+    }
+  }
+  & > li{
+    width: auto;
+    padding: 2px 0px;
+    margin-left: 15px;
+
+    list-style: disc;
+  }
+  &.mc-list-clean{
+    padding-left: 0px;
+    ul{
+      margin-bottom: 0px;
+    }
+    li{
+      list-style: none;
+    }
+  }
+}
+
+[mc-layout="list"]{
+  position: relative;
+  display: inline-block;
+  float: left;
+
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+
+  list-style: none;
+
+  box-sizing: border-box;
+}
+[mc-layout="list"] > .mc-title, [mc-layout="list"] > .mc-subtitle{
+  width: 100%;
+
+  color: #000000;
+
+  background-color: #FAFAFA;
+  box-sizing: border-box;
+}
+[mc-layout="list"] > .mc-title{
+  padding: 20px 16px;
+
+  font-size: 24px;
+}
+[mc-layout="list"] > .mc-subtitle{
+  padding: 13px 16px;
+
+  font-size: 16px;
+}
+[mc-layout="list"] .mc-list-item{
+  position: relative;
+  display: inline-block;
+  float: left;
+
+  width: 100%;
+  padding: 16px;
+  margin: 0px;
+
+  list-style: none;
+
+  background-color: #FAFAFA;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  background-position: 16px;
+  border-bottom: 1px solid #ECECEC;
+  box-sizing: border-box;
+}
+[mc-layout="list"] .mc-list-item[mc-action]{
+  padding-left: 72px;
+}
+[mc-layout="list"] .mc-list-item img{
+  position: relative;
+  display: inline-block;
+  float: left;
+
+  width: 40px;
+  height: 40px;
+  padding: 0px;
+  margin: 0px;
+  margin-right: 16px;
+
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+[mc-layout="list"] .mc-list-item[mc-action] img{
+  display: none;
+}
+[mc-layout="list"] .mc-list-item .mc-title, [mc-layout="list"] .mc-list-item .mc-subtitle, [mc-layout="list"] .mc-list-item .mc-text, [mc-layout="list"] .mc-list-item .mc-note{
+  position: relative;
+  display: inline-block;
+  float: left;
+
+  width: 100%;
+  padding: 0px;
+
+  text-transform: none;
+  text-decoration: none;
+  border: 0px;
+}
+[mc-layout="list"] .mc-list-item img ~ .mc-title, [mc-layout="list"] .mc-list-item img ~ .mc-subtitle, [mc-layout="list"] .mc-list-item img ~ .mc-text, [mc-layout="list"] .mc-list-item img ~ .mc-note{
+  width: calc(100% - 56px);
+}
+[mc-layout="list"] .mc-list-item[mc-action] .mc-title, [mc-layout="list"] .mc-list-item[mc-action] .mc-subtitle, [mc-layout="list"] .mc-list-item[mc-action] .mc-text, [mc-layout="list"] .mc-list-item[mc-action] .mc-note{
+  width: 100%;
+}
+[mc-layout="list"] .mc-list-item .mc-title, [mc-layout="list"] .mc-list-item .mc-subtitle{
+  font-size: 16px;
+}
+[mc-layout="list"] .mc-list-item .mc-text, [mc-layout="list"] .mc-list-item .mc-note{
+  font-size: 14px;
+}
+[mc-layout="list"] .mc-list-item .mc-button{
+  position: absolute;
+  display: block;
+  float: right;
+
+  right: 16px;
+  top: 19px;
+
+  margin: 0px;
+}
+[mc-layout="list"] .mc-list-item .mc-button:active{
+  background-color: #DDDDDD;
+}
+[mc-layout="list"] .mc-list-item .mc-button ~ .mc-title, [mc-layout="list"] .mc-list-item .mc-button ~ .mc-subtitle, [mc-layout="list"] .mc-list-item .mc-button ~ .mc-text, [mc-layout="list"] .mc-list-item .mc-button ~ .mc-note{
+  width: calc(100% - 40px);
+  word-wrap: break-word;
+}
+[mc-layout="list"] .mc-list-item img ~ .mc-button ~ .mc-title, [mc-layout="list"] .mc-list-item img ~ .mc-button ~ .mc-subtitle, [mc-layout="list"] .mc-list-item img ~ .mc-button ~ .mc-text, [mc-layout="list"] .mc-list-item img ~ .mc-button ~ .mc-note{
+  width: calc(100% - 40px - 56px);
+  word-wrap: break-word;
+}
+
 // PCs, Tablets, Mobiles and Smartwatches
 @media screen and (max-width: $max-pcs){
 
@@ -27,7 +182,24 @@
 
 // Smartwatches
 @media screen and (max-width: $max-watches){
+  .mc-list{
+    font-size: 70%;
+  }
 
+  [mc-layout="list"]{
+    .mc-list-item{
+      .mc-title, .mc-subtitle, .mc-text, .mc-note{
+        line-height: 26px;
+        text-align: left;
+      }
+      .mc-button{
+        display: none;
+      }
+      .mc-button ~ .mc-title, .mc-button ~ .mc-subtitle, .mc-button ~ .mc-text, .mc-button ~ .mc-note{
+        width: 100%;
+      }
+    }
+  }
 }
 
 // Only Mobiles
