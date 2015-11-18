@@ -1,0 +1,499 @@
+
+	/* -------------------------------------------------------------------------------------- */
+	/* --- MATERIAL CSS ---------------------------------------------------------------- */
+	/* -------------------------------------------------------------------------------------- */
+	/* --- Light CSS framework for creating a Material Design look&feel ----------- */
+	/* --- aplicable to webapps. Supports any JS framework ------------------------ */
+	/* -------------------------------------------------------------------------------------- */
+	/* --- Developed by:				------------------------------------------------------ */
+	/* ---   Rafael Pérez García		------------------------------------------------------ */
+	/* ---   at ImperdibleSoft		------------------------------------------------------ */
+	/* -------------------------------------------------------------------------------------- */
+	/* --- http://www.imperdiblesoft.com		----------------------------------------- */
+	/* --- https://github.com/ImperdibleSoft/material-css		---------------------- */
+	/* -------------------------------------------------------------------------------------- */
+
+	/* -------------------------------------------------------------------------------------- */
+	/* --- Sporify Theme										----------------------------------- */
+	/* --- Created by: Imperdiblesoft					----------------------------------- */
+	/* -------------------------------------------------------------------------------------- */
+	/* --- Main color:						#DFE0E6;		----------------------------------- */
+	/* --- Main color clicked:				#;		----------------------------------- */
+	/* --- Main color bg:					#;		----------------------------------- */
+	/* --- Secondary color:				#121314;		----------------------------------- */
+	/* --- Secondary color clicked:	#212121;		----------------------------------- */
+	/* --- Secondary color bg: 			#212121;		----------------------------------- */
+	/* -------------------------------------------------------------------------------------- */
+
+body, body > .mc-content, body:not([mc-layout="front"]) > .mc-content, body[mc-layout="front"] > .mc-content, body > .mc-footer {
+	background-color: #121314;
+}
+*{
+	color: #575759;
+}
+	
+/*	GENERALS	*/
+.mc-button{
+	color: #DFE0E6;
+	background-color: #121314;
+	border: 1px solid #DFE0E6;
+}
+.mc-button.mc-clickable:active{
+	background-color: #212121;
+}
+.mc-title, .mc-subtitle{
+	color: #84BD00;
+	border-color: #575759;
+}
+.mc-code{
+	background: #333333;
+	border-color: #84BD00;
+}
+.mc-code *{
+	color: #575759;
+}
+.mc-blocker, .mc-content-blocker{
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+/*	NAVIGATION	*/
+body > .mc-navigation{
+	background-color: #1C1C1F;
+}
+body > .mc-navigation .mc-header-menu, body > .mc-navigation .mc-header-menu .mc-button{
+	background-color: #121314;
+}
+body > .mc-navigation .mc-header-menu .mc-button.mc-clickable:active{
+	background-color: #212121;
+}
+body > .mc-navigation .mc-header-menu .mc-title{
+	color: #DFE0E6;
+}
+body > .mc-navigation .mc-nav-item, body > .mc-navigation .mc-nav-subitem{
+	color: #DFE0E6;
+}
+body > .mc-navigation .mc-nav-item:hover, body > .mc-navigation .mc-nav-subitem:hover{
+	color: #84BD00;
+}
+
+/*	HEADER	*/
+body > .mc-header, body > .mc-header .mc-button{
+	background-color: #121314;
+}
+body > .mc-header .mc-button.mc-clickable:active{
+	background-color: #212121;
+}
+body > .mc-header .mc-title{
+	color: #DFE0E6;
+}
+body > .mc-header .mc-tabs-bar{
+	background-color: #121314;
+}
+body > .mc-header .mc-tabs-bar .mc-tab{
+	color: #DFE0E6;
+}
+body > .mc-header .mc-tabs-bar .mc-tab.mc-selected{
+	border-color: #84BD00;
+}
+body > .mc-header .mc-dropdown .mc-dropdown-bg:hover{
+	background-color: #212121;
+}
+body > .mc-header .mc-dropdown .mc-dropdown-value{
+	color: #DFE0E6;
+}
+
+/*	DIALOGS	*/
+.mc-dialog, .mc-dialog .mc-header, .mc-dialog .mc-content, .mc-dialog .mc-footer{
+	background-color: #1C1C1F;
+}
+.mc-dialog .mc-button{
+	background-color: transparent;
+	border-color: transparent;
+}
+.mc-dialog .mc-button:active{
+	background-color: transparent;
+	border-color: transparent;
+}
+.mc-dialog .mc-footer .mc-button:hover{
+	color: #84BD00;
+}
+.mc-tooltip{
+	color: #212121;
+}
+
+body > .mc-floating-window, body > .mc-floating-window .mc-window-header, body > .mc-floating-window .mc-window-header .mc-button{
+	background-color: #1C1C1F;
+}
+body > .mc-floating-window .mc-window-content, body > .mc-floating-window .mc-window-content *, body > .mc-floating-window .mc-window-footer, body > .mc-floating-window .mc-window-footer *{
+	background-color: #575759;
+}
+body > .mc-floating-window .mc-window-content > .mc-title, body > .mc-floating-window .mc-window-content > .mc-title *, body > .mc-floating-window .mc-window-content > .mc-subtitle, body > .mc-floating-window .mc-window-content > .mc-subtitle *, body > .mc-floating-window .mc-window-content > .mc-text, body > .mc-floating-window .mc-window-content > .mc-text *, body > .mc-floating-window .mc-window-content > .mc-note, body > .mc-floating-window .mc-window-content > .mc-note *, body > .mc-floating-window .mc-window-footer > .mc-title, body > .mc-floating-window .mc-window-footer > .mc-title *, body > .mc-floating-window .mc-window-footer > .mc-subtitle, body > .mc-floating-window .mc-window-footer > .mc-subtitle *, body > .mc-floating-window .mc-window-footer > .mc-text, body > .mc-floating-window .mc-window-footer > .mc-text *, body > .mc-floating-window .mc-window-footer > .mc-note, body > .mc-floating-window .mc-window-footer > .mc-note *{
+	color: #FFFFFF;
+}
+
+/*	SPLASH	*/
+.mc-splash{
+	background-color: #121314;
+}
+
+/*	LISTS	*/
+[mc-layout="list"] > .mc-title, [mc-layout="list"] > .mc-subtitle{
+	color: #84BD00;
+	background-color: #333333;
+}
+[mc-layout="list"] .mc-list-item{
+	background-color: #1C1C1F;
+	border-bottom: 1px solid #121314;
+}
+[mc-layout="list"] .mc-list-item .mc-title{
+	color: #DFE0E6;
+}
+[mc-layout="list"] .mc-list-item .mc-button{
+	background-color: transparent;
+}
+[mc-layout="list"] .mc-list-item .mc-button:active{
+	background-color: transparent;
+}
+
+/*	CHAT	*/
+[mc-layout="chat"] .mc-message.mc-own .mc-title, [mc-layout="chat"] .mc-message.mc-own .mc-subtitle, [mc-layout="chat"] .mc-message.mc-own .mc-text, [mc-layout="chat"] .mc-message.mc-own .mc-note{
+	background-color: #DFE0E6;
+}
+
+/*	MULTIMEDIA	*/
+body > .mc-floating-window .mc-window-header .mc-button-icon:active, body > .mc-floating-window .mc-window-content .mc-button-icon:active, body > .mc-floating-window .mc-window-footer .mc-button-icon:active{
+	background-color: #212121!important;
+}
+
+/*	CARDS	*/
+.mc-card{
+	background-color: #1C1C1F;
+}
+.mc-card .mc-title{
+	color: #84BD00;
+}
+.mc-card[mc-layout="header-image"] .mc-header .mc-title{
+	color: #DFE0E6;
+}
+.mc-card .mc-footer .mc-button{
+	background-color: transparent;
+	border-color: transparent;
+}
+.mc-card .mc-footer .mc-button:hover{
+	color: #84BD00;
+}
+.mc-card .mc-footer .mc-button:active{
+	background-color: transparent;
+}
+
+/*	NOTIFICATION	*/
+.mc-notification .mc-button{
+	border: 0px solid transparent;
+}
+
+/*	INPUTS BACKGROUNDS	*/
+.mc-input input:focus, .mc-input textarea:focus{
+	border-color: #84BD00;
+}
+.mc-input input:focus ~ .mc-label, .mc-input textarea:focus ~ .mc-label{
+	color: #84BD00;
+}
+
+/*	DROPDOWN	*/
+.mc-dropdown > select ~ .mc-dropdown-bg{
+	background-image: url('../material-icons/mc-arrow-down-dark.png');
+}
+.mc-dropdown:hover > select ~ .mc-dropdown-bg{
+	background-image: url('../material-icons/mc-arrow-down-light.png');
+}
+.mc-dropdown > select ~ .mc-dropdown-menu .mc-dropdown-menu-item {
+	border-bottom: 1px solid #121314;
+}
+
+/*	RADIO BACKGROUNDS	*/
+.mc-radiobutton input[type="radio"]:checked ~ .mc-radio-bg{
+	border-color: #84BD00;
+}
+.mc-radiobutton input[type="radio"]:checked ~ .mc-radio-bg > .mc-radio{
+	background-color: #84BD00;
+}
+
+/*	CHECKBOXES BACKGROUNDS	*/
+.mc-checkbox input[type="checkbox"]:checked ~ .mc-checkbox-bg{
+	border-color: #84BD00;
+	background-color: #84BD00;
+}
+
+/*	SWITCHERS BACKGROUNDS	*/
+.mc-switcher input[type="checkbox"]:checked ~ .mc-switch-bg{
+	background-color: #84BD00;
+}
+.mc-switcher input[type="checkbox"]:checked ~ .mc-switch-bg > .mc-switch{
+	background-color: #DFE0E6;
+}
+
+/*	SLIDERS BACKGROUNDS	*/
+.mc-slider input[type="range"] ~ .mc-slider-bg{
+	background-color: #E9E9E9;
+}
+.mc-slider input[type="range"] ~ .mc-slider-bg > .mc-slider-progress{
+	background-color: #84BD00;
+}
+.mc-slider:active input[type="range"] ~ .mc-slider-bg > .mc-slider-progress, .mc-slider input[type="range"] ~ .mc-slider-bg:active > .mc-slider-progress, .mc-slider input[type="range"] ~ .mc-slider-bg > .mc-slider-progress:active{
+	background-color: #84BD00;
+	border-color: #84BD00;
+}
+.mc-slider input[type="range"] ~ .mc-slider-bg > .mc-slider-picker{
+	background-color: #84BD00;
+	border-color: #84BD00;
+}
+.mc-slider:active input[type="range"] ~ .mc-slider-bg > .mc-slider-picker, .mc-slider input[type="range"] ~ .mc-slider-bg:active > .mc-slider-picker, .mc-slider input[type="range"] ~ .mc-slider-bg > .mc-slider-picker:active{
+	background-color: #84BD00;
+	border-color: #84BD00;
+}
+
+/*	PROGRESS BAR BACKGROUNDS	*/
+.mc-progressbar{
+	background-color: #E9E9E9;
+}
+.mc-progressbar > .mc-progress{
+	background-color: #84BD00;
+}
+
+/*	SPINNERS BACKGROUNDS	*/
+.mc-spinner{
+	background: -moz-linear-gradient(left, #84BD00 10%, rgba(255, 255, 255, 0) 85%);
+	background: -webkit-linear-gradient(left, #84BD00 10%, rgba(255, 255, 255, 0) 85%);
+	background: -o-linear-gradient(left, #84BD00 10%, rgba(255, 255, 255, 0) 85%);
+	background: -ms-linear-gradient(left, #84BD00 10%, rgba(255, 255, 255, 0) 85%);
+	background: linear-gradient(to right, #84BD00 10%, rgba(255, 255, 255, 0) 85%);
+}
+.mc-spinner:after{
+	background-color: #121314;
+}
+
+/*	ICONS	*/
+*[mc-action="menu"]{
+	background-image: url('../material-icons/mc-menu-dark.png');
+}
+*[mc-action="help"]{
+	background-image: url('../material-icons/mc-help-dark.png');
+}
+*[mc-action="info"]{
+	background-image: url('../material-icons/mc-info-dark.png');
+}
+*[mc-action="home"]{
+	background-image: url('../material-icons/mc-home-dark.png');
+}
+*[mc-action="gallery"]{
+	background-image: url('../material-icons/mc-gallery-dark.png');
+}
+*[mc-action="prev"]{
+	background-image: url('../material-icons/mc-prev-dark.png');
+}
+*[mc-action="next"]{
+	background-image: url('../material-icons/mc-next-dark.png');
+}
+*[mc-action="scroll-top"]{
+	background-image: url('../material-icons/mc-scrolltop-dark.png');
+}
+*[mc-action="scroll-down"]{
+	background-image: url('../material-icons/mc-scrollbottom-dark.png');
+}
+*[mc-action="done"]{
+	background-image: url('../material-icons/mc-done-dark.png');
+}
+*[mc-action="search"]{
+	background-image: url('../material-icons/mc-search-dark.png');
+}
+*[mc-action="refresh"]{
+	background-image: url('../material-icons/mc-refresh-dark.png');
+}
+*[mc-action="cancel"]{
+	background-image: url('../material-icons/mc-cancel-dark.png');
+}
+*[mc-action="options-h"]{
+	background-image: url('../material-icons/mc-options-h-dark.png');
+}
+*[mc-action="options-v"]{
+	background-image: url('../material-icons/mc-options-v-dark.png');
+}
+*[mc-action="settings"]{
+	background-image: url('../material-icons/mc-settings-dark.png');
+}
+*[mc-action="add"]{
+	background-image: url('../material-icons/mc-add-dark.png');
+}
+*[mc-action="edit"]{
+	background-image: url('../material-icons/mc-edit-dark.png');
+}
+*[mc-action="undo"]{
+	background-image: url('../material-icons/mc-undo-dark.png');
+}
+*[mc-action="redo"]{
+	background-image: url('../material-icons/mc-redo-dark.png');
+}
+*[mc-action="delete"]{
+	background-image: url('../material-icons/mc-delete-dark.png');
+}
+*[mc-action="remove"]{
+	background-image: url('../material-icons/mc-remove-dark.png');
+}
+*[mc-action="upload"]{
+	background-image: url('../material-icons/mc-upload-dark.png');
+}
+*[mc-action="download"]{
+	background-image: url('../material-icons/mc-download-dark.png');
+}
+*[mc-action="sync"]{
+	background-image: url('../material-icons/mc-sync-dark.png');
+}
+*[mc-action="favorite"]{
+	background-image: url('../material-icons/mc-favorite-dark.png');
+}
+*[mc-action="like"]{
+	background-image: url('../material-icons/mc-like-dark.png');
+}
+*[mc-action="share"]{
+	background-image: url('../material-icons/mc-share-dark.png');
+}
+*[mc-action="send"]{
+	background-image: url('../material-icons/mc-send-dark.png');
+}
+*[mc-action="comment"]{
+	background-image: url('../material-icons/mc-comment-dark.png');
+}
+*[mc-action="colors"]{
+	background-image: url('../material-icons/mc-colors-dark.png');
+}
+*[mc-action="text"]{
+	background-image: url('../material-icons/mc-text-dark.png');
+}
+*[mc-action="button"]{
+	background-image: url('../material-icons/mc-button-dark.png');
+}
+*[mc-action="cards"]{
+	background-image: url('../material-icons/mc-cards-dark.png');
+}
+*[mc-action="icon"]{
+	background-image: url('../material-icons/mc-icon-dark.png');
+}
+*[mc-action="navigation"]{
+	background-image: url('../material-icons/mc-navigation-dark.png');
+}
+*[mc-action="location"]{
+	background-image: url('../material-icons/mc-location-dark.png');
+}
+*[mc-action="email"]{
+	background-image: url('../material-icons/mc-email-dark.png');
+}
+*[mc-action="phone"]{
+	background-image: url('../material-icons/mc-phone-dark.png');
+}
+*[mc-action="message"]{
+	background-image: url('../material-icons/mc-message-dark.png');
+}
+*[mc-action="user"]{
+	background-image: url('../material-icons/mc-user-dark.png');
+}
+*[mc-action="list"]{
+	background-image: url('../material-icons/mc-list-dark.png');
+}
+*[mc-action="layout"]{
+	background-image: url('../material-icons/mc-layout-dark.png');
+}
+*[mc-action="popup"]{
+	background-image: url('../material-icons/mc-popup-dark.png');
+}
+*[mc-action="cut"]{
+	background-image: url('../material-icons/mc-cut-dark.png');
+}
+*[mc-action="copy"]{
+	background-image: url('../material-icons/mc-copy-dark.png');
+}
+*[mc-action="paste"]{
+	background-image: url('../material-icons/mc-paste-dark.png');
+}
+*[mc-action="arrow-down"]{
+	background-image: url('../material-icons/mc-arrow-down-dark.png');
+}
+*[mc-action="picker"]{
+	background-image: url('../material-icons/mc-picker-dark.png');
+}
+*[mc-action="account"]{
+	background-image: url('../material-icons/mc-account-dark.png');
+}
+*[mc-action="forums"]{
+	background-image: url('../material-icons/mc-forums-dark.png');
+}
+*[mc-action="notifications"]{
+	background-image: url('../material-icons/mc-notifications-dark.png');
+}
+*[mc-action="external"]{
+	background-image: url('../material-icons/mc-external-dark.png');
+}
+*[mc-action="play"]{
+	background-image: url('../material-icons/mc-play-dark.png');
+}
+*[mc-action="pause"]{
+	background-image: url('../material-icons/mc-pause-dark.png');
+}
+*[mc-action="stop"]{
+	background-image: url('../material-icons/mc-stop-dark.png');
+}
+*[mc-action="music-next"]{
+	background-image: url('../material-icons/mc-music-next-dark.png');
+}
+*[mc-action="music-prev"]{
+	background-image: url('../material-icons/mc-music-previous-dark.png');
+}
+*[mc-action="playlist"]{
+	background-image: url('../material-icons/mc-playlist-dark.png');
+}
+*[mc-action="volume-up"]{
+	background-image: url('../material-icons/mc-volume-up-dark.png');
+}
+*[mc-action="volume-down"]{
+	background-image: url('../material-icons/mc-volume-down-dark.png');
+}
+*[mc-action="volume-off"]{
+	background-image: url('../material-icons/mc-volume-off-dark.png');
+}
+*[mc-action="facebook"]{
+	background-image: url('../material-icons/mc-facebook-dark.png');
+}
+*[mc-action="google-plus"]{
+	background-image: url('../material-icons/mc-google-plus-dark.png');
+}
+*[mc-action="twitter"]{
+	background-image: url('../material-icons/mc-twitter-dark.png');
+}
+*[mc-action="whatsapp"]{
+	background-image: url('../material-icons/mc-whatsapp-dark.png');
+}
+*[mc-action="instagram"]{
+	background-image: url('../material-icons/mc-instagram-dark.png');
+}
+*[mc-action="youtube"]{
+	background-image: url('../material-icons/mc-youtube-dark.png');
+}
+*[mc-action="soundcloud"]{
+	background-image: url('../material-icons/mc-soundcloud-dark.png');
+}
+*[mc-action="imperdiblesoft"]{
+	background-image: url('../material-icons/mc-imperdiblesoft-dark.png');
+}
+*[mc-action="skype"]{
+	background-image: url('../material-icons/mc-skype-dark.png');
+}
+*[mc-action="linkedin"]{
+	background-image: url('../material-icons/mc-linkedin-dark.png');
+}
+*[mc-action="github"]{
+	background-image: url('../material-icons/mc-github-dark.png');
+}
+
+/*	HEADER DROPDOWN ICONS	*/
+body > .mc-header .mc-dropdown-bg, .mc-dropdown:hover > select ~ .mc-dropdown-bg{
+	background-image: url('../material-icons/mc-arrow-down-dark.png');
+}

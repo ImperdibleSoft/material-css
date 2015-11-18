@@ -1,0 +1,803 @@
+<p class="mc-text">Layouts are a great thing on Material CSS. You can use the "<b>mc-layout</b>" in any container element, so you can display 1, 2 or 3 colums. First of all, add the "<b>mc-layout</b>" class and "<b>mc-layout</b>" attribute. On the attribute, you can set the number of columns you want to display.</p>
+<p class="mc-text">Once you have set this, you must create some children (they will be the columns), with the "<b>mc-layout</b>" class and the "<b>mc-layout-size</b>" attribute, where you can set the size of this column. Available sizes are:</p>
+<ul class="mc-list">
+	<li>Small</li>
+	<li>Normal</li>
+	<li>Big</li>
+	<li>Biggest</li>
+</ul>
+
+<h1 class="mc-title" alt="no-layout">No layout</h1>
+<p class="mc-text">You can place all your content with no layout specified, so the content will addapt automatically to your screen.</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-card"&gt;</li>
+		<ul>
+			<li>...</li>
+		</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+<br />
+<br />
+<div>
+	<div class="mc-card" >
+		<div class="mc-header" >
+			<img src="images/material_logo.png" />
+			<h1 class="mc-title" >Material CSS</h1>
+			<h2 class="mc-subtitle" ></h2>
+		</div>
+		<div class="mc-content" >
+			<p class="mc-text" >This is a common card.</p>
+			<img src="images/material-09.jpg" />
+		</div>
+		<div class="mc-footer" >
+			<a class="mc-button mc-button-icon mc-clickable" mc-action="share" ></a>
+			<a class="mc-button mc-button-icon mc-clickable" mc-action="comment" ></a>
+			<a class="mc-button mc-button-icon mc-clickable" mc-action="like" ></a>
+		</div>
+	</div>
+	<div class="mc-card" >
+		<div class="mc-header" >
+			<img src="images/material_logo.png" />
+			<h1 class="mc-title" >Material CSS</h1>
+			<h2 class="mc-subtitle" ></h2>
+		</div>
+		<div class="mc-content" >
+			<p class="mc-text" >This is a common card.</p>
+			<img src="images/material-09.jpg" />
+		</div>
+		<div class="mc-footer" >
+			<a class="mc-button mc-button-icon mc-clickable" mc-action="share" ></a>
+			<a class="mc-button mc-button-icon mc-clickable" mc-action="comment" ></a>
+			<a class="mc-button mc-button-icon mc-clickable" mc-action="like" ></a>
+		</div>
+	</div>
+	<div class="mc-card" >
+		<div class="mc-header" >
+			<img src="images/material_logo.png" />
+			<h1 class="mc-title" >Material CSS</h1>
+			<h2 class="mc-subtitle" ></h2>
+		</div>
+		<div class="mc-content" >
+			<p class="mc-text" >This is a common card.</p>
+			<img src="images/material-09.jpg" />
+		</div>
+		<div class="mc-footer" >
+			<a class="mc-button mc-button-icon mc-clickable" mc-action="share" ></a>
+			<a class="mc-button mc-button-icon mc-clickable" mc-action="comment" ></a>
+			<a class="mc-button mc-button-icon mc-clickable" mc-action="like" ></a>
+		</div>
+	</div>
+</div>
+<br />
+
+<h1 class="mc-title" alt="1-column">One column</h1>
+<p class="mc-text">This layout will display cards in 1 column always, and they will resize themselves to look beautiful on any screensize.</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-layout" mc-layout="1"&gt;</li>
+	<ul>
+		<li>&lt;div class="mc-layout" mc-layout-size="small | normal | big | biggest"&gt;</li>
+		<ul>
+			<li>&lt;div class="mc-card"&gt;</li>
+				<ul>
+					<li>...</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+		</ul>
+		<li>&lt;/div&gt;</li>
+	</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+<br />
+<br />
+<div class="mc-layout" mc-layout="1">
+	<div class="mc-layout" mc-layout-size="small">
+		<div class="mc-card" >
+			<div class="mc-header" >
+				<img src="images/material_logo.png" />
+				<h1 class="mc-title" >Material CSS</h1>
+				<h2 class="mc-subtitle" ></h2>
+			</div>
+			<div class="mc-content" >
+				<p class="mc-text" >This is a common card.</p>
+				<img src="images/material-09.jpg" />
+			</div>
+			<div class="mc-footer" >
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="share" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="comment" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="like" ></a>
+			</div>
+		</div>
+	</div>
+	<div class="mc-layout" mc-layout-size="normal">
+		<div class="mc-card" >
+			<div class="mc-header" >
+				<img src="images/material_logo.png" />
+				<h1 class="mc-title" >Material CSS</h1>
+				<h2 class="mc-subtitle" ></h2>
+			</div>
+			<div class="mc-content" >
+				<p class="mc-text" >This is a common card.</p>
+				<img src="images/material-09.jpg" />
+			</div>
+			<div class="mc-footer" >
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="share" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="comment" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="like" ></a>
+			</div>
+		</div>
+	</div>
+	<div class="mc-layout" mc-layout-size="big">
+		<div class="mc-card" >
+			<div class="mc-header" >
+				<img src="images/material_logo.png" />
+				<h1 class="mc-title" >Material CSS</h1>
+				<h2 class="mc-subtitle" ></h2>
+			</div>
+			<div class="mc-content" >
+				<p class="mc-text" >This is a common card.</p>
+				<img src="images/material-09.jpg" />
+			</div>
+			<div class="mc-footer" >
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="share" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="comment" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="like" ></a>
+			</div>
+		</div>
+	</div>
+</div>
+<br />
+
+<h1 class="mc-title" alt="2-column">Two columns</h1>
+<p class="mc-text">This layout will display cards in 2 columns on tablet, PCs and TVs, and 1 column in mobiles. They will resize themselves to look beautiful on any screensize.</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-layout" mc-layout="2"&gt;</li>
+	<ul>
+		<li>&lt;div class="mc-layout" mc-layout-size="small"&gt;</li>
+		<ul>
+			<li>&lt;div class="mc-card"&gt;</li>
+				<ul>
+					<li>...</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+		</ul>
+		<li>&lt;/div&gt;</li>
+		<li>&lt;div class="mc-layout" mc-layout-size="big | biggest"&gt;</li>
+		<ul>
+			<li>&lt;div class="mc-card"&gt;</li>
+				<ul>
+					<li>...</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+		</ul>
+		<li>&lt;/div&gt;</li>
+	</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+<br />
+<br />
+<div class="mc-layout" mc-layout="2">
+	<div class="mc-layout" mc-layout-size="small">
+		<div class="mc-card" >
+			<div class="mc-header" >
+				<img src="images/material_logo.png" />
+				<h1 class="mc-title" >Material CSS</h1>
+				<h2 class="mc-subtitle" ></h2>
+			</div>
+			<div class="mc-content" >
+				<p class="mc-text" >This is a common card.</p>
+				<img src="images/material-09.jpg" />
+			</div>
+			<div class="mc-footer" >
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="share" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="comment" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="like" ></a>
+			</div>
+		</div>
+	</div>
+	<div class="mc-layout" mc-layout-size="big">
+		<div class="mc-card" >
+			<div class="mc-header" >
+				<img src="images/material_logo.png" />
+				<h1 class="mc-title" >Material CSS</h1>
+				<h2 class="mc-subtitle" ></h2>
+			</div>
+			<div class="mc-content" >
+				<p class="mc-text" >This is a common card.</p>
+				<img src="images/material-09.jpg" />
+			</div>
+			<div class="mc-footer" >
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="share" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="comment" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="like" ></a>
+			</div>
+		</div>
+	</div>
+</div>
+<br />
+
+<span class="mc-divider"></span>
+<br />
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-layout" mc-layout="2"&gt;</li>
+	<ul>
+		<li>&lt;div class="mc-layout" mc-layout-size="big | biggest"&gt;</li>
+		<ul>
+			<li>&lt;div class="mc-card"&gt;</li>
+				<ul>
+					<li>...</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+		</ul>
+		<li>&lt;/div&gt;</li>
+		<li>&lt;div class="mc-layout" mc-layout-size="small"&gt;</li>
+		<ul>
+			<li>&lt;div class="mc-card"&gt;</li>
+				<ul>
+					<li>...</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+		</ul>
+		<li>&lt;/div&gt;</li>
+	</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+<br />
+<br />
+<div class="mc-layout" mc-layout="2">
+	<div class="mc-layout" mc-layout-size="big">
+		<div class="mc-card" >
+			<div class="mc-header" >
+				<img src="images/material_logo.png" />
+				<h1 class="mc-title" >Material CSS</h1>
+				<h2 class="mc-subtitle" ></h2>
+			</div>
+			<div class="mc-content" >
+				<p class="mc-text" >This is a common card.</p>
+				<img src="images/material-09.jpg" />
+			</div>
+			<div class="mc-footer" >
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="share" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="comment" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="like" ></a>
+			</div>
+		</div>
+	</div>
+	<div class="mc-layout" mc-layout-size="small">
+		<div class="mc-card" >
+			<div class="mc-header" >
+				<img src="images/material_logo.png" />
+				<h1 class="mc-title" >Material CSS</h1>
+				<h2 class="mc-subtitle" ></h2>
+			</div>
+			<div class="mc-content" >
+				<p class="mc-text" >This is a common card.</p>
+				<img src="images/material-09.jpg" />
+			</div>
+			<div class="mc-footer" >
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="share" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="comment" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="like" ></a>
+			</div>
+		</div>
+	</div>
+</div>
+<br />
+
+<span class="mc-divider"></span>
+<br />
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-layout" mc-layout="2"&gt;</li>
+	<ul>
+		<li>&lt;div class="mc-layout" mc-layout-size="normal"&gt;</li>
+		<ul>
+			<li>&lt;div class="mc-card"&gt;</li>
+				<ul>
+					<li>...</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+		</ul>
+		<li>&lt;/div&gt;</li>
+		<li>&lt;div class="mc-layout" mc-layout-size="normal"&gt;</li>
+		<ul>
+			<li>&lt;div class="mc-card"&gt;</li>
+				<ul>
+					<li>...</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+		</ul>
+		<li>&lt;/div&gt;</li>
+	</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+<br />
+<br />
+<div class="mc-layout" mc-layout="2">
+	<div class="mc-layout" mc-layout-size="normal">
+		<div class="mc-card" >
+			<div class="mc-header" >
+				<img src="images/material_logo.png" />
+				<h1 class="mc-title" >Material CSS</h1>
+				<h2 class="mc-subtitle" ></h2>
+			</div>
+			<div class="mc-content" >
+				<p class="mc-text" >This is a common card.</p>
+				<img src="images/material-09.jpg" />
+			</div>
+			<div class="mc-footer" >
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="share" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="comment" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="like" ></a>
+			</div>
+		</div>
+	</div>
+	<div class="mc-layout" mc-layout-size="normal">
+		<div class="mc-card" >
+			<div class="mc-header" >
+				<img src="images/material_logo.png" />
+				<h1 class="mc-title" >Material CSS</h1>
+				<h2 class="mc-subtitle" ></h2>
+			</div>
+			<div class="mc-content" >
+				<p class="mc-text" >This is a common card.</p>
+				<img src="images/material-09.jpg" />
+			</div>
+			<div class="mc-footer" >
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="share" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="comment" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="like" ></a>
+			</div>
+		</div>
+	</div>
+</div>
+<br />
+
+<h1 class="mc-title" alt="3-column">Three columns</h1>
+<p class="mc-text">This layout will display cards in 3 columns on some PCs and TVs, 2 columns on tablet and PCs with low resolutions, and 1 column in mobiles. They will resize themselves to look beautiful on any screensize.</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-layout" mc-layout="3"&gt;</li>
+	<ul>
+		<li>&lt;div class="mc-layout" mc-layout-size="normal"&gt;</li>
+		<ul>
+			<li>&lt;div class="mc-card"&gt;</li>
+				<ul>
+					<li>...</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+		</ul>
+		<li>&lt;/div&gt;</li>
+		<li>&lt;div class="mc-layout" mc-layout-size="normal"&gt;</li>
+		<ul>
+			<li>&lt;div class="mc-card"&gt;</li>
+				<ul>
+					<li>...</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+		</ul>
+		<li>&lt;/div&gt;</li>
+		<li>&lt;div class="mc-layout" mc-layout-size="normal"&gt;</li>
+		<ul>
+			<li>&lt;div class="mc-card"&gt;</li>
+				<ul>
+					<li>...</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+		</ul>
+		<li>&lt;/div&gt;</li>
+	</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+<br />
+<br />
+<div class="mc-layout" mc-layout="3">
+	<div class="mc-layout" mc-layout-size="normal">
+		<div class="mc-card" >
+			<div class="mc-header" >
+				<img src="images/material_logo.png" />
+				<h1 class="mc-title" >Material CSS</h1>
+				<h2 class="mc-subtitle" ></h2>
+			</div>
+			<div class="mc-content" >
+				<p class="mc-text" >This is a common card.</p>
+				<img src="images/material-09.jpg" />
+			</div>
+			<div class="mc-footer" >
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="share" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="comment" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="like" ></a>
+			</div>
+		</div>
+	</div>
+	<div class="mc-layout" mc-layout-size="normal">
+		<div class="mc-card" >
+			<div class="mc-header" >
+				<img src="images/material_logo.png" />
+				<h1 class="mc-title" >Material CSS</h1>
+				<h2 class="mc-subtitle" ></h2>
+			</div>
+			<div class="mc-content" >
+				<p class="mc-text" >This is a common card.</p>
+				<img src="images/material-09.jpg" />
+			</div>
+			<div class="mc-footer" >
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="share" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="comment" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="like" ></a>
+			</div>
+		</div>
+	</div>
+	<div class="mc-layout" mc-layout-size="normal">
+		<div class="mc-card" >
+			<div class="mc-header" >
+				<img src="images/material_logo.png" />
+				<h1 class="mc-title" >Material CSS</h1>
+				<h2 class="mc-subtitle" ></h2>
+			</div>
+			<div class="mc-content" >
+				<p class="mc-text" >This is a common card.</p>
+				<img src="images/material-09.jpg" />
+			</div>
+			<div class="mc-footer" >
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="share" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="comment" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="like" ></a>
+			</div>
+		</div>
+	</div>
+</div>
+<br />
+
+<span class="mc-divider"></span>
+<br />
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-layout" mc-layout="3"&gt;</li>
+	<ul>
+		<li>&lt;div class="mc-layout" mc-layout-size="small"&gt;</li>
+		<ul>
+			<li>&lt;div class="mc-card"&gt;</li>
+				<ul>
+					<li>...</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+		</ul>
+		<li>&lt;/div&gt;</li>
+		<li>&lt;div class="mc-layout" mc-layout-size="big"&gt;</li>
+		<ul>
+			<li>&lt;div class="mc-card"&gt;</li>
+				<ul>
+					<li>...</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+		</ul>
+		<li>&lt;/div&gt;</li>
+		<li>&lt;div class="mc-layout" mc-layout-size="small"&gt;</li>
+		<ul>
+			<li>&lt;div class="mc-card"&gt;</li>
+				<ul>
+					<li>...</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+		</ul>
+		<li>&lt;/div&gt;</li>
+	</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+<br />
+<br />
+<div class="mc-layout" mc-layout="3">
+	<div class="mc-layout" mc-layout-size="small">
+		<div class="mc-card" >
+			<div class="mc-header" >
+				<img src="images/material_logo.png" />
+				<h1 class="mc-title" >Material CSS</h1>
+				<h2 class="mc-subtitle" ></h2>
+			</div>
+			<div class="mc-content" >
+				<p class="mc-text" >This is a common card.</p>
+				<img src="images/material-09.jpg" />
+			</div>
+			<div class="mc-footer" >
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="share" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="comment" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="like" ></a>
+			</div>
+		</div>
+	</div>
+	<div class="mc-layout" mc-layout-size="big">
+		<div class="mc-card" >
+			<div class="mc-header" >
+				<img src="images/material_logo.png" />
+				<h1 class="mc-title" >Material CSS</h1>
+				<h2 class="mc-subtitle" ></h2>
+			</div>
+			<div class="mc-content" >
+				<p class="mc-text" >This is a common card.</p>
+				<img src="images/material-09.jpg" />
+			</div>
+			<div class="mc-footer" >
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="share" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="comment" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="like" ></a>
+			</div>
+		</div>
+	</div>
+	<div class="mc-layout" mc-layout-size="small">
+		<div class="mc-card" >
+			<div class="mc-header" >
+				<img src="images/material_logo.png" />
+				<h1 class="mc-title" >Material CSS</h1>
+				<h2 class="mc-subtitle" ></h2>
+			</div>
+			<div class="mc-content" >
+				<p class="mc-text" >This is a common card.</p>
+				<img src="images/material-09.jpg" />
+			</div>
+			<div class="mc-footer" >
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="share" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="comment" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="like" ></a>
+			</div>
+		</div>
+	</div>
+</div>
+<br />
+
+<span class="mc-divider"></span>
+<br />
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-layout" mc-layout="3"&gt;</li>
+	<ul>
+		<li>&lt;div class="mc-layout" mc-layout-size="small"&gt;</li>
+		<ul>
+			<li>&lt;div class="mc-card"&gt;</li>
+				<ul>
+					<li>...</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+		</ul>
+		<li>&lt;/div&gt;</li>
+		<li>&lt;div class="mc-layout" mc-layout-size="biggest"&gt;</li>
+		<ul>
+			<li>&lt;div class="mc-card"&gt;</li>
+				<ul>
+					<li>...</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+		</ul>
+		<li>&lt;/div&gt;</li>
+	</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+<br />
+<br />
+<div class="mc-layout" mc-layout="3">
+	<div class="mc-layout" mc-layout-size="small">
+		<div class="mc-card" >
+			<div class="mc-header" >
+				<img src="images/material_logo.png" />
+				<h1 class="mc-title" >Material CSS</h1>
+				<h2 class="mc-subtitle" ></h2>
+			</div>
+			<div class="mc-content" >
+				<p class="mc-text" >This is a common card.</p>
+				<img src="images/material-09.jpg" />
+			</div>
+			<div class="mc-footer" >
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="share" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="comment" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="like" ></a>
+			</div>
+		</div>
+		<div class="mc-card" >
+			<div class="mc-header" >
+				<img src="images/material_logo.png" />
+				<h1 class="mc-title" >Material CSS</h1>
+				<h2 class="mc-subtitle" ></h2>
+			</div>
+			<div class="mc-content" >
+				<p class="mc-text" >This is a common card.</p>
+				<img src="images/material-09.jpg" />
+			</div>
+			<div class="mc-footer" >
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="share" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="comment" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="like" ></a>
+			</div>
+		</div>
+	</div>
+	<div class="mc-layout" mc-layout-size="biggest">
+		<div class="mc-card" >
+			<div class="mc-header" >
+				<img src="images/material_logo.png" />
+				<h1 class="mc-title" >Material CSS</h1>
+				<h2 class="mc-subtitle" ></h2>
+			</div>
+			<div class="mc-content" >
+				<p class="mc-text" >This is a common card.</p>
+				<img src="images/material-09.jpg" />
+			</div>
+			<div class="mc-footer" >
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="share" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="comment" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="like" ></a>
+			</div>
+		</div>
+	</div>
+</div>
+<br />
+
+<span class="mc-divider"></span>
+<br />
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-layout" mc-layout="3"&gt;</li>
+	<ul>
+		<li>&lt;div class="mc-layout" mc-layout-size="biggest"&gt;</li>
+		<ul>
+			<li>&lt;div class="mc-card"&gt;</li>
+				<ul>
+					<li>...</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+		</ul>
+		<li>&lt;/div&gt;</li>
+		<li>&lt;div class="mc-layout" mc-layout-size="small"&gt;</li>
+		<ul>
+			<li>&lt;div class="mc-card"&gt;</li>
+				<ul>
+					<li>...</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+		</ul>
+		<li>&lt;/div&gt;</li>
+	</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+<br />
+<br />
+<div class="mc-layout" mc-layout="3">
+	<div class="mc-layout" mc-layout-size="biggest">
+		<div class="mc-card" >
+			<div class="mc-header" >
+				<img src="images/material_logo.png" />
+				<h1 class="mc-title" >Material CSS</h1>
+				<h2 class="mc-subtitle" ></h2>
+			</div>
+			<div class="mc-content" >
+				<p class="mc-text" >This is a common card.</p>
+				<img src="images/material-09.jpg" />
+			</div>
+			<div class="mc-footer" >
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="share" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="comment" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="like" ></a>
+			</div>
+		</div>
+	</div>
+	<div class="mc-layout" mc-layout-size="small">
+		<div class="mc-card" >
+			<div class="mc-header" >
+				<img src="images/material_logo.png" />
+				<h1 class="mc-title" >Material CSS</h1>
+				<h2 class="mc-subtitle" ></h2>
+			</div>
+			<div class="mc-content" >
+				<p class="mc-text" >This is a common card.</p>
+				<img src="images/material-09.jpg" />
+			</div>
+			<div class="mc-footer" >
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="share" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="comment" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="like" ></a>
+			</div>
+		</div>
+		<div class="mc-card" >
+			<div class="mc-header" >
+				<img src="images/material_logo.png" />
+				<h1 class="mc-title" >Material CSS</h1>
+				<h2 class="mc-subtitle" ></h2>
+			</div>
+			<div class="mc-content" >
+				<p class="mc-text" >This is a common card.</p>
+				<img src="images/material-09.jpg" />
+			</div>
+			<div class="mc-footer" >
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="share" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="comment" ></a>
+				<a class="mc-button mc-button-icon mc-clickable" mc-action="like" ></a>
+			</div>
+		</div>
+	</div>
+</div>
+<br />
+
+<h1 class="mc-title" alt="front-page">Front page</h1>
+<p class="mc-text">This layout is one of the most shocking layouts availables on Material Design. It is used for landing pages and it's too simple to use.</p>
+<p class="mc-text">Just add the attribute <b>mc-layout="front"</b> to your body, and see what happens.</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;body mc-layout="front"&gt;</li>
+	<ul>
+		<li>&lt;div class="mc-navigation" &gt;</li>
+		<ul>
+			<li>...</li>
+		</ul>
+		<li>&lt;/div&gt;</li>
+		<li>&lt;div class="mc-header" &gt;</li>
+		<ul>
+			<li>...</li>
+		</ul>
+		<li>&lt;/div&gt;</li>
+		<li>&lt;div class="mc-content" &gt;</li>
+		<ul>
+			<li>...</li>
+		</ul>
+		<li>&lt;/div&gt;</li>
+		<li>&lt;div class="mc-floating" &gt;</li>
+		<ul>
+			<li>...</li>
+		</ul>
+		<li>&lt;/div&gt;</li>
+	</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+<br />
+<button class="mc-button mc-button-text mc-button-raised mc-clickable" data-ng-click="frontLayoutSample()">Show sample</button>
+<br />
+
+<h1 class="mc-title" alt="hidden-nav">Hidden Navigation</h1>
+<p class="mc-text">Maybe you want to hide the menu, but want a normal layout on your page. On these cases, you just have to add the attribute <b>mc-layout="hidden-nav"</b> to your body, and everything is going to be prepeared for that.</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;body mc-layout="hidden-nav"&gt;</li>
+	<ul>
+		<li>&lt;div class="mc-navigation" &gt;</li>
+		<ul>
+			<li>...</li>
+		</ul>
+		<li>&lt;/div&gt;</li>
+		<li>&lt;div class="mc-header" &gt;</li>
+		<ul>
+			<li>...</li>
+		</ul>
+		<li>&lt;/div&gt;</li>
+		<li>&lt;div class="mc-content" &gt;</li>
+		<ul>
+			<li>...</li>
+		</ul>
+		<li>&lt;/div&gt;</li>
+		<li>&lt;div class="mc-floating" &gt;</li>
+		<ul>
+			<li>...</li>
+		</ul>
+		<li>&lt;/div&gt;</li>
+	</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+<br />
+<button class="mc-button mc-button-text mc-button-raised mc-clickable" data-ng-click="hiddenNavigationSample()">Show sample</button>
+<br />
+
+<h1 class="mc-title" alt="no-nav">No Navigation</h1>
+<p class="mc-text">Maybe we don't want a navigation menu on the left side. Maybe we want to display a menu on the tabs bar, or maybe we don't want a menu.</p>
+<p class="mc-text">For this cases, we created this layout. Just add the attribute <b>mc-layout="no-nav"</b> to your body, and you are ready to go.</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;body mc-layout="no-nav"&gt;</li>
+	<ul>
+		<li>&lt;div class="mc-header" &gt;</li>
+		<ul>
+			<li>...</li>
+		</ul>
+		<li>&lt;/div&gt;</li>
+		<li>&lt;div class="mc-content" &gt;</li>
+		<ul>
+			<li>...</li>
+		</ul>
+		<li>&lt;/div&gt;</li>
+		<li>&lt;div class="mc-floating" &gt;</li>
+		<ul>
+			<li>...</li>
+		</ul>
+		<li>&lt;/div&gt;</li>
+	</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+<br />
+<button class="mc-button mc-button-text mc-button-raised mc-clickable" data-ng-click="noNavigationSample()">Show sample</button>
+<br />

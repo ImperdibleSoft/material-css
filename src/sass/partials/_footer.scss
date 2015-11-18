@@ -91,7 +91,10 @@ body{
 
 // Smartwatches
 @media screen and (max-width: $max-watches){
-
+  body > .mc-footer{
+    width: 100%!important;
+    left: 0px!important;
+  }
 }
 
 // Only Mobiles

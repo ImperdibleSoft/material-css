@@ -113,7 +113,8 @@ body{
       float: none;
 
       width: 110%;
-      min-height: 100%;
+      min-height: 110%;
+      max-width: none;
       top: 0px;
       left: 0px;
       margin-left: -5%;
@@ -216,6 +217,8 @@ body{
           display: inline-block;
 
           width: calc(100% - 48px);
+
+          text-align: left;
         }
         .mc-button{
           display: inline-block;

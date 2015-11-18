@@ -1,0 +1,143 @@
+<p class="mc-text">Notifications are the best way to inform the user about something, without taking care of what you are doing.</p>
+
+<h1 class="mc-title" alt="common-notification">Common notification</h1>
+<p class="mc-text">First of all, you need to place a "<b>mc-notification-container</b>" class as your body's direct child. This will be a controlled place to stack all the notifications.</p>
+<p class="mc-text">To open a notification, just create it by placing an element with the "<b>mc-notification</b>" class. The notification will appear automatically in its place.</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-notification-container"&gt;</li>
+		<ul>
+			<li>&lt;div class="mc-notification"&gt;</li>
+				<ul>
+					<li>...</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+			<li>&lt;div class="mc-notification"&gt;</li>
+				<ul>
+					<li>...</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+			<li>&lt;div class="mc-notification"&gt;</li>
+				<ul>
+					<li>...</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+		</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+<button class="mc-button mc-button-text mc-clickable mc-button-raised" onclick="javascript:notification.create('This is a normal notification.', 'mc-text', 'cancel', 'comb')">create notification</button>
+<p class="mc-note">*We strongly recommend you to use the <b class="mc-selectable">mc.updateFloatingButtons()</b> function when open/close notifications. Thanks to this function, your notifications won't overlaps the floating buttons on mobile enviroments.</p>
+<br />
+
+<h1 class="mc-title" alt="notification-components">Notification components</h1>
+<p class="mc-text">You can add <b>mc-title</b>, <b>mc-subtitle</b>, <b>mc-text</b>, <b>mc-note</b>, <b>mc-button-icon</b>, <b>mc-button-text</b> and <b>mc-button-comb</b> elements to your notification, so the user can interact with them.</p>
+
+<form name="notificationType">
+	<div class="mc-card">
+		<div class="mc-header">
+			<h1 class="mc-title">Text conf</h1>
+		</div>
+		<div class="mc-content">
+			<div class="mc-input" style="width: calc(100% - 20px);">
+				<input type="text" data-ng-model="text" />
+				<span class="mc-label" data-ng-class="{'mc-floating-label': text}">Notification text</span>
+			</div>
+			<br />
+			
+			<label class="mc-radiobutton">
+				<input type="radio" data-ng-model="textType" value="mc-title" />
+				<div class="mc-radio-bg">
+					<div class="mc-radio"></div>
+				</div>
+				<span>Title</span>
+			</label>
+			<br />
+			
+			<label class="mc-radiobutton">
+				<input type="radio" data-ng-model="textType" value="mc-subtitle" />
+				<div class="mc-radio-bg">
+					<div class="mc-radio"></div>
+				</div>
+				<span>Subtitle</span>
+			</label>
+			<br />
+			
+			<label class="mc-radiobutton">
+				<input type="radio" data-ng-model="textType" value="mc-text" />
+				<div class="mc-radio-bg">
+					<div class="mc-radio"></div>
+				</div>
+				<span>Text</span>
+			</label>
+			<br />
+			
+			<label class="mc-radiobutton">
+				<input type="radio" data-ng-model="textType" value="mc-note" />
+				<div class="mc-radio-bg">
+					<div class="mc-radio"></div>
+				</div>
+				<span>Note</span>
+			</label>
+			<br />
+		</div>
+	</div>
+	<div class="mc-card">
+		<div class="mc-header">
+			<h1 class="mc-title">Button conf</h1>
+		</div>
+		<div class="mc-content">
+			<label class="mc-radiobutton">
+				<input type="radio" data-ng-model="buttonType" value="none" />
+				<div class="mc-radio-bg">
+					<div class="mc-radio"></div>
+				</div>
+				<span>None</span>
+			</label>
+			<br />
+			
+			<label class="mc-radiobutton">
+				<input type="radio" data-ng-model="buttonType" value="icon" />
+				<div class="mc-radio-bg">
+					<div class="mc-radio"></div>
+				</div>
+				<span>Icon</span>
+			</label>
+			<br />
+			
+			<label class="mc-radiobutton">
+				<input type="radio" data-ng-model="buttonType" value="text" />
+				<div class="mc-radio-bg">
+					<div class="mc-radio"></div>
+				</div>
+				<span>Text</span>
+			</label>
+			<br />
+			
+			<label class="mc-radiobutton">
+				<input type="radio" data-ng-model="buttonType" value="comb" />
+				<div class="mc-radio-bg">
+					<div class="mc-radio"></div>
+				</div>
+				<span>Combined</span>
+			</label>
+			<br />
+		</div>
+	</div>
+	<br />
+	<br />
+
+	<ul class="mc-list mc-list-clean mc-code">
+		<li>&lt;div class="mc-notification-container"&gt;</li>
+			<ul>
+				<li>&lt;div class="mc-notification"&gt;</li>
+					<ul>
+						<li data-ng-if="buttonType != 'none'">&lt;span class="mc-button mc-button-{{ buttonType }} <span data-ng-if="buttonType != 'text'">mc-action="cancel"</span>&gt;<span data-ng-if="buttonType != 'icon'">cancel</span>&lt;/span&gt;</li>
+						<li>&lt;p class="{{ textType }}"&gt;{{ text }}&lt;/p&gt;</li>
+					</ul>
+				<li>&lt;/div&gt;</li>
+			</ul>
+		<li>&lt;/div&gt;</li>
+	</ul>
+	<br />
+	<button class="mc-button mc-button-text mc-clickable mc-button-raised" data-ng-click="createNotification()">create notification</button>
+</form>
+<br />

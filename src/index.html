@@ -1,22 +1,58 @@
-<html>
-  <head>
-    <title>Material CSS</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<html data-ng-app="materialCSS">
+	<head>
+		<title>Material CSS</title>
 
-    <!--Android -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
-    <!-- iOS -->
+		<!--Android -->
+		<meta name="mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" href="images/material_logo.png" />
+		<link rel="icon" href="images/material_logo.png" sizes="192x192">
+		<meta name="theme-color" content="#FF9800">
 
-    <!-- Custom files -->
-    <script src="http://www.material-css.com/js/jquery.min.js" type="text/javascript"></script>
-    <script src="js/main.js" type="text/javascript"></script>
+		<!-- iOS -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="images/material_logo.png" />
 
-    <!-- Material-CSS files -->
-    <link href="css/main.css" type="text/css" rel="stylesheet" />
-    <!-- <link href="http://www.material-css.com/color-themes/default-theme.css" type="text/css" rel="stylesheet" /> -->
+		<!-- inject:css -->
+    <!-- endinject -->
+
+		<!-- 	Facebook  -->
+		<meta property="fb:app_id" content="804230836336073" />
+		<meta property="fb:admins" content="1354010527" />
+		<meta property="og:site_name" content="Material CSS" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Material CSS" />
+		<meta property="og:url" content="http://www.material-css.com" />
+		<meta property="og:description" content="Light CSS Framework to create responsive apps following the Material Design guidelines" />
+		<meta property="og:image" content="http://www.material-css.com/images/material_logo.png" />
+
+		<!-- Twitter -->
+		<meta name="twitter:creator" content="@ImperdibleSoft" />
+		<meta name="twitter:domain" content="imperdiblesoft.github.io" />
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:title" content="Material CSS" />
+		<meta name="twitter:description" content="Light CSS Framework to create responsive apps following the Material Design guidelines" />
+		<meta name="twitter:url" content="http://www.material-css.com" />
+		<meta name="twitter:image" content="http://www.material-css.com/images/material_logo.png" />
+
+		<!-- Google+ -->
+		<link rel="author" href="https://plus.google.com/+Imperdiblesoft/" />
+		<meta itemprop="url" content="http://www.material-css.com" />
+		<meta itemprop="name" content="Material CSS" />
+		<meta itemprop="description" content="Light CSS Framework to create responsive apps following the Material Design guidelines" />
+		<meta itemprop="thumbnail" content="http://schema.org/ImageObject" />
+		<meta itemprop="thumbnailUrl" content="http://www.material-css.com/images/material_logo.png" />
+
   </head>
-  <body>
-    <div class="mc-smartwatch"></div>
+	<body mc-layout="front">
+
+		<div class="mc-splash">
+			<div class="mc-content">
+				<img src="images/material_logo.png" />
+				<div class="mc-spinner mc-color-white mc-bg-orange"></div>
+			</div>
+		</div>
 
 		<nav class="mc-navigation">
 
@@ -31,6 +67,7 @@
 				<h1 class="mc-title">Rafael Perez Garcia</h1>
 				<h1 class="mc-text">real.lord.fido@gmail.com</h1>
 			</div>
+
 
 			<a href="#/" class="mc-nav-item" mc-action="home">Home</a>
 
@@ -66,10 +103,10 @@
 			<a href="#/support" class="mc-nav-item" mc-action="help">support</a>
 		</nav>
 
-    <header class="mc-header" style="margin-top: 0px;">
+		<header class="mc-header">
 			<div class="mc-header-line">
-				<span class="mc-button mc-button-icon mc-clickable" mc-action="menu"><span class="ink animate" style="height: 38px; width: 38px; top: 1px; left: 6px;"></span></span>
-				<label class="mc-title">texts</label>
+				<span class="mc-button mc-button-icon mc-clickable" mc-action="menu"></span>
+				<label class="mc-title">Home</label>
 				<div class="mc-right">
 					<a href="#/?download" class="mc-button mc-button-icon mc-clickable" mc-action="download" mc-tooltip="download"></a>
 					<div class="mc-tooltip" mc-item="download">Download</div>
@@ -78,103 +115,151 @@
 					<div class="mc-tooltip" mc-item="share">Share</div>
 				</div>
 			</div>
-			<div class="mc-tabs-bar mc-opened" style="min-width: 506px; left: 0px;">
-        <a href="#/texts?titles" class="mc-tab" mc-section="titles">Titles</a>
-        <a href="#/texts?subtitles" class="mc-tab" mc-section="subtitles">Subtitles</a>
-        <a href="#/texts?normal" class="mc-tab" mc-section="normal">Normal text</a>
-        <a href="#/texts?notes" class="mc-tab" mc-section="notes">Notes</a>
-        <a href="#/texts?others" class="mc-tab" mc-section="others">Others</a>
-      </div>
+			<div class="mc-tabs-bar"></div>
 		</header>
 
-    <div class="mc-content ng-scope">
-
-      <table class="mc-table">
-        <thead>
-          <tr>
-            <th>Head 1</th>
-            <th>Head 2</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Data 1</td>
-            <td>Data 2</td>
-          </tr>
-          <tr>
-            <td>Data 3</td>
-            <td>Data 4</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <div class="mc-layout ng-scope" mc-layout="1">
-      	<div class="mc-layout" mc-layout-size="big">
-      		<div class="mc-card">
-      			<div class="mc-header">
-              <img src="images/material_logo.png">
-      				<h1 class="mc-title">Material CSS</h1>
-      			</div>
-      			<div class="mc-content">
-      				<p class="mc-text">Material CSS is a light framework that allows you to create webs with Material Design look&amp;feel. </p>
-      				<p class="mc-text">This is a responsive design framework, that will allow you to create websites prepeared for be displayed on mobiles, tablets, PCs and TVs.</p>
-
-      				<div class="mc-right">
-      					<a class="mc-button mc-button-comb mc-clickable mc-button-raised" href="#/texts" mc-action="next">Read more</a>
-      				</div>
-      			</div>
-      			<div class="mc-footer">
-      				<a class="mc-button mc-button-text mc-clickable" onclick="javascript:scrollToSection('use-it')">Use It</a>
-      				<a class="mc-button mc-button-text mc-clickable" onclick="javascript:scrollToSection('install-it')">Install It</a>
-      				<a class="mc-button mc-button-text mc-clickable" onclick="javascript:scrollToSection('download')">Download</a>
-      			</div>
-      		</div>
-
-      		<div class="mc-card" alt="use-it">
-      			<div class="mc-content">
-      				<h2 class="mc-title">Use it</h2>
-      				<p class="mc-text">If you want, you can use our hosted files.</p>
-      				<h2 class="mc-subtitle">CSS File</h2>
-      				<p class="mc-text">The main framework, that allows you to use special classes.</p>
-      				<p class="mc-note mc-selectable">&lt;link href="http://www.material-css.com/material-css.css" type="text/css" rel="stylesheet" /&gt;</p>
-
-      				<h2 class="mc-subtitle">JS File</h2>
-      				<p class="mc-text">Open/close the menu bar in movile enviroments and resize some images.</p>
-      				<p class="mc-note mc-selectable">&lt;script src="http://www.material-css.com/material-css.js" type="text/javascript"&gt;&lt;/script&gt;</p>
-      			</div>
-      		</div>
-
-      		<div class="mc-card" alt="install-it">
-      			<div class="mc-content">
-      				<h2 class="mc-title">Install it</h2>
-      				<p class="mc-text">You can install our NPM module by running the next command.</p>
-      				<p class="mc-note mc-selectable">npm install materialcss</p>
-      			</div>
-      		</div>
-
-      		<div class="mc-card" alt="download">
-      			<div class="mc-content">
-      				<h2 class="mc-title">Download</h2>
-      				<p class="mc-text">Download Material CSS and use it where you want!</p>
-      				<a data-ng-if="versions.stable" href="downloads/material-css-v0.4.zip" class="mc-button mc-button-comb mc-clickable mc-button-raised ng-scope" mc-action="download">Stable</a>
-      				<a data-ng-if="versions.beta" href="downloads/material-css-v0.4b.zip" class="mc-button mc-button-comb mc-clickable mc-button-raised ng-scope" mc-action="download">Beta</a>
-      				<a data-ng-if="versions.nightly" href="downloads/material-css-v0.4n.zip" class="mc-button mc-button-comb mc-clickable mc-button-raised ng-scope" mc-action="download">Nightly</a>
-      				<br>
-      				<p class="mc-note ng-binding ng-scope" data-ng-if="versions.stable">Stable version: v0.4</p>
-      				<p class="mc-note ng-binding ng-scope" data-ng-if="versions.beta">Beta version: v0.4b</p>
-      				<p class="mc-note ng-binding ng-scope" data-ng-if="versions.nightly">Nightly version (web): v0.4n</p>
-      			</div>
-      		</div>
-      	</div>
-      </div>
-    </div>
-
-    <div class="mc-footer">
-			<p class="mc-note">Material CSS ©2015 name and its logo are property of <a href="http://www.imperdiblesoft.com" target="_blank">ImperdibleSoft</a> ©2012 | Optimized for PCs, Tablets, Mobiles and TVs. | It's recomended the use of Google Chrome</p>
+		<div class="mc-floating-window mc-hidden">
+			<div class="mc-window-header">
+				<h1 class="mc-title">Floating window</h1>
+				<h2 class="mc-note">floating-window-header</h2>
+			</div>
+			<div class="mc-window-content">
+				<p class="mc-text">This is an <b>mc-text</b> in the <b>mc-window-content</b></p>
+			</div>
+			<div class="mc-window-footer">
+				<p class="mc-note">This is an <b>mc-note</b> in the <b>mc-window-footer</b></p>
+			</div>
+		</div>
+		<div class="mc-floating-window mc-hidden" mc-layout="chat">
+			<div class="mc-window-header">
+				<img src="images/logos/imperdiblesoft.jpg" />
+				<span class="mc-button mc-button-icon" mc-action="options-v"></span>
+				<h1 class="mc-title">ImperdibleSoft</h1>
+				<h2 class="mc-note">Chat</h2>
+			</div>
+			<div class="mc-window-content">
+				<span class="mc-message">
+					<img src="images/logos/imperdiblesoft.jpg" />
+					<p class="mc-text">Hello!</p>
+				</span>
+				<span class="mc-message mc-own">
+					<img src="images/material_logo.png" />
+					<p class="mc-text">Hi, how are you?</p>
+				</span>
+				<span class="mc-message">
+					<img src="images/logos/imperdiblesoft.jpg" />
+					<p class="mc-text">I'm fine! We are working on Material CSS right now.</p>
+				</span>
+				<span class="mc-message mc-own">
+					<img src="images/material_logo.png" />
+					<p class="mc-text">Oh! This is a great framework, congrats :)</p>
+				</span>
+				<span class="mc-message mc-own">
+					<img src="images/material_logo.png" />
+					<p class="mc-text">Give me one min.</p>
+				</span>
+				<span class="mc-message mc-own">
+					<img src="images/material_logo.png" />
+					<p class="mc-text">Ok, I'm ready now. What did you want?</p>
+				</span>
+				<span class="mc-message">
+					<img src="images/logos/imperdiblesoft.jpg" />
+					<p class="mc-text">Nothing in special. I just wanted to talk with somebody :P</p>
+				</span>
+			</div>
+			<div class="mc-window-footer">
+				<input type="text" />
+				<span class="mc-button mc-button-icon" mc-action="send"></span>
+			</div>
+		</div>
+		<div class="mc-floating-window mc-hidden" mc-layout="multimedia" data-ng-controller="mediaPlayerController">
+			<div class="mc-window-header">
+				<img src="{{ playing.image }}" />
+				<span class="mc-button mc-button-icon" mc-action="playlist" data-ng-click="tooglePlayList()"></span>
+				<h1 class="mc-title">{{ playing.title }}</h1>
+				<h2 class="mc-note">{{ playing.artist }}</h2>
+			</div>
+			<div class="mc-window-content" mc-layout="list" data-ng-if="playlist">
+				<span class="mc-list-item" data-ng-repeat="track in tracklist" data-ng-click="reproduce(track.id)">
+					<!-- <span class="mc-button mc-button-icon mc-clickable" mc-action="add"></span> -->
+					<h1 class="mc-title">{{ track.title }}</h1>
+					<h1 class="mc-note">{{ track.artist }}</h1>
+				</span>
+			</div>
+			<div class="mc-window-content" data-ng-if="!playlist">
+				<img src="{{ playing.image }}" />
+			</div>
+			<div class="mc-window-footer">
+				<audio id="soundtrack" src="{{ playing.src }}" ></audio>
+				<div class="mc-slider">
+					<input type="range" min="0" max="100" value="0" />
+					<span class="mc-slider-bg">
+						<div class="mc-slider-progress"></div>
+						<div class="mc-slider-picker"></div>
+					</span>
+				</div>
+				<!-- <span class="mc-button mc-button-icon" mc-action="volume-up"></span> -->
+				<!-- <span class="mc-button mc-button-icon" mc-action="repeat"></span> -->
+				<span class="mc-button mc-button-icon" mc-action="music-prev" data-ng-click="prev()"></span>
+				<span class="mc-button mc-button-icon" mc-action="play" data-ng-click="play($event)"></span>
+				<span class="mc-button mc-button-icon" mc-action="music-next" data-ng-click="next()"></span>
+				<!-- <span class="mc-button mc-button-icon" mc-action="random"></span> -->
+			</div>
+		</div>
+		<div class="mc-floating-window mc-hidden" mc-layout="share" >
+			<div class="mc-window-header">
+				<span class="mc-button mc-button-icon" mc-action="cancel" onclick="javascript:closeShare()"></span>
+				<h1 class="mc-title">Share</h1>
+			</div>
+			<div class="mc-window-content">
+				<p class="mc-text">Share this content with any friend you want.</p>
+				<br />
+				<div class="mc-input">
+					<input type="text" value="" id="shareLink"/>
+					<label class="mc-label mc-floating-label">Share link</label>
+				</div>
+				<span class="mc-button mc-button-icon mc-clickable" mc-action="facebook" onclick="javascript:share.facebook()"></span>
+				<span class="mc-button mc-button-icon mc-clickable" mc-action="whatsapp" onclick="javascript:share.whatsapp()"></span>
+			</div>
 		</div>
 
-    <div class="mc-floating">
-      <span class="mc-button mc-button-icon mc-button-raised mc-clickable" mc-action="add"></span>
-    </div>
+		<div class="mc-content" data-ng-view=""></div>
+
+		<div class="mc-footer">
+			<p class="mc-note">Material CSS &copy;2015 name and its logo are property of <a href="http://www.imperdiblesoft.com" target="_blank">ImperdibleSoft</a> &copy;2012 | Optimized for PCs, Tablets, Mobiles and TVs. | It's recomended the use of Google Chrome</p>
+		</div>
+
+		<div class="mc-floating">
+			<a class="mc-button mc-button-icon mc-clickable mc-button-raised" mc-action="scroll-down" onclick="javascript:scrollDown()"></a>
+		</div>
+
+		<div id="falling-dialog"class="mc-dialog mc-falling-dialog">
+			<div class="mc-content">
+				<div class="mc-title">Falling dialog</div>
+				<p class="mc-text">This is a Falling dialog example.</p>
+			</div>
+			<div class="mc-footer">
+				<span class="mc-button mc-button-text mc-clickable " onclick="javascript:mc.closeDialog('#falling-dialog')">Accept</span>
+				<span class="mc-button mc-button-text mc-clickable " onclick="javascript:mc.closeDialog('#falling-dialog')">Close</span>
+			</div>
+		</div>
+		<div id="bottom-dialog" class="mc-dialog mc-bottom-dialog">
+			<div class="mc-content">
+				<div class="mc-title">Bottom dialog</div>
+				<p class="mc-text">This is a Bottom dialog example.</p>
+			</div>
+			<div class="mc-footer mc-complete-button">
+				<span class="mc-button mc-button-text mc-clickable" onclick="javascript:mc.closeDialog('#bottom-dialog')">Let me think about it</span>
+				<span class="mc-button mc-button-text mc-clickable" onclick="javascript:mc.closeDialog('#bottom-dialog')">Deny</span>
+				<span class="mc-button mc-button-text mc-clickable" onclick="javascript:mc.closeDialog('#bottom-dialog')">Accept</span>
+			</div>
+		</div>
+
+		<div class="mc-notification-container"></div>
+
+    <!-- inject:js -->
+    <!-- endinject -->
+
+  	<script src="http://www.imperdiblesoft.com/js/custom-sign.js"></script>
   </body>
 </html>

@@ -335,20 +335,23 @@ body{
 
 // Smartwatches
 @media screen and (max-width: $max-watches){
-  body > .mc-navigation{
-    width: 100%;
-    max-width: none;
-    margin-left: -100%;
 
-    .mc-nav-item, .mc-nav-subitem{
-      &.mc-nav-subitem{
-        text-align: center;
-      }
-      &, &:hover, &[mc-action], &[mc-action]:hover{
-        padding-top: 20px;
-        padding-bottom: 20px;
-        padding-right: 10px;
-        margin: 0px;
+  body, body[mc-layout="front"], body[mc-layout="no-nav"], body[mc-layout="hidden-nav"]{
+    & > .mc-navigation{
+      width: 100%;
+      max-width: none;
+      margin-left: -100%;
+
+      .mc-nav-item, .mc-nav-subitem{
+        &.mc-nav-subitem{
+          text-align: center;
+        }
+        &, &:hover, &[mc-action], &[mc-action]:hover{
+          padding-top: 20px;
+          padding-bottom: 20px;
+          padding-right: 10px;
+          margin: 0px;
+        }
       }
     }
   }

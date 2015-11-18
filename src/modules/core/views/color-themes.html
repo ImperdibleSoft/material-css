@@ -1,0 +1,195 @@
+<p class="mc-text">We have several themes to use with our framework. Of course, you can download it or use our hosted files. You'll be able to have a beautiful site without caring on colors, so let's try!</p>
+<br />
+
+<p class="mc-text">Choose any of our available themes and see if you like it. .</p>
+<form name="myForm">
+	<div class="mc-card">
+		<div class="mc-header">
+			<img src="images/{{ themes.default.img }}.png" />
+			<h1 class="mc-title">{{ themes.default.name }}</h1>
+			<h2 class="mc-subtitle">by Material CSS</h2>
+		</div>
+		<div class="mc-content">
+			<p class="mc-text">This is the style we are using on our website.</p>
+			<label class="mc-radiobutton">
+				<input type="radio" data-ng-model="selectedTheme" value="{{ themes.default.route }}" data-ng-click="update(themes.default.route)" />
+				<div class="mc-radio-bg">
+					<div class="mc-radio"></div>
+				</div>
+				<span>{{ themes.default.name }} Theme</span>
+			</label>
+			<br />
+			<br />
+		</div>
+	</div>
+	
+	<div class="mc-card">
+		<div class="mc-header">
+			<img src="images/logos/{{ themes.android.img }}.png" />
+			<h1 class="mc-title">{{ themes.android.name }}</h1>
+			<h2 class="mc-subtitle">by Material CSS</h2>
+		</div>
+		<div class="mc-content">
+			<p class="mc-text">Make your app looks like Android Lollipop.</p>
+			<label class="mc-radiobutton">
+				<input type="radio" data-ng-model="selectedTheme" value="{{ themes.android.route }}" data-ng-click="update(themes.android.route)" />
+				<div class="mc-radio-bg">
+					<div class="mc-radio"></div>
+				</div>
+				<span>{{ themes.android.name }} Theme</span>
+			</label>
+			<br />
+			<br />
+		</div>
+	</div>
+	
+	<div class="mc-card">
+		<div class="mc-header">
+			<img src="images/logos/{{ themes.imperdiblesoft.img }}.jpg" />
+			<h1 class="mc-title">{{ themes.imperdiblesoft.name }}</h1>
+			<h2 class="mc-subtitle">by Material CSS</h2>
+		</div>
+		<div class="mc-content">
+			<p class="mc-text">Discover it at <a href="http://www.imperdiblesoft.com" target="_blank">www.imperdiblesoft.com</a>.</p>
+			<label class="mc-radiobutton">
+				<input type="radio" data-ng-model="selectedTheme" value="{{ themes.imperdiblesoft.route }}" data-ng-click="update(themes.imperdiblesoft.route)" />
+				<div class="mc-radio-bg">
+					<div class="mc-radio"></div>
+				</div>
+				<span>{{ themes.imperdiblesoft.name }} Theme</span>
+			</label>
+			<br />
+			<br />
+		</div>
+	</div>
+	
+	<div class="mc-card">
+		<div class="mc-header">
+			<img src="images/logos/{{ themes.google.img }}.png" />
+			<h1 class="mc-title">{{ themes.google.name }}</h1>
+			<h2 class="mc-subtitle">by Material CSS</h2>
+		</div>
+		<div class="mc-content">
+			<p class="mc-text">Make your app looks like <a href="http://plus.google.com" target="_blank">plus.google.com</a>.</p>
+			<label class="mc-radiobutton">
+				<input type="radio" data-ng-model="selectedTheme" value="{{ themes.google.route }}" data-ng-click="update(themes.google.route)" />
+				<div class="mc-radio-bg">
+					<div class="mc-radio"></div>
+				</div>
+				<span>{{ themes.google.name }} Theme</span>
+			</label>
+			<br />
+			<br />
+		</div>
+	</div>
+	
+	<div class="mc-card">
+		<div class="mc-header">
+			<img src="images/logos/{{ themes.facebook.img }}.png" />
+			<h1 class="mc-title">{{ themes.facebook.name }}</h1>
+			<h2 class="mc-subtitle">by Material CSS</h2>
+		</div>
+		<div class="mc-content">
+			<p class="mc-text">Make your app looks like <a href="http://www.facebook.com" target="_blank">www.facebook.com</a>.</p>
+			<label class="mc-radiobutton">
+				<input type="radio" data-ng-model="selectedTheme" value="{{ themes.facebook.route }}" data-ng-click="update(themes.facebook.route)" />
+				<div class="mc-radio-bg">
+					<div class="mc-radio"></div>
+				</div>
+				<span>{{ themes.facebook.name }} Theme</span>
+			</label>
+			<br />
+			<br />
+		</div>
+	</div>
+	
+	<div class="mc-card">
+		<div class="mc-header">
+			<img src="images/logos/{{ themes.twitter.img }}.png" />
+			<h1 class="mc-title">{{ themes.twitter.name }}</h1>
+			<h2 class="mc-subtitle">by Material CSS</h2>
+		</div>
+		<div class="mc-content">
+			<p class="mc-text">Make your app looks like <a href="http://www.twitter.com" target="_blank">www.twitter.com</a>.</p>
+			<label class="mc-radiobutton">
+				<input type="radio" data-ng-model="selectedTheme" value="{{ themes.twitter.route }}" data-ng-click="update(themes.twitter.route)" />
+				<div class="mc-radio-bg">
+					<div class="mc-radio"></div>
+				</div>
+				<span>{{ themes.twitter.name }} Theme</span>
+			</label>
+			<br />
+			<br />
+		</div>
+	</div>
+	
+	<div class="mc-card">
+		<div class="mc-header">
+			<img src="images/logos/{{ themes.spotify.img }}.png" />
+			<h1 class="mc-title">{{ themes.spotify.name }}</h1>
+			<h2 class="mc-subtitle">by Material CSS</h2>
+		</div>
+		<div class="mc-content">
+			<p class="mc-text">Make your app looks like <a href="http://www.spotify.com" target="_blank">www.spotify.com</a>.</p>
+			<label class="mc-radiobutton">
+				<input type="radio" data-ng-model="selectedTheme" value="{{ themes.spotify.route }}" data-ng-click="update(themes.spotify.route)" />
+				<div class="mc-radio-bg">
+					<div class="mc-radio"></div>
+				</div>
+				<span>{{ themes.spotify.name }} Theme</span>
+			</label>
+			<br />
+			<br />
+		</div>
+	</div>
+	
+	<div class="mc-card">
+		<div class="mc-header">
+			<img src="images/logos/{{ themes.mypetcard.img }}.png" />
+			<h1 class="mc-title">{{ themes.mypetcard.name }}</h1>
+			<h2 class="mc-subtitle">by Material CSS</h2>
+		</div>
+		<div class="mc-content">
+			<p class="mc-text">Make your app looks like <a href="http://www.mypetcard.com.ar" target="_blank">www.mypetcard.com.ar</a>.</p>
+			<label class="mc-radiobutton">
+				<input type="radio" data-ng-model="selectedTheme" value="{{ themes.mypetcard.route }}" data-ng-click="update(themes.mypetcard.route)" />
+				<div class="mc-radio-bg">
+					<div class="mc-radio"></div>
+				</div>
+				<span>{{ themes.mypetcard.name }} Theme</span>
+			</label>
+			<br />
+			<br />
+		</div>
+	</div>
+	
+	<div class="mc-card">
+		<div class="mc-header">
+			<h1 class="mc-title">{{ themes.notheme.name }}</h1>
+			<h2 class="mc-subtitle">by Material CSS</h2>
+		</div>
+		<div class="mc-content">
+			<p class="mc-text">This is how your application will look if you don't use any Color Theme and any Color class on it.</p>
+			<label class="mc-radiobutton">
+				<input type="radio" data-ng-model="selectedTheme" value="{{ themes.notheme.route }}" data-ng-click="update(themes.notheme.route)" />
+				<div class="mc-radio-bg">
+					<div class="mc-radio"></div>
+				</div>
+				<span>{{ themes.notheme.name }}</span>
+			</label>
+			<br />
+			<br />
+		</div>
+	</div>
+	
+	<div data-ng-if="selectedTheme != themes.notheme.route">
+		<h1 class="mc-title">Use it!</h1>
+		<p class="mc-text">To use this color theme, simply copy&amp;paste this line on your header.</p>
+		<p class="mc-note mc-selectable">&lt;link href="http://www.material-css.com/{{ selectedTheme }}" type="text/css" rel="stylesheet" /&gt;</p>
+		<br />
+		
+		<h1 class="mc-title">Download it!</h1>
+		<p class="mc-text">If you prefer, you can download it, and even modify it.</p>
+		<button class="mc-button mc-button-comb mc-clickable mc-button-raised" mc-action="download" data-ng-click="download()">Download</button>
+	</div>
+</form>

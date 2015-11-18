@@ -1,0 +1,89 @@
+<p class="mc-text">We have implemented some tricks to improve the use of Material CSS, like some functions or minor elements.</p>
+<p class="mc-text">With this tricks, we try to improve even more the creation of beautiful webapps, following Material Design guidelines.</p>
+
+<h1 class="mc-title" alt="splash">Splash Screen</h1>
+<p class="mc-text">The splash screen is a perfect way to hide the page content while it is loading. This helps the user to hide the "this is too slow" feeling.</p>
+<p class="mc-text">Simply add an element with "<b>mc-splash</b>" as your body's first child, and into it place an "<b>mc-content</b>" element. </p>
+<p class="mc-text">Now you are prepeared to place your image, title, subtitle, text, note or maybe a spinner.</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-splash"&gt;</li>
+	<ul>
+		<li>&lt;div class="mc-content"&gt;</li>
+		<ul>
+			<li>&lt;img src="" /&gt;</li>
+			<li>&lt;div class="mc-spinner"&gt;&lt;/div&gt;</li>
+		</ul>
+		<li>&lt;/div&gt;</li>
+	</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+<br />
+<button class="mc-button mc-button-text mc-button-raised mc-clickable" data-ng-click="showSpashScreen()">Show sample</button>
+
+<h1 class="mc-title" alt="toogle-navigation">Toogle Navigation</h1>
+<p class="mc-text">If you want to force the navigation panel to open, close or simply toogle between those states, you can use the "<b>mc.toogleNavigation()</b>" function:</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>mc.toogleNavigation( true )  // Force the navigation panel to open</li>
+	<li>mc.toogleNavigation( false )  // Force the navigation panel to close</li>
+	<li>mc.toogleNavigation()  // Toogle between open/close</li>
+</ul>
+<br />
+
+<h1 class="mc-title" alt="toogle-submenu">Toogle SubMenu</h1>
+<p class="mc-text">If you want to change the submenu's opened/closed status, you can use the "<b>mc.toogleSubMenu()</b>" function:</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>mc.toogleSubMenu( param )  // Change the open/close status, where param is the "mc-sumbenu" attribute's value</li>
+</ul>
+<br />
+
+<h1 class="mc-title" alt="toogle-tabsbar">Toogle Tabs bar</h1>
+<p class="mc-text">If you want to force the tabs bar to open, close or simply toogle between those states, you can use the "<b>mc.toogleTabs()</b>" function:</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>mc.toogleTabs( true )  // Force the tabs bar to open</li>
+	<li>mc.toogleTabs( false )  // Force the tabs bar to close</li>
+	<li>mc.toogleTabs()  // Toogle between open/close</li>
+</ul>
+<br />
+
+<h1 class="mc-title" alt="toogle-dialogs">Open/Close dialogs</h1>
+<p class="mc-text">If you want to open or close Dialogs (popups), you should use the "<b>mc.openDialog()</b>" and "<b>mc.closeDialog()</b>" functions:</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>mc.openDialog( "#myDialogId" )  // Force the dialog to open</li>
+	<li>mc.closeDialog( ".myDialogClass" )  // Force the dialog to close</li>
+</ul>
+<br />
+
+<h1 class="mc-title" alt="device-type">Device type</h1>
+<p class="mc-text">If you want to know what type of device is displaying the app (so you can choose if your app do or not something), you have different functions to ask:</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>mc.isMobile()  // Returns true if the screen fits with normal mobile sizes</li>
+	<li>mc.isTablet()  // Returns true if the screen fits with normal tablet sizes</li>
+	<li>mc.isPC()  // Returns true if the screen fits with normal PC sizes</li>
+	<li>mc.isTV()  // Returns true if the screen fits with normal TV sizes</li>
+</ul>
+<br />
+
+<p class="mc-text">Also, we have different CSS classes for you to display the content on some particular devices. Of course, you can combine them as you want.</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;img class="mc-mobile" /&gt;  &lt;!-- Display the element only on mobile devices --&gt;</li>
+	<li>&lt;img class="mc-tablet" /&gt;  &lt;!-- Display the element only on tablet devices --&gt;</li>
+	<li>&lt;img class="mc-pc" /&gt;  &lt;!-- Display the element only on PC devices --&gt;</li>
+	<li>&lt;img class="mc-tv" /&gt;  &lt;!-- Display the element only on TV devices --&gt;</li>
+	<li>&lt;img class="mc-mobile mc-tablet" /&gt;  &lt;!-- Display the element only on mobile and tablet devices --&gt;</li>
+</ul>
+<br />
+
+<h1 class="mc-title" alt="dynamic-buttons">Dinamic Buttons</h1>
+<p class="mc-text">Other super cool thing you can do with Material CSS is to make dynamic buttons. Make them change of colors and types with some events!</p>
+
+<a id="clickableColorBtn" mc-tooltip="clickableColorBtn" class="mc-button mc-button-text mc-button-raised mc-clickable">Click me!</a>
+<span class="mc-tooltip" mc-item="clickableColorBtn">Click this button to change its color</span>
+<br />
+
+<a id="clickableBtn" mc-tooltip="clickableBtn" class="mc-button mc-button-comb mc-button-raised mc-clickable" mc-action="download">Click me!</a>
+<span class="mc-tooltip" mc-item="clickableBtn">Click this button to change its type</span>
+<br />
+
+<a id="hoverBtn" mc-tooltip="hoverBtn" class="mc-button mc-button-icon mc-button-raised mc-clickable" mc-action="download"></a>
+<span class="mc-tooltip" mc-item="hoverBtn">Hover this button to change its type</span>
+<br />

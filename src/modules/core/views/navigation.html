@@ -1,0 +1,103 @@
+<p class="mc-text">Navigation is an important part of your application. It allows the user to move between pages and see interesting content. Because of that, we have paid attention to this so our framework is completly responsive.</p>
+<p class="mc-text">So, let's start! Just add an element with the "<b>mc-navigation</b>" class to create the navigation container. This container will hide automatically on mobile enviroments, and you'll be able to open it by clicking the "menu" button, or swiping to de right.</p>
+
+<h1 class="mc-title" alt="nav-title">Navigation title</h1>
+<p class="mc-text">The menu bar contains the header bar on the navigation panel. It'll be hidden automatically on mobile enviroments and will appear when clicking the "Menu" button, as the navigation panel.</p>
+<p class="mc-text">Simply add an element with "<b>mc-header-menu</b>" class into your the "<b>mc-navigation</b>". </p>
+<p class="mc-text">You can place <b>Icon Buttons</b> and <b>Titles</b> into this bar.</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-navigation"&gt;</li>
+	<ul>
+		<li>&lt;div class="mc-header-menu"&gt;</li>
+		<ul>
+			<li>&lt;span class="mc-button-icon" mc-action="menu"&gt;&lt;/span&gt;</li>
+			<li>&lt;span class="mc-button-icon" mc-action="back"&gt;&lt;/span&gt;</li>
+			<li>&lt;p class="mc-title"&gt; Menu &lt;/p&gt;</li>
+		</ul>
+		<li>&lt;/div&gt;</li>
+	</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+<br />
+
+<h1 class="mc-title" alt="account-info">Account Info</h1>
+<p class="mc-text">The account info is an special header for the navigation panel to display some info about the logged user. It is very useful for identifying our account, and it's very beautiful also.</p>
+<p class="mc-text">Simply add the "<b>mc-accountinfo</b>" class to your "<b>mc-header-menu</b>" element and it'll be ready to display your new components.</p>
+<p class="mc-text">You can place 3 different elements on it:</p>
+<ul class="mc-list mc-clean">
+	<li class="mc-list-item">An image</li>
+	<li class="mc-list-item">First line of text (recommended mc-title or mc-subtitle)</li>
+	<li class="mc-list-item">Second line of text (recommended mc-text or mc-note)</li>
+</ul>
+<br />
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-navigation"&gt;</li>
+	<ul>
+		<li>&lt;div class="mc-header-menu mc-accountinfo"&gt;</li>
+		<ul>
+			<li>&lt;img /&gt;</li>
+			<li>&lt;h1 class="mc-title"&gt; User Name &lt;/h1&gt;</li>
+			<li>&lt;p class="mc-text"&gt; user email &lt;/p&gt;</li>
+		</ul>
+		<li>&lt;/div&gt;</li>
+	</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+<br />
+<button class="mc-button mc-button-text mc-button-raised mc-clickable" data-ng-click="toogleHeaderMenu()">Toogle Account Info</button>
+
+<h1 class="mc-title" alt="nav-items">Navigation items</h1>
+<p class="mc-text">These items are the main items, and they can be added by writing the "<b>mc-nav-item</b>" class.</p>
+<p class="mc-note">In our menu, this corresponds to "Home", "Elements", "Colorize", etc...</p>
+<p class="mc-text">You can add an icon to your item or subitem easily. Just add an "<b>mc-action</b>" attribute, like Icon Buttons</p>
+<p class="mc-note">In our menu, main items have icons.</p>
+<br />
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-navigation"&gt;</li>
+	<ul>
+		<li>&lt;a href="#" class="mc-nav-item" mc-action="home"&gt; Home &lt;/a&gt;</li>
+		<li>&lt;a href="#" class="mc-nav-item" mc-action="text"&gt; Texts &lt;/a&gt;</li>
+		<li>&lt;a href="#" class="mc-nav-item" mc-action="icon"&gt; Icons &lt;/a&gt;</li>
+		<li>...</li>
+	</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+<br />
+
+<h1 class="mc-title" alt="nav-subitems">Navigation subitems</h1>
+<p class="mc-text">Subitems are in the second level, and they are below the main items. You can create a div to contain all your related subitems, and then, add all the elements with "<b>mc-nav-subitem</b>" class into it.</p>
+<p class="mc-note">In our menu, this corresponds to "Texts", "Icons", "Navigation", etc. under "Elements" main item.</p>
+<br />
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-navigation"&gt;</li>
+	<ul>
+		<li>&lt;a href="#" class="mc-nav-item" mc-action="home"&gt; Navigation &lt;/a&gt;</li>
+		<li>&lt;div&gt;</li>
+		<ul>
+			<li>&lt;a href="#" class="mc-nav-subitem"&gt; Nav. Items &lt;/a&gt;</li>
+			<li>&lt;a href="#" class="mc-nav-subitem"&gt; Nav. Subitems &lt;/a&gt;</li>
+			<li>...</li>
+		</ul>
+		<li>&lt;/div&gt;</li>
+	</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+<br />
+
+<h1 class="mc-title" alt="collapsable-subitems">Collapsable subitems</h1>
+<p class="mc-text">You can hide subitem by adding the "<b>mc-collapsed</b>" class to their parent container. You also must place an "<b>mc-submenu</b>" on it, with the same value that the "<b>mc-menu</b>" you will place on its related "<b>.mc-nav-item</b>"</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-navigation"&gt;</li>
+	<ul>
+		<li>&lt;a href="#" class="mc-nav-item" mc-action="home" mc-menu="navigation"&gt; Navigation &lt;/a&gt;</li>
+		<li>&lt;div class="mc-collapsed" mc-submenu="navigation"&gt;</li>
+		<ul>
+			<li>&lt;a href="#" class="mc-nav-subitem"&gt; Nav. Items &lt;/a&gt;</li>
+			<li>&lt;a href="#" class="mc-nav-subitem"&gt; Nav. Subitems &lt;/a&gt;</li>
+			<li>...</li>
+		</ul>
+		<li>&lt;/div&gt;</li>
+	</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+<br />

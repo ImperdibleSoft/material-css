@@ -1,0 +1,650 @@
+<p class="mc-text">Forms are the main way you collect info from the user. They register, send you feedback, and talk between themselves thanks to forms. So here you have a list of form components you can use with Material CSS.</p>
+
+<h1 class="mc-title" alt="text-inputs">Text inputs</h1>
+<p class="mc-text">Text inputs allows the user to input some text data, as names, emails, phone numbers, addresses, etc.</p>
+<p class="mc-text">To use them, just place an element with the "<b>mc-input</b>" class. Then add two children: The input, and the "<b>mc-label</b>".</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-input" /&gt;</li>
+		<ul>
+			<li>&lt;input type="text | email | tel | number" /&gt;</li>
+			<li>&lt;span class="mc-label"&gt;&lt;/span&gt;</li>
+		</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+<br />
+<br />
+<div class="mc-input">
+	<input type="text" />
+	<label class="mc-label">Write something</label>
+</div>
+<br />
+
+<p class="mc-text">You can color the inputs using the "mc-bg-darkpurple" class on the "mc-input" element</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-input mc-bg-darkpurple" /&gt;</li>
+		<ul>
+			<li>&lt;input type="text | email | tel | number" /&gt;</li>
+			<li>&lt;span class="mc-label"&gt;&lt;/span&gt;</li>
+		</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+<br />
+<br />
+<form>
+	<div class="mc-input mc-bg-darkpurple">
+		<input type="text"/>
+		<label class="mc-label">Darkpurple label</label>
+	</div>
+	<div class="mc-input mc-bg-orange">
+		<input type="text" />
+		<label class="mc-label">Orange label</label>
+	</div>
+	<div class="mc-input mc-bg-red">
+		<input type="text" />
+		<label class="mc-label">Red label</label>
+	</div>
+	<div class="mc-input mc-bg-darkgreen">
+		<input type="text" />
+		<label class="mc-label">Darkgreen label</label>
+	</div>
+</form>
+<br />
+
+<h2 class="mc-subtitle">Floating labels</h2>
+<p class="mc-text">You can also make the label be above the input always. Just place the "mc-floating-label" class on the "mc-label" element.</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-input mc-bg-darkpurple" /&gt;</li>
+		<ul>
+			<li>&lt;input type="text | email | phone | number" /&gt;</li>
+			<li>&lt;span class="mc-label mc-floating-label"&gt;&lt;/span&gt;</li>
+		</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+<br />
+<br />
+<form>
+	<div class="mc-input">
+		<input type="text" />
+		<label class="mc-label mc-floating-label">Write something</label>
+	</div>
+</form>
+<br />
+
+<h2 class="mc-subtitle">Multi-line</h2>
+<p class="mc-text">If you want a multi-line input, just place a textarea instead an input, with the same "mc-input" class and the same children.</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-input mc-bg-darkpurple" /&gt;</li>
+		<ul>
+			<li>&lt;textarea&gt;&lt;/textarea&gt;</li>
+			<li>&lt;span class="mc-label"&gt;&lt;/span&gt;</li>
+		</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+<br />
+<br />
+<form>
+	<div class="mc-input">
+		<textarea></textarea>
+		<label class="mc-label">Write something</label>
+		<label class="mc-input-message">This is a multi-line field</label>
+	</div>
+</form>
+<br />
+
+<h2 class="mc-subtitle">Messages</h2>
+<p class="mc-text">In cases you want to display message, you can do it adding another children to the "<b>mc-input</b>", with the class "<b>mc-input-message</b>".</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-input mc-bg-darkpurple" /&gt;</li>
+		<ul>
+			<li>&lt;input type="text | email | tel | number" /&gt;</li>
+			<li>&lt;span class="mc-label"&gt;&lt;/span&gt;</li>
+			<li>&lt;span class="mc-input-message"&gt;&lt;/span&gt;</li>
+		</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+<br />
+<br />
+<form>
+	<div class="mc-input">
+		<input type="email" />
+		<label class="mc-label">Write something</label>
+		<label class="mc-input-message">This should match an email pattern.</label>
+	</div>
+</form>
+<br />
+
+<h2 class="mc-subtitle">Errors</h2>
+<p class="mc-text">In cases you want to display an error message, you can do it adding another children to the "<b>mc-input</b>", with the class "<b>mc-input-error</b>".</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-input mc-bg-darkpurple" /&gt;</li>
+		<ul>
+			<li>&lt;input type="text | email | tel | number" /&gt;</li>
+			<li>&lt;span class="mc-label"&gt;&lt;/span&gt;</li>
+			<li>&lt;span class="mc-input-error"&gt;&lt;/span&gt;</li>
+		</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+<br />
+<br />
+<form>
+	<div class="mc-input">
+		<input type="email" />
+		<label class="mc-label">Write something</label>
+		<label class="mc-input-error">This should match an email pattern.</label>
+	</div>
+</form>
+<br />
+
+<h1 class="mc-title" alt="dropdowns">Dropdowns</h1>
+<p class="mc-text">Dropdowns allow you to choose one option between more than one. They are used to display questions with more than 4 options and only one possible choice.</p>
+<p class="mc-text">To use them, just place an element with the "<b>mc-dropdown</b>" class. Now you've the container, you only need to add 3 elements into it: the select, the "<b>mc-dropdown-bg</b>" with a "<b>mc-dropdown-value</b>" into it, and a "<b>mc-dropdown-menu</b>" with the <b>mc-layout="list"</b> on it.</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;label class="mc-dropdown" &gt;</li>
+		<ul class="mc-list">
+			<li>&lt;select&gt;</li>
+				<ul>
+					<li>&lt;option value="val1"&gt;Text1&lt;/option&gt;</li>
+					<li>&lt;option value="val2"&gt;Text2&lt;/option&gt;</li>
+				</ul>
+			<li>&lt;/select&gt;</li>
+			<li>&lt;div class="mc-dropdown-bg" &gt;</li>
+				<ul>
+					<li>&lt;div class="mc-dropdown-value" &gt;&lt;/div&gt;</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+			<li>&lt;div class="mc-dropdown-menu" mc-layout="list"&gt;&lt;/div&gt;</li>
+		</ul>
+	<li>&lt;/label&gt;</li>
+</ul>
+<br />
+<br />
+<span class="mc-dropdown">
+	<select>
+		<option value="" selected>Select one color</option>
+		<option value="darkpurple">Darkpurple</option>
+		<option value="orange">Orange</option>
+		<option value="red">Red</option>
+		<option value="darkgreen">Dark Green</option>
+	</select>
+	<div class="mc-dropdown-bg">
+		<div class="mc-dropdown-value"></div>
+	</div>
+	<div class="mc-dropdown-menu" mc-layout="list"></div>
+</span>
+<br />
+
+<h1 class="mc-title" alt="radio-buttons">Radio Buttons</h1>
+<p class="mc-text">Radio Buttons allow you to choose one option between more than one. They are used to display questions with 2 or 3 options and only one possible choice.</p>
+<p class="mc-text">To use them, just place a <b>label</b> with the "<b>mc-radiobutton</b>" class. Now you've the container, you only need to add 3 elements into it: the radiobutton, the "<b>mc-radio-bg</b>", and the "<b>mc-label</b>" with the text you want to display.</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;label class="mc-radiobutton" &gt;</li>
+		<ul class="mc-list">
+			<li>&lt;input type="radio" /&gt;</li>
+			<li>&lt;div class="mc-radio-bg" &gt;</li>
+				<ul>
+					<li>&lt;div class="mc-radio" &gt;&lt;/div&gt;</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+			<li>&lt;span class="mc-label"&gt;Radio Button label&lt;/span&gt;</li>
+		</ul>
+	<li>&lt;/label&gt;</li>
+</ul>
+<br />
+<br />
+<label class="mc-radiobutton">
+	<input type="radio" />
+	<div class="mc-radio-bg">
+		<div class="mc-radio"></div>
+	</div>
+	<span class="mc-label">Radio Button label</span>
+</label>
+<br />
+
+<p class="mc-text">You can color the radio buttons using the "<b>mc-bg-darkpurple</b>" class on the "<b>mc-radio</b>" element</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;label class="mc-radiobutton mc-bg-darkpurple" &gt;</li>
+		<ul class="mc-list">
+			<li>&lt;input type="radio" /&gt;</li>
+			<li>&lt;div class="mc-radio-bg" &gt;</li>
+				<ul>
+					<li>&lt;div class="mc-radio" &gt;&lt;/div&gt;</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+			<li>&lt;span class="mc-label"&gt;Radio Button label&lt;/span&gt;</li>
+		</ul>
+	<li>&lt;/label&gt;</li>
+</ul>
+<br />
+<br />
+<form>
+	<label class="mc-radiobutton mc-bg-darkpurple">
+		<input type="radio" name="option[]" />
+		<div class="mc-radio-bg">
+			<div class="mc-radio"></div>
+		</div>
+		<span class="mc-label">Dark Purple radiobutton</span>
+	</label>
+	<label class="mc-radiobutton mc-bg-orange">
+		<input type="radio" name="option[]" />
+		<div class="mc-radio-bg">
+			<div class="mc-radio"></div>
+		</div>
+		<span class="mc-label">Orange radiobutton</span>
+	</label>
+	<label class="mc-radiobutton mc-bg-red">
+		<input type="radio" name="option[]" />
+		<div class="mc-radio-bg">
+			<div class="mc-radio"></div>
+		</div>
+		<span class="mc-label">Red radiobutton</span>
+	</label>
+	<label class="mc-radiobutton mc-bg-darkgreen">
+		<input type="radio" name="option[]" />
+		<div class="mc-radio-bg">
+			<div class="mc-radio"></div>
+		</div>
+		<span class="mc-label">Dark Green radiobutton</span>
+	</label>
+</form>
+<br />
+<br />
+
+<h1 class="mc-title" alt="checkboxes">Checkboxes</h1>
+<p class="mc-text">Checkboxes allow you to select multiple options in the same question. They are used to display questions with 2 or 3 options and more than one possible choice.</p>
+<p class="mc-text">To use them, just place a <b>label</b> with the "<b>mc-checkbox</b>" class. Now you've the container, you only need to add 3 elements into it: the checkbox, "<b>mc-checkbox-bg</b>", and the "<b>mc-label</b>"with the text you want to display.</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;label class="mc-checkbox" &gt;</li>
+		<ul class="mc-list">
+			<li>&lt;input type="checkbox" /&gt;</li>
+			<li>&lt;div class="mc-checkbox-bg" &gt;</li>
+				<ul>
+					<li>&lt;div class="mc-checkbox-check" &gt;&lt;/div&gt;</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+			<li>&lt;span class="mc-label"&gt;Checkbox label&lt;/span&gt;</li>
+		</ul>
+	<li>&lt;/label&gt;</li>
+</ul>
+<br />
+<br />
+<label class="mc-checkbox">
+	<input type="checkbox" />
+	<div class="mc-checkbox-bg">
+		<div class="mc-checkbox-check"></div>
+	</div>
+	<span class="mc-label">Checkbox label</span>
+</label>
+<br />
+
+<p class="mc-text">You can color the checkboxes using the "<b>mc-bg-darkpurple</b>" class on the "<b>mc-checkbox</b>" element</p>.
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;label class="mc-checkbox mc-bg-darkpurple" &gt;</li>
+		<ul class="mc-list">
+			<li>&lt;input type="checkbox" /&gt;</li>
+			<li>&lt;div class="mc-checkbox-bg" &gt;</li>
+				<ul>
+					<li>&lt;div class="mc-checkbox-check" &gt;&lt;/div&gt;</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+			<li>&lt;span class="mc-label"&gt;Checkbox label&lt;/span&gt;</li>
+		</ul>
+	<li>&lt;/label&gt;</li>
+</ul>
+<br />
+<br />
+<form>
+	<label class="mc-checkbox mc-bg-darkpurple">
+		<input type="checkbox" name="option[]" />
+		<div class="mc-checkbox-bg">
+			<div class="mc-checkbox-check"></div>
+		</div>
+		<span class="mc-label">Dark Purple checkbox</span>
+	</label>
+	<label class="mc-checkbox mc-bg-orange">
+		<input type="checkbox" name="option[]" />
+		<div class="mc-checkbox-bg">
+			<div class="mc-checkbox-check"></div>
+		</div>
+		<span class="mc-label">Orange checkbox</span>
+	</label>
+	<label class="mc-checkbox mc-bg-red">
+		<input type="checkbox" name="option[]" />
+		<div class="mc-checkbox-bg">
+			<div class="mc-checkbox-check"></div>
+		</div>
+		<span class="mc-label">Red checkbox</span>
+	</label>
+	<label class="mc-checkbox mc-bg-darkgreen">
+		<input type="checkbox" name="option[]" />
+		<div class="mc-checkbox-bg">
+			<div class="mc-checkbox-check"></div>
+		</div>
+		<span class="mc-label">Dark Green checkbox</span>
+	</label>
+</form>
+<br />
+<br />
+
+<h1 class="mc-title" alt="switchers">Switchers</h1>
+<p class="mc-text">Switchers allow you to decide on|off questions. They are used to display configs settings.</p>
+<p class="mc-text">To use them, just place a <b>label</b> with the "<b>mc-switcher</b>" class. Now you've the container, you only need to add 3 elements into it: the checkbox, the "<b>mc-switch-bg</b>", and the "<b>mc-label</b>" with the text you want to display.</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;label class="mc-switcher" &gt;</li>
+		<ul class="mc-list">
+			<li>&lt;input type="checkbox" /&gt;</li>
+			<li>&lt;div class="mc-switch-bg" &gt;</li>
+				<ul>
+					<li>&lt;div class="mc-switch" &gt;&lt;/div&gt;</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+			<li>&lt;span class="mc-label"&gt;Switcher label&lt;/span&gt;</li>
+		</ul>
+	<li>&lt;/label&gt;</li>
+</ul>
+<br />
+<br />
+<label class="mc-switcher">
+	<input type="checkbox" />
+	<div class="mc-switch-bg">
+		<div class="mc-switch"></div>
+	</div>
+	<span class="mc-label">Switcher label</span>
+</label>
+<br />
+
+<p class="mc-text">Of course, you can color the switchers using the "<b>mc-bg-darkpurple</b>" class on the "<b>mc-switch</b>" element</p>.
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;label class="mc-switcher mc-bg-darkpurple" &gt;</li>
+		<ul class="mc-list">
+			<li>&lt;input type="checkbox" /&gt;</li>
+			<li>&lt;div class="mc-switch-bg" &gt;</li>
+				<ul>
+					<li>&lt;div class="mc-switch" &gt;&lt;/div&gt;</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+			<li>&lt;span&gt;Switcher label&lt;/span&gt;</li>
+		</ul>
+	<li>&lt;/label&gt;</li>
+</ul>
+<br />
+<br />
+<form>
+	<label class="mc-switcher mc-bg-darkpurple">
+		<input type="checkbox" />
+		<div class="mc-switch-bg">
+			<div class="mc-switch"></div>
+		</div>
+		<span class="mc-label">Dark Purple Switcher</span>
+	</label>
+	<label class="mc-switcher mc-bg-orange">
+		<input type="checkbox" />
+		<div class="mc-switch-bg">
+			<div class="mc-switch"></div>
+		</div>
+		<span class="mc-label">Orange Switcher</span>
+	</label>
+	<label class="mc-switcher mc-bg-red">
+		<input type="checkbox" />
+		<div class="mc-switch-bg">
+			<div class="mc-switch"></div>
+		</div>
+		<span class="mc-label">Red Switcher</span>
+	</label>
+	<label class="mc-switcher mc-bg-darkgreen">
+		<input type="checkbox" />
+		<div class="mc-switch-bg">
+			<div class="mc-switch"></div>
+		</div>
+		<span class="mc-label">Dark Green Switcher</span>
+	</label>
+</form>
+<br />
+<br />
+
+<h1 class="mc-title" alt="sliders">Sliders</h1>
+<p class="mc-text">Sliders are used to select a value in a range.</p>
+<p class="mc-text">To use them, just place an element with the "<b>mc-slider</b>" class. Now you've the container, you only need to add a children with the slider (an input with "range" type), an element with the "<b>mc-slider-bg</b>" class, and it's chldren "<b>mc-slider-progress</b>" and "<b>mc-slider-picker</b>".</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-slider" &gt;</li>
+		<ul>
+			<li>&lt;input type="range" min="0" max="100" /&gt;</li>
+			<li>&lt;div class="mc-slider-bg" &gt;</li>
+				<ul>
+					<li>&lt;div class="mc-slider-progress"&gt;&lt;/div&gt;</li>
+					<li>&lt;div class="mc-slider-picker"&gt;&lt;/div&gt;</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+		</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+<br />
+<br />
+<div class="mc-slider">
+	<input type="range" min="0" max="100" />
+	<div class="mc-slider-bg">
+		<div class="mc-slider-progress"></div>
+		<div class="mc-slider-picker"></div>
+	</div>
+</div>
+<br />
+
+<p class="mc-text">Of course, you can color the progress bars using the "<b>mc-bg-darkpurple</b>" class on the "<b>mc-slider</b>" element</p>.
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-slider mc-bg-darkpurple" &gt;</li>
+		<ul>
+			<li>&lt;input type="range" min="0" max="100" /&gt;</li>
+			<li>&lt;div class="mc-slider-bg" &gt;</li>
+				<ul>
+					<li>&lt;div class="mc-slider-progress"&gt;&lt;/div&gt;</li>
+					<li>&lt;div class="mc-slider-picker"&gt;&lt;/div&gt;</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+		</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+</ul>
+<br />
+<br />
+<form>
+	<div class="mc-slider mc-bg-darkpurple">
+		<input type="range" min="0" max="100" value="0" />
+		<div class="mc-slider-bg">
+			<div class="mc-slider-progress"></div>
+			<div class="mc-slider-picker"></div>
+		</div>
+	</div>
+	<div class="mc-slider mc-bg-orange">
+		<input type="range" min="0" max="150" value="25" />
+		<div class="mc-slider-bg">
+			<div class="mc-slider-progress"></div>
+			<div class="mc-slider-picker"></div>
+		</div>
+	</div>
+	<div class="mc-slider mc-bg-red">
+		<input type="range" min="50" max="100" value="75" />
+		<div class="mc-slider-bg">
+			<div class="mc-slider-progress"></div>
+			<div class="mc-slider-picker"></div>
+		</div>
+	</div>
+	<div class="mc-slider mc-bg-darkgreen">
+		<input type="range" min="50" max="200" value="175" />
+		<div class="mc-slider-bg">
+			<div class="mc-slider-progress"></div>
+			<div class="mc-slider-picker"></div>
+		</div>
+	</div>
+</form>
+<br />
+<br />
+
+<h1 class="mc-title" alt="progress-bar">Progress Bar</h1>
+<p class="mc-text">Progress Bars are used to indicate the progress of something: Page load, video load, video timing, audio timing, etc.</p>
+<p class="mc-text">To use them, just place an element with the "<b>mc-progressbar</b>" class. Now you've the container, you only need to add a children with the "<b>mc-progress</b>" class, and set the width in percentage format.</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-progressbar" &gt;</li>
+		<ul>
+			<li>&lt;div class="mc-progress" style="width: 20%;" &gt;&lt;/div&gt;</li>
+		</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+<br />
+<br />
+<div class="mc-progressbar">
+	<div class="mc-progress" style="width: 20%;"></div>
+</div>
+<br />
+
+<p class="mc-text">Of course, you can color the progress bars using the "<b>mc-bg-darkpurple</b>" class on the "<b>mc-progressbar</b>" element</p>.
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-progressbar mc-bg-darkpurple" &gt;</li>
+		<ul>
+			<li>&lt;div class="mc-progress" style="width: 20%;" &gt;&lt;/div&gt;</li>
+		</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+<br />
+<br />
+<form>
+	<div class="mc-progressbar mc-bg-darkpurple">
+		<div class="mc-progress" style="width: 20%;"></div>
+	</div>
+	<div class="mc-progressbar mc-bg-orange">
+		<div class="mc-progress" style="width: 40%;"></div>
+	</div>
+	<div class="mc-progressbar mc-bg-red">
+		<div class="mc-progress" style="width: 60%;"></div>
+	</div>
+	<div class="mc-progressbar mc-bg-darkgreen">
+		<div class="mc-progress" style="width: 80%;"></div>
+	</div>
+</form>
+<br />
+<br />
+
+<h1 class="mc-title" alt="spinners">Spinners</h1>
+<p class="mc-text">Spinters are used to indicate an indeterminate load.</p>
+<p class="mc-text">To use them, just place an element with the "<b>mc-spinner</b>" class. Now you've the container, you only need to add a children with the "<b>mc-spinner-progress</b>" class.</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-spinner" &gt;&lt;/div&gt;</li>
+</ul>
+<br />
+<br />
+<div class="mc-spinner"></div>
+<br />
+
+<p class="mc-text">Of course, you can color the spinners using the "<b>mc-color-darkpurple</b>" class on the "<b>mc-spinner</b>" element</p>.
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-spinner mc-color-darkpurple" &gt;&lt;/div&gt;</li>
+</ul>
+<br />
+<br />
+<form>
+	<div class="mc-spinner mc-color-darkpurple"></div>
+	<div class="mc-spinner mc-color-orange"></div>
+	<div class="mc-spinner mc-color-red"></div>
+	<div class="mc-spinner mc-color-darkgreen"></div>
+</form>
+<br />
+<br />
+
+<p class="mc-text">In case you have a particular background color on your section, you should use the "<b>mc-bg-darkpurple</b>" class on the "<b>mc-spinner</b>" element</p>.
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-spinner mc-bg-darkpurple" &gt;&lt;/div&gt;</li>
+</ul>
+<br />
+<br />
+<div class="mc-bg-darkblue" style="width: 100%; position: relative; display: block; float: left;">
+	<div class="mc-spinner mc-color-darkpurple mc-bg-darkblue"></div>
+	<div class="mc-spinner mc-color-orange mc-bg-darkblue"></div>
+	<div class="mc-spinner mc-color-red mc-bg-darkblue"></div>
+	<div class="mc-spinner mc-color-darkgreen mc-bg-darkblue"></div>
+</div>
+<br />
+
+<h1 class="mc-title" alt="disabled">Disabled Elements</h1>
+<p class="mc-text">Of course, you can disable any of these elements by adding the "disabled" attribute, as you would do normally, and they'll look like this</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-input" /&gt;</li>
+		<ul>
+			<li>&lt;input type="text | email | tel | number" disabled /&gt;</li>
+			<li>&lt;span class="mc-label"&gt;&lt;/span&gt;</li>
+		</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+<br />
+<br />
+
+<button class="mc-button mc-button-text mc-button-raised mc-clickable" disabled>Disabled button</button>
+<br />
+
+<div class="mc-input">
+	<input type="text" disabled />
+	<label class="mc-label">Disabled input</label>
+</div>
+<br />
+
+<!-- 
+<div class="mc-dropdown">
+	<input type="text" disabled />
+	<label class="mc-label">Disableddro</label>
+</div>
+<br />
+ -->
+ 
+<label class="mc-radiobutton" >
+	<input type="radio" disabled />
+	<div class="mc-radio-bg" >
+		<div class="mc-radio" ></div>
+	</div>
+	<span class="mc-label">Disabled Radio Button OFF</span>
+</label>
+<label class="mc-radiobutton" >
+	<input type="radio" disabled checked />
+	<div class="mc-radio-bg" >
+		<div class="mc-radio" ></div>
+	</div>
+	<span class="mc-label">Disabled Radio Button ON</span>
+</label>
+<br />
+
+<label class="mc-checkbox" >
+	<input type="checkbox" disabled  />
+	<div class="mc-checkbox-bg" >
+		<div class="mc-checkbox-check" ></div>
+	</div>
+	<span class="mc-label">Disabled Checkbox OFF</span>
+</label>
+<label class="mc-checkbox" >
+	<input type="checkbox" disabled checked />
+	<div class="mc-checkbox-bg" >
+		<div class="mc-checkbox-check" ></div>
+	</div>
+	<span class="mc-label">Disabled Checkbox ON</span>
+</label>
+<br />
+
+<label class="mc-switcher" >
+	<input type="checkbox" disabled />
+	<div class="mc-switch-bg" >
+		<div class="mc-switch" ></div>
+	</div>
+	<span class="mc-label">Disabled Switcher OFF</span>
+</label>
+<label class="mc-switcher" >
+	<input type="checkbox" disabled checked/>
+	<div class="mc-switch-bg" >
+		<div class="mc-switch" ></div>
+	</div>
+	<span class="mc-label">Disabled Switcher ON</span>
+</label>
+<br />
+
+<div class="mc-slider" >
+	<input type="range" min="0" max="100" value="44" disabled />
+	<div class="mc-slider-bg" >
+		<div class="mc-slider-progress"></div>
+		<div class="mc-slider-picker"></div>
+	</div>
+</div>
+<br />

@@ -1,0 +1,847 @@
+<p class="mc-text">Cards are a good way to present the content on your web. These cards help you to present the content in an ordered way, well distributed and with enought space to make them beautiful.</p>
+<p class="mc-text">We know there are a lot of ways to present content, so we have prepeared a lot of different card types, so you can use the one you like.</p>
+
+<h1 class="mc-title" alt="normal-cards">Normal cards</h1>
+<p class="mc-text">To start, just set a div with a "<b>mc-card</b>" class. This will construct the main conintainer for the card.</p>
+<p class="mc-text">Into this div, you can place a div with "<b>mc-header</b>", "<b>mc-content</b>" or a "<b>mc-footer</b>" classes. You can combine them as you prefer.</p>
+<div>
+	<div class="mc-card">
+		<div class="mc-content">
+			<br />
+			<ul class="mc-list mc-list-clean mc-code">
+				<li>&lt;div class="mc-card" &gt;</li>
+					<ul>
+						<li>&lt;div class="mc-content" &gt;</li>
+							<ul>
+								<li>&lt;h2 class="mc-subtitle" &gt;&lt;/h2&gt;</li>
+								<li>&lt;p class="mc-text" &gt;&lt;/p&gt;</li>
+								<li>&lt;p class="mc-text" &gt;&lt;/p&gt;</li>
+							</ul>
+						<li>&lt;/div&gt;</li>
+					</ul>
+				<li>&lt;/div&gt;</li>
+			</ul>
+			<br />
+			<br />
+		</div>
+	</div>
+	<div class="mc-card">
+		<div class="mc-content">
+			<p class="mc-subtitle">mc-subtitle</p>
+			<p class="mc-text">mc-text</p>
+			<p class="mc-text">This card has not a header</p>
+		</div>
+	</div>
+</div>
+<br />
+<div>
+	<div class="mc-card">
+		<div class="mc-content">
+			<br />
+			<ul class="mc-list mc-list-clean mc-code">
+				<li>&lt;div class="mc-card" &gt;</li>
+					<ul class="mc-list">
+						<li>&lt;div class="mc-header" &gt;</li>
+							<ul>
+								<li>&lt;img src="" /&gt;</li>
+								<li>&lt;h1 class="mc-title" &gt;&lt;/h1&gt;</li>
+								<li>&lt;h2 class="mc-subtitle" &gt;&lt;/h2&gt;</li>
+							</ul>
+						<li>&lt;/div&gt;</li>
+						<li>&lt;div class="mc-content" &gt;</li>
+							<ul>
+								<li>&lt;h2 class="mc-subtitle" &gt;&lt;/h2&gt;</li>
+								<li>&lt;p class="mc-text" &gt;&lt;/p&gt;</li>
+								<li>&lt;p class="mc-text" &gt;&lt;/p&gt;</li>
+							</ul>
+						<li>&lt;/div&gt;</li>
+					</ul>
+				<li>&lt;/div&gt;</li>
+			</ul>
+			<br />
+			<br />
+		</div>
+	</div>
+	<div class="mc-card">
+		<div class="mc-header">
+			<img src="images/material_logo.png" />
+			<p class="mc-title">mc-title</p>
+			<p class="mc-subtitle">mc-subtitle</p>
+		</div>
+		<div class="mc-content">
+			<p class="mc-subtitle">mc-content</p>
+			<p class="mc-text">mc-text</p>
+			<p class="mc-text">This this card has a header</p>
+		</div>
+	</div>
+</div>
+
+<h1 class="mc-title" alt="with-buttons">Cards with buttons</h1>
+<p class="mc-text">Sometimes, you need to interact with cards, and buttons are here for this! You can use buttons in the footer, and they will adapt automatically to this position, or you can use in the content, so the will look normal.</p>
+<div>
+	<div class="mc-card">
+		<div class="mc-content">
+			<br />
+			<ul class="mc-list mc-list-clean mc-code">
+				<li>&lt;div class="mc-card" &gt;</li>
+					<ul class="mc-list">
+						<li>&lt;div class="mc-content" &gt;</li>
+							<ul>
+								<li>&lt;h2 class="mc-subtitle" &gt;&lt;/h2&gt;</li>
+								<li>&lt;p class="mc-text" &gt;&lt;/p&gt;</li>
+							</ul>
+						<li>&lt;/div&gt;</li>
+						<li>&lt;div class="mc-footer" &gt;</li>
+							<ul>
+								<li>&lt;a class="mc-button mc-button-text mc-clickable mc-color-red" &gt;Cancel&lt;/a&gt;</li>
+								<li>&lt;a class="mc-button mc-button-text mc-clickable mc-color-green" &gt;Accept&lt;/a&gt;</li>
+							</ul>
+						<li>&lt;/div&gt;</li>
+					</ul>
+				<li>&lt;/div&gt;</li>
+			</ul>
+			<br />
+			<br />
+		</div>
+	</div>
+	<div class="mc-card">
+		<div class="mc-content">
+			<p class="mc-subtitle">Text buttons</p>
+			<p class="mc-text">These buttons has been declared as a "<b>mc-footer</b>"'s children.</p>
+		</div>
+		<div class="mc-footer">
+			<span class="mc-button mc-button-text mc-clickable mc-color-red">Cancel</span>
+			<span class="mc-button mc-button-text mc-clickable mc-color-green">Accept</span>
+		</div>
+	</div>
+</div>
+<br />
+<div>
+	<div class="mc-card">
+		<div class="mc-content">
+			<br />
+			<ul class="mc-list mc-list-clean mc-code">
+				<li>&lt;div class="mc-card" &gt;</li>
+					<ul class="mc-list">
+						<li>&lt;div class="mc-content" &gt;</li>
+							<ul>
+								<li>&lt;h2 class="mc-subtitle" &gt;&lt;/h2&gt;</li>
+								<li>&lt;p class="mc-text" &gt;&lt;/p&gt;</li>
+							</ul>
+						<li>&lt;/div&gt;</li>
+						<li>&lt;div class="mc-footer" &gt;</li>
+							<ul>
+								<li>&lt;a class="mc-button mc-button-text mc-clickable mc-color-red" &gt;Cancel&lt;/a&gt;</li>
+								<li>&lt;a class="mc-button mc-button-text mc-clickable" &gt;Dismiss&lt;/a&gt;</li>
+								<li>&lt;a class="mc-button mc-button-text mc-clickable mc-color-green" &gt;Accept&lt;/a&gt;</li>
+							</ul>
+						<li>&lt;/div&gt;</li>
+					</ul>
+				<li>&lt;/div&gt;</li>
+			</ul>
+			<br />
+			<br />
+		</div>
+	</div>
+	<div class="mc-card">
+		<div class="mc-content">
+			<p class="mc-subtitle">Text buttons</p>
+			<p class="mc-text">As you can see, buttons modify their width depending on the number of buttons you have.</p>
+		</div>
+		<div class="mc-footer">
+			<span class="mc-button mc-button-text mc-clickable mc-color-red">Cancel</span>
+			<span class="mc-button mc-button-text mc-clickable">Dismiss</span>
+			<span class="mc-button mc-button-text mc-clickable mc-color-green">Accept</span>
+		</div>
+	</div>
+</div>
+<br />
+<div>
+	<div class="mc-card">
+		<div class="mc-content">
+			<br />
+			<ul class="mc-list mc-list-clean mc-code">
+				<li>&lt;div class="mc-card" &gt;</li>
+					<ul class="mc-list">
+						<li>&lt;div class="mc-content" &gt;</li>
+							<ul>
+								<li>&lt;h2 class="mc-subtitle" &gt;&lt;/h2&gt;</li>
+								<li>&lt;p class="mc-text" &gt;&lt;/p&gt;</li>
+							</ul>
+						<li>&lt;/div&gt;</li>
+						<li>&lt;div class="mc-footer" &gt;</li>
+							<ul>
+								<li>&lt;a class="mc-button mc-button-icon mc-clickable" mc-action="upload" &gt;&lt;/a&gt;</li>
+								<li>&lt;a class="mc-button mc-button-icon mc-clickable" mc-action="download" &gt;&lt;/a&gt;</li>
+								<li>&lt;a class="mc-button mc-button-icon mc-clickable" mc-action="refresh" &gt;&lt;/a&gt;</li>
+								<li>&lt;a class="mc-button mc-button-icon mc-clickable" mc-action="delete" &gt;&lt;/a&gt;</li>
+							</ul>
+						<li>&lt;/div&gt;</li>
+					</ul>
+				<li>&lt;/div&gt;</li>
+			</ul>
+			<br />
+			<br />
+		</div>
+	</div>
+	<div class="mc-card">
+		<div class="mc-content">
+			<p class="mc-subtitle">Icon buttons</p>
+			<p class="mc-text">You can also use icon buttons, and they'll adapt to their's new situation too.</p>
+		</div>
+		<div class="mc-footer">
+			<span class="mc-button mc-button-icon mc-clickable" mc-action="delete" mc-tooltip="10"></span>
+			<div class="mc-tooltip" mc-item="10">Delete</div>
+			<span class="mc-button mc-button-icon mc-clickable" mc-action="sync" mc-tooltip="11"></span>
+			<div class="mc-tooltip" mc-item="11">Sync</div>
+			<span class="mc-button mc-button-icon mc-clickable" mc-action="download" mc-tooltip="12"></span>
+			<div class="mc-tooltip" mc-item="12">Download</div>
+			<span class="mc-button mc-button-icon mc-clickable" mc-action="upload" mc-tooltip="13"></span>
+			<div class="mc-tooltip" mc-item="13">Upload</div>
+		</div>
+	</div>
+</div>
+<br />
+<div>
+	<div class="mc-card">
+		<div class="mc-content">
+			<br />
+			<ul class="mc-list mc-list-clean mc-code mc-code">
+				<li>&lt;div class="mc-card" &gt;</li>
+					<ul class="mc-list">
+						<li>&lt;div class="mc-content" &gt;</li>
+							<ul>
+								<li>&lt;h2 class="mc-subtitle" &gt;&lt;/h2&gt;</li>
+								<li>&lt;p class="mc-text" &gt;&lt;/p&gt;</li>
+								<li>&lt;a class="mc-button mc-button-icon mc-clickable" mc-action="add" &gt;&lt;/a&gt;</li>
+								<li>&lt;a class="mc-button mc-button-icon mc-clickable" mc-action="delete" &gt;&lt;/a&gt;</li>
+								<li>&lt;a class="mc-button mc-button-comb mc-clickable" mc-action="done" &gt;OK&lt;/a&gt;</li>
+							</ul>
+						<li>&lt;/div&gt;</li>
+					</ul>
+				<li>&lt;/div&gt;</li>
+			</ul>
+			<br />
+			<br />
+		</div>
+	</div>
+	<div class="mc-card">
+		<div class="mc-content">
+			<p class="mc-subtitle">Normal buttons</p>
+			<p class="mc-text">If you want normal controls, you can place them in the "<b>mc-content</b>" element, so they'll take their's normal look & feel.</p>
+			<span class="mc-button mc-button-icon mc-clickable" mc-action="add"></span>
+			<span class="mc-button mc-button-icon mc-clickable" mc-action="delete"></span>
+			<span class="mc-button mc-button-comb mc-clickable" mc-action="done">ok</span>
+		</div>
+	</div>
+</div>
+
+<h1 class="mc-title" alt="post-cards">Post Cards</h1>
+<p class="mc-text">Now you know all this, let's put some content into these cards and see what happens.</p>
+<div>
+	<div class="mc-card">
+		<div class="mc-content">
+			<br />
+			<ul class="mc-list mc-list-clean mc-code mc-code">
+				<li>&lt;div class="mc-card" &gt;</li>
+					<ul class="mc-list">
+						<li>&lt;div class="mc-header" &gt;</li>
+							<ul>
+								<li>&lt;img src="" /&gt;</li>
+								<li>&lt;h1 class="mc-title" &gt;&lt;/h1&gt;</li>
+								<li>&lt;h2 class="mc-subtitle" &gt;&lt;/h2&gt;</li>
+							</ul>
+						<li>&lt;/div&gt;</li>
+						<li>&lt;div class="mc-content" &gt;</li>
+							<ul>
+								<li>&lt;img src="" /&gt;</li>
+								<li>&lt;p class="mc-text" &gt;&lt;/p&gt;</li>
+								<li>&lt;ul class="mc-list" &gt;&lt;/ul&gt;</li>
+								<li>&lt;p class="mc-text" &gt;&lt;/p&gt;</li>
+							</ul>
+						<li>&lt;/div&gt;</li>
+						<li>&lt;div class="mc-footer" &gt;</li>
+							<ul>
+								<li>&lt;a class="mc-button mc-button-text mc-clickable" &gt;like&lt;/a&gt;</li>
+								<li>&lt;a class="mc-button mc-button-text mc-clickable" &gt;comment&lt;/a&gt;</li>
+								<li>&lt;a class="mc-button mc-button-text mc-clickable" &gt;share&lt;/a&gt;</li>
+							</ul>
+						<li>&lt;/div&gt;</li>
+					</ul>
+				<li>&lt;/div&gt;</li>
+			</ul>
+			<br />
+			<br />
+		</div>
+	</div>
+	<div class="mc-card">
+		<div class="mc-header">
+			<img src="images/material_logo.png" />
+			<p class="mc-title">New post</p>
+			<p class="mc-subtitle">by Material CSS</p>
+		</div>
+		<div class="mc-content">
+			<img src="images/material-01.jpg" />
+			<p class="mc-text">Hi guys! I just placed some items on my card and they look like this:</p>
+			<ul class="mc-list">
+				<li>An <b>image</b> into my <b>mc-content</b></li>
+				<li>Some <b>mc-button-icon</b> into the <b>mc-footer</b></li>
+			</ul>
+			<p class="mc-text">It's like... WOW!</p>
+		</div>
+		<div class="mc-footer">
+			<span class="mc-button mc-button-text mc-clickable">Like</span>
+			<span class="mc-button mc-button-text mc-clickable">Comment</span>
+			<span class="mc-button mc-button-text mc-clickable">Share</span>
+		</div>
+	</div>
+</div>
+<br />
+<div>
+	<div class="mc-card">
+		<div class="mc-content">
+			<br />
+			<ul class="mc-list mc-list-clean mc-code mc-code">
+				<li>&lt;div class="mc-card" &gt;</li>
+					<ul class="mc-list">
+						<li>&lt;div class="mc-header" &gt;</li>
+							<ul>
+								<li>&lt;img src="" /&gt;</li>
+								<li>&lt;h1 class="mc-title" &gt;&lt;/h1&gt;</li>
+								<li>&lt;h2 class="mc-subtitle" &gt;&lt;/h2&gt;</li>
+							</ul>
+						<li>&lt;/div&gt;</li>
+						<li>&lt;div class="mc-content" &gt;</li>
+							<ul>
+								<li>&lt;p class="mc-text" &gt;&lt;/p&gt;</li>
+								<li>&lt;img src="" /&gt;</li>
+								<li>&lt;p class="mc-text" &gt;&lt;/p&gt;</li>
+							</ul>
+						<li>&lt;/div&gt;</li>
+						<li>&lt;div class="mc-footer" &gt;</li>
+							<ul>
+								<li>&lt;a class="mc-button mc-button-icon mc-clickable" mc-action="share" &gt;&lt;/a&gt;</li>
+								<li>&lt;a class="mc-button mc-button-icon mc-clickable" mc-action="comment" &gt;&lt;/a&gt;</li>
+								<li>&lt;a class="mc-button mc-button-icon mc-clickable" mc-action="like" &gt;&lt;/a&gt;</li>
+							</ul>
+						<li>&lt;/div&gt;</li>
+					</ul>
+				<li>&lt;/div&gt;</li>
+			</ul>
+			<br />
+			<br />
+		</div>
+	</div>
+	<div class="mc-card">
+		<div class="mc-header">
+			<img src="images/material_logo.png" />
+			<p class="mc-title">New post</p>
+			<p class="mc-subtitle">by Material CSS</p>
+		</div>
+		<div class="mc-content">
+			<p class="mc-text">Hey guys! I also placed an <a href="#/cards">hyperlink</a>. Awesome!</p>
+			<img src="images/material-02.jpg" />
+			<p class="mc-text">And I changed the <b>mc-button-text</b> for some <b>mc-button-icon</b>. This look really good, doesn't it?</p>
+		</div>
+		<div class="mc-footer">
+			<span class="mc-button mc-button-icon mc-clickable" mc-action="share" mc-tooltip="1"></span>
+			<div class="mc-tooltip" mc-item="1">Share</div>
+			<span class="mc-button mc-button-icon mc-clickable" mc-action="comment" mc-tooltip="2"></span>
+			<div class="mc-tooltip" mc-item="2">Comment</div>
+			<span class="mc-button mc-button-icon mc-clickable" mc-action="like" mc-tooltip="3"></span>
+			<div class="mc-tooltip" mc-item="3">Like</div>
+		</div>
+	</div>
+</div>
+
+<h1 class="mc-title" alt="with-header">Cards with header images</h1>
+<p class="mc-text">It's time to start with layouts. Layouts are a great thing we've implemented to modify the appearance of some components. For example: cards.</p>
+<p class="mc-text">The first layout we are going to use is "header-image". This will make the image placed on the header to fill all the available space, so we add the attribute <b>mc-layout="header-image"</b> to our card.</p>
+<div>
+	<div class="mc-card">
+		<div class="mc-content">
+			<br />
+			<ul class="mc-list mc-list-clean mc-code mc-code">
+				<li>&lt;div class="mc-card" mc-layout="header-image"&gt;</li>
+					<ul class="mc-list">
+						<li>&lt;div class="mc-header"&gt;</li>
+							<ul>
+								<li>&lt;img src=""/&gt;</li>
+								<li>&lt;h1 class="mc-title mc-color-white" &gt;&lt;/h1&gt;</li>
+							</ul>
+						<li>&lt;/div&gt;</li>
+						<li>&lt;div class="mc-content"&gt;</li>
+							<ul>
+								<li>&lt;h1 class="mc-text" &gt;&lt;/h1&gt;</li>
+							</ul>
+						<li>&lt;/div&gt;</li>
+					</ul>
+				<li>&lt;/div&gt;</li>
+			</ul>
+			<br />
+			<br />
+		</div>
+	</div>
+	<div class="mc-card" mc-layout="header-image">
+		<div class="mc-header">
+			<img src="images/material-03.jpg" />
+			<p class="mc-title mc-color-white">Card with layout</p>
+		</div>
+		<div class="mc-content">
+			<p class="mc-text">This card has the mc-layout implemented.</p>
+		</div>
+	</div>
+</div>
+
+<h1 class="mc-title" alt="with-lateral">Cards with lateral images</h1>
+<p class="mc-text">Maybe you want another layouts, to make your site more dynamic. You also can use lateral images to occupy less space with images.</p>
+<p class="mc-text">For this cases, you can use these mc-layouts: <b>left-image</b> and <b>right-image</b>.</p>
+<div>
+	<div class="mc-card">
+		<div class="mc-content">
+			<br />
+			<ul class="mc-list mc-list-clean mc-code mc-code">
+				<li>&lt;div class="mc-card" mc-layout="left-image"&gt;</li>
+					<ul class="mc-list">
+						<li>&lt;div class="mc-header"&gt;</li>
+							<ul>
+								<li>&lt;img src=""/&gt;</li>
+							</ul>
+						<li>&lt;/div&gt;</li>
+						<li>&lt;div class="mc-content"&gt;</li>
+							<ul>
+								<li>&lt;h1 class="mc-title" &gt;&lt;/h1&gt;</li>
+								<li>&lt;p class="mc-text" &gt;&lt;/p&gt;</li>
+								<li>&lt;p class="mc-note" &gt;&lt;/p&gt;</li>
+							</ul>
+						<li>&lt;/div&gt;</li>
+					</ul>
+				<li>&lt;/div&gt;</li>
+			</ul>
+			<br />
+			<br />
+		</div>
+	</div>
+	<div class="mc-card" mc-layout="left-image">
+		<div class="mc-header">
+			<img src="images/material-04.jpg" />
+		</div>
+		<div class="mc-content">
+			<p class="mc-title">Left layout</p>
+			<p class="mc-text">These layouts are made for vertical images. As you can see, the image is completely visible but it doesn't take so much space as the header-image layout.</p>
+			<p class="mc-note">This is very convenient for mobile, due to its reduced screen sizes.</p>
+		</div>
+	</div>
+</div>
+<br />
+<div>
+	<div class="mc-card">
+		<div class="mc-content">
+			<br />
+			<ul class="mc-list mc-list-clean mc-code mc-code">
+				<li>&lt;div class="mc-card" mc-layout="right-image"&gt;</li>
+					<ul class="mc-list">
+						<li>&lt;div class="mc-header"&gt;</li>
+							<ul>
+								<li>&lt;img src=""/&gt;</li>
+							</ul>
+						<li>&lt;/div&gt;</li>
+						<li>&lt;div class="mc-content"&gt;</li>
+							<ul>
+								<li>&lt;h1 class="mc-title" &gt;&lt;/h1&gt;</li>
+								<li>&lt;p class="mc-text" &gt;&lt;/p&gt;</li>
+							</ul>
+						<li>&lt;/div&gt;</li>
+						<li>&lt;div class="mc-footer" &gt;</li>
+							<ul>
+								<li>&lt;a class="mc-button mc-button-text mc-clickable" &gt;Cancel&lt;/a&gt;</li>
+								<li>&lt;a class="mc-button mc-button-text mc-clickable mc-color-green" &gt;Accept&lt;/a&gt;</li>
+							</ul>
+						<li>&lt;/div&gt;</li>
+					</ul>
+				<li>&lt;/div&gt;</li>
+			</ul>
+			<br />
+			<br />
+		</div>
+	</div>
+	<div class="mc-card" mc-layout="right-image">
+		<div class="mc-header">
+			<img src="images/material-05.jpg" />
+		</div>
+		<div class="mc-content">
+			<p class="mc-title">Rigth layout</p>
+			<p class="mc-text">You also can use footer, and buttons with this layouts. They will adapt automatically to the new space.</p>
+		</div>
+		<div class="mc-footer">
+			<p class="mc-button mc-button-text mc-clickable">Cancel</p>
+			<p class="mc-button mc-button-text mc-clickable mc-color-green">Accept</p>
+		</div>
+	</div>
+</div>
+
+<h1 class="mc-title" alt="with-grid">Grid of images</h1>
+<p class="mc-text">In case you want to place more than 1 image, they'll take too much space, so we've prepeared the "<b>grid-images</b>" layout. This will reduce the image sizes so you can display as much as you want.</p>
+<p class="mc-text">On this case, we added the attribute <b>mc-layout="grid-images"</b> to our card.</p>
+<div>
+	<div class="mc-card">
+		<div class="mc-content">
+			<br />
+			<ul class="mc-list mc-list-clean mc-code mc-code">
+				<li>&lt;div class="mc-card" mc-layout="grid-images" &gt;</li>
+					<ul class="mc-list">
+						<li>&lt;div class="mc-header" &gt;</li>
+							<ul>
+								<li>&lt;img src="" /&gt;</li>
+								<li>&lt;h1 class="mc-title" &gt;&lt;/h1&gt;</li>
+								<li>&lt;h2 class="mc-subtitle" &gt;&lt;/h2&gt;</li>
+							</ul>
+						<li>&lt;/div&gt;</li>
+						<li>&lt;div class="mc-content" &gt;</li>
+							<ul>
+								<li>&lt;p class="mc-text" &gt;&lt;/p&gt;</li>
+								<li>&lt;div class="mc-grid-item" &gt;</li>
+									<ul>
+										<li>&lt;img src="" /&gt;</li>
+									</ul>
+								<li>&lt;/div&gt;</li>
+								<li>&lt;div class="mc-grid-item" &gt;</li>
+									<ul>
+										<li>&lt;img src="" /&gt;</li>
+									</ul>
+								<li>&lt;/div&gt;</li>
+								<li>&lt;div class="mc-grid-item" &gt;</li>
+									<ul>
+										<li>&lt;img src="" /&gt;</li>
+									</ul>
+								<li>&lt;/div&gt;</li>
+								<li>&lt;div class="mc-grid-item" &gt;</li>
+									<ul>
+										<li>&lt;img src="" /&gt;</li>
+									</ul>
+								<li>&lt;/div&gt;</li>
+								<li>&lt;div class="mc-grid-item" &gt;</li>
+									<ul>
+										<li>&lt;img src="" /&gt;</li>
+									</ul>
+								<li>&lt;/div&gt;</li>
+							</ul>
+						<li>&lt;/div&gt;</li>
+						<li>&lt;div class="mc-footer" &gt;</li>
+							<ul>
+								<li>&lt;a class="mc-button mc-button-icon mc-clickable" mc-action="share" &gt;&lt;/a&gt;</li>
+								<li>&lt;a class="mc-button mc-button-icon mc-clickable" mc-action="comment" &gt;&lt;/a&gt;</li>
+								<li>&lt;a class="mc-button mc-button-icon mc-clickable" mc-action="like" &gt;&lt;/a&gt;</li>
+							</ul>
+						<li>&lt;/div&gt;</li>
+					</ul>
+				<li>&lt;/div&gt;</li>
+			</ul>
+			<br />
+			<br />
+		</div>
+	</div>
+	<div class="mc-card" mc-layout="grid-images">
+		<div class="mc-header">
+			<img src="images/material_logo.png" />
+			<h1 class="mc-title">New Album</h1>
+			<h2 class="mc-subtitle">by Material CSS</h2>
+		</div>
+		<div class="mc-content">
+			<p class="mc-text">Then, for each image, we have placed a <b>span</b> element with the "<b>mc-grid-item</b>" class. Into it, you can place your image, and voilà!</p>
+			<span class="mc-grid-item">
+				<img src="images/material-01.jpg" />
+			</span>
+			<span class="mc-grid-item">
+				<img src="images/material-02.jpg" />
+			</span>
+			<span class="mc-grid-item">
+				<img src="images/material-03.jpg" />
+			</span>
+			<span class="mc-grid-item">
+				<img src="images/material-04.jpg" />
+			</span>
+			<span class="mc-grid-item">
+				<img src="images/material-05.jpg" />
+			</span>
+		</div>
+		<div class="mc-footer">
+			<span class="mc-button mc-button-icon mc-clickable" mc-action="share" mc-tooltip="4"></span>
+			<div class="mc-tooltip" mc-item="4">Share</div>
+			<span class="mc-button mc-button-icon mc-clickable" mc-action="comment" mc-tooltip="5"></span>
+			<div class="mc-tooltip" mc-item="5">Comment</div>
+			<span class="mc-button mc-button-icon mc-clickable" mc-action="like" mc-tooltip="6"></span>
+			<div class="mc-tooltip" mc-item="6">Like</div>
+		</div>
+	</div>
+</div>
+<br />
+<div>
+	<div class="mc-card">
+		<div class="mc-content">
+			<br />
+			<ul class="mc-list mc-list-clean mc-code mc-code">
+				<li>&lt;div class="mc-card" mc-layout="grid-images" &gt;</li>
+					<ul class="mc-list">
+						<li>&lt;div class="mc-header" &gt;</li>
+							<ul>
+								<li>&lt;img src="" /&gt;</li>
+								<li>&lt;h1 class="mc-title" &gt;&lt;/h1&gt;</li>
+								<li>&lt;h2 class="mc-subtitle" &gt;&lt;/h2&gt;</li>
+							</ul>
+						<li>&lt;/div&gt;</li>
+						<li>&lt;div class="mc-content" &gt;</li>
+							<ul>
+								<li>&lt;p class="mc-text" &gt;&lt;/p&gt;</li>
+								<li>&lt;div class="mc-grid-item" &gt;</li>
+									<ul>
+										<li>&lt;img src="" /&gt;</li>
+										<li>&lt;span class="mc-legend" &gt;&lt;/span&gt;</li>
+									</ul>
+								<li>&lt;/div&gt;</li>
+								<li>&lt;div class="mc-grid-item" &gt;</li>
+									<ul>
+										<li>&lt;img src="" /&gt;</li>
+										<li>&lt;span class="mc-legend" &gt;&lt;/span&gt;</li>
+									</ul>
+								<li>&lt;/div&gt;</li>
+								<li>&lt;div class="mc-grid-item" &gt;</li>
+									<ul>
+										<li>&lt;img src="" /&gt;</li>
+										<li>&lt;span class="mc-legend" &gt;&lt;/span&gt;</li>
+									</ul>
+								<li>&lt;/div&gt;</li>
+								<li>&lt;div class="mc-grid-item" &gt;</li>
+									<ul>
+										<li>&lt;img src="" /&gt;</li>
+										<li>&lt;span class="mc-legend" &gt;&lt;/span&gt;</li>
+									</ul>
+								<li>&lt;/div&gt;</li>
+								<li>&lt;div class="mc-grid-item" &gt;</li>
+									<ul>
+										<li>&lt;img src="" /&gt;</li>
+										<li>&lt;span class="mc-legend" &gt;&lt;/span&gt;</li>
+									</ul>
+								<li>&lt;/div&gt;</li>
+							</ul>
+						<li>&lt;/div&gt;</li>
+						<li>&lt;div class="mc-footer" &gt;</li>
+							<ul>
+								<li>&lt;a class="mc-button mc-button-icon mc-clickable" mc-action="share" &gt;&lt;/a&gt;</li>
+								<li>&lt;a class="mc-button mc-button-icon mc-clickable" mc-action="comment" &gt;&lt;/a&gt;</li>
+								<li>&lt;a class="mc-button mc-button-icon mc-clickable" mc-action="like" &gt;&lt;/a&gt;</li>
+							</ul>
+						<li>&lt;/div&gt;</li>
+					</ul>
+				<li>&lt;/div&gt;</li>
+			</ul>
+			<br />
+			<br />
+		</div>
+	</div>
+	<div class="mc-card" mc-layout="grid-images">
+		<div class="mc-header">
+			<img src="images/material_logo.png" />
+			<h1 class="mc-title">New Album</h1>
+			<h2 class="mc-subtitle">by Material CSS</h2>
+		</div>
+		<div class="mc-content">
+			<p class="mc-text">If you want to place a description, or some info text, you can add some text with the "<b>mc-legend</b>" class into the "<b>mc-grid-item</b>", next to the image.</p>
+			<span class="mc-grid-item">
+				<img src="images/material-06.jpg" />
+				<span class="mc-legend">Image info</span>
+			</span>
+			<span class="mc-grid-item">
+				<img src="images/material-07.jpg" />
+				<span class="mc-legend">Image info</span>
+			</span>
+			<span class="mc-grid-item">
+				<img src="images/material-08.jpg" />
+				<span class="mc-legend">Image info</span>
+			</span>
+			<span class="mc-grid-item">
+				<img src="images/material-09.jpg" />
+				<span class="mc-legend">Image info</span>
+			</span>
+			<span class="mc-grid-item">
+				<img src="images/material-10.jpg" />
+				<span class="mc-legend">Image info</span>
+			</span>
+		</div>
+		<div class="mc-footer">
+			<span class="mc-button mc-button-icon mc-clickable" mc-action="share" mc-tooltip="7"></span>
+			<div class="mc-tooltip" mc-item="7">Share</div>
+			<span class="mc-button mc-button-icon mc-clickable" mc-action="comment" mc-tooltip="8"></span>
+			<div class="mc-tooltip" mc-item="8">Comment</div>
+			<span class="mc-button mc-button-icon mc-clickable" mc-action="like" mc-tooltip="9"></span>
+			<div class="mc-tooltip" mc-item="9">Like</div>
+		</div>
+	</div>
+</div>
+
+<h1 class="mc-title" alt="colored-cards">Colored cards</h1>
+<p class="mc-text">Of course, you can use the color classes to color your cards.</p>
+<div>
+	<div class="mc-card mc-bg-orange">
+		<div class="mc-header">
+			<img src="images/material_logo.png" />
+			<h1 class="mc-title">Colored cards</h1>
+		</div>
+		<div class="mc-content">
+			<p class="mc-text">This is a simple list:</p>
+			<ul class="mc-list">
+				<li>Coloring the "<b>mc-card</b>" and its buttons.</li>
+			</ul>
+			<br />
+			<br />
+		</div>
+		<div class="mc-footer">
+			<span class="mc-button mc-button-text mc-clickable">Cancel</span>
+			<span class="mc-button mc-button-text mc-clickable">Ok</span>
+		</div>
+	</div>
+	<div class="mc-card mc-bg-blue">
+		<div class="mc-header">
+			<img src="images/material_logo.png" />
+			<h1 class="mc-title">Colored cards</h1>
+		</div>
+		<div class="mc-content">
+			<p class="mc-text">This is a simple list:</p>
+			<ul class="mc-list">
+				<li>Coloring the "<b>mc-card</b>" and its buttons.</li>
+			</ul>
+			<br />
+			<br />
+		</div>
+		<div class="mc-footer">
+			<span class="mc-button mc-button-text mc-clickable">Cancel</span>
+			<span class="mc-button mc-button-text mc-clickable">Ok</span>
+		</div>
+	</div>
+	<div class="mc-card mc-bg-purple">
+		<div class="mc-header">
+			<img src="images/material_logo.png" />
+			<h1 class="mc-title">Colored cards</h1>
+		</div>
+		<div class="mc-content">
+			<p class="mc-text">This is a simple list:</p>
+			<ul class="mc-list">
+				<li>Coloring the "<b>mc-card</b>" and its buttons.</li>
+			</ul>
+			<br />
+			<br />
+		</div>
+		<div class="mc-footer">
+			<span class="mc-button mc-button-text mc-clickable">Cancel</span>
+			<span class="mc-button mc-button-text mc-clickable">Ok</span>
+		</div>
+	</div>
+	<div class="mc-card">
+		<div class="mc-header mc-bg-yellow">
+			<img src="images/material_logo.png" />
+			<h1 class="mc-title">Colored cards</h1>
+		</div>
+		<div class="mc-content mc-bg-darkyellow">
+			<p class="mc-text">This is a simple list:</p>
+			<ul class="mc-list">
+				<li>Coloring the "<b>mc-header</b>", "<b>mc-content</b>", "<b>mc-footer</b>" and its buttons.</li>
+			</ul>
+			<br />
+			<br />
+		</div>
+		<div class="mc-footer mc-bg-orange">
+			<span class="mc-button mc-button-text mc-clickable">Cancel</span>
+			<span class="mc-button mc-button-text mc-clickable">Ok</span>
+		</div>
+	</div>
+	<div class="mc-card">
+		<div class="mc-header mc-bg-darkgreen">
+			<img src="images/material_logo.png" />
+			<h1 class="mc-title">Colored cards</h1>
+		</div>
+		<div class="mc-content mc-bg-green">
+			<p class="mc-text">This is a simple list:</p>
+			<ul class="mc-list">
+				<li>Coloring the "<b>mc-header</b>", "<b>mc-content</b>", "<b>mc-footer</b>" and its buttons.</li>
+			</ul>
+			<br />
+			<br />
+		</div>
+		<div class="mc-footer mc-bg-lightgreen">
+			<span class="mc-button mc-button-text mc-clickable">Cancel</span>
+			<span class="mc-button mc-button-text mc-clickable">Ok</span>
+		</div>
+	</div>
+	<div class="mc-card">
+		<div class="mc-header mc-bg-red">
+			<img src="images/material_logo.png" />
+			<h1 class="mc-title">Colored cards</h1>
+		</div>
+		<div class="mc-content mc-bg-red">
+			<p class="mc-text">This is a simple list:</p>
+			<ul class="mc-list">
+				<li>Coloring the "<b>mc-header</b>" and "<b>mc-content</b>".</li>
+			</ul>
+			<br />
+			<br />
+		</div>
+		<div class="mc-footer">
+			<span class="mc-button mc-button-text mc-clickable">Cancel</span>
+			<span class="mc-button mc-button-text mc-clickable">Ok</span>
+		</div>
+	</div>
+	<div class="mc-card">
+		<div class="mc-header mc-bg-darkorange">
+			<img src="images/material_logo.png" />
+			<h1 class="mc-title">Colored cards</h1>
+		</div>
+		<div class="mc-content">
+			<p class="mc-text">This is a simple list:</p>
+			<ul class="mc-list">
+				<li>Coloring the "<b>mc-header</b>".</li>
+			</ul>
+			<br />
+			<br />
+		</div>
+		<div class="mc-footer">
+			<span class="mc-button mc-button-text mc-clickable">Cancel</span>
+			<span class="mc-button mc-button-text mc-clickable">Ok</span>
+		</div>
+	</div>
+	<div class="mc-card">
+		<div class="mc-header">
+			<img src="images/material_logo.png" />
+			<h1 class="mc-title">Colored cards</h1>
+		</div>
+		<div class="mc-content mc-bg-pink">
+			<p class="mc-text">This is a simple list:</p>
+			<ul class="mc-list">
+				<li>Coloring the "<b>mc-content</b>".</li>
+			</ul>
+			<br />
+			<br />
+		</div>
+		<div class="mc-footer">
+			<span class="mc-button mc-button-text mc-clickable">Cancel</span>
+			<span class="mc-button mc-button-text mc-clickable">Ok</span>
+		</div>
+	</div>
+	<div class="mc-card">
+		<div class="mc-header">
+			<img src="images/material_logo.png" />
+			<h1 class="mc-title">Colored cards</h1>
+		</div>
+		<div class="mc-content">
+			<p class="mc-text">This is a simple list:</p>
+			<ul class="mc-list">
+				<li>Coloring the "<b>mc-footer</b>" and its buttons.</li>
+			</ul>
+			<br />
+			<br />
+		</div>
+		<div class="mc-footer mc-bg-purple">
+			<span class="mc-button mc-button-text mc-clickable mc-bg-purple">Cancel</span>
+			<span class="mc-button mc-button-text mc-clickable mc-bg-purple">Ok</span>
+		</div>
+	</div>
+</div>

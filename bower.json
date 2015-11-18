@@ -1,0 +1,14 @@
+{
+  "name": "material-css",
+  "version": "0.5.0",
+  "dependencies": {
+    "angular": "~1.4.x",
+    "angular-route": "~1.3.x",
+    "jquery": "~2.1.4"
+  },
+  "resolutions": {
+    "angular": "~1.4.x"
+  },
+  "appPath": "src",
+  "moduleName": "materialCSS"
+}

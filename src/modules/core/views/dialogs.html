@@ -1,0 +1,98 @@
+<p class="mc-text">Dialogs are useful when you have to advice or ask some "yes/no" question to the user, so here we'll explain how make them look great.</p>
+
+<h1 class="mc-title" alt="common-dialog">Common dialog</h1>
+<p class="mc-text">You just need to add children to your body, with the "<b>mc-dialog</b>" class. This will prepare the dialog box with all the required styles.</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-dialog"&gt;</li>
+		<ul>
+			<li>&lt;div class="mc-content"&gt;</li>
+				<ul>
+					<li>&lt;h1 class="mc-title"&gt;&lt;/h1&gt;</li>
+					<li>&lt;p class="mc-text"&gt;&lt;/p&gt;</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+			<li>&lt;div class="mc-footer"&gt;</li>
+				<ul>
+					<li>&lt;span class="mc-button mc-button-text mc-clickable"&gt;Close&lt;/span&gt;</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+		</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+
+<p class="mc-text">To open the popup, just place the "<b>mc-opened</b>" class on the mc-dialog and it'll be displayed, like this:</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-dialog mc-opened"&gt;</li>
+		<ul>
+			<li>...</li>
+		</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+
+<p class="mc-note">*We strongly recommend you to use the <b class="mc-selectable">mc.openDialog(DOM selector)</b> and <b class="mc-selectable">mc.closeDialog(DOM selector)</b> functions when open/close dialogs. This will fire the CSS animations in a proper order.</p>
+
+<h1 class="mc-title" alt="falling-dialog">Falling dialogs</h1>
+<p class="mc-text">Adding the class "<b>mc-falling-dialog</b>" to the mc-dialog will simulate the dialogs fall from the top of the screen.</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-dialog mc-falling-dialog"&gt;</li>
+		<ul>
+			<li>&lt;div class="mc-content"&gt;</li>
+				<ul>
+					<li>&lt;h1 class="mc-title"&gt;&lt;/h1&gt;</li>
+					<li>&lt;p class="mc-text"&gt;&lt;/p&gt;</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+			<li>&lt;div class="mc-footer"&gt;</li>
+				<ul>
+					<li>&lt;span class="mc-button mc-button-text mc-clickable"&gt;Accept&lt;/span&gt;</li>
+					<li>&lt;span class="mc-button mc-button-text mc-clickable"&gt;Close&lt;/span&gt;</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+		</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+<br />
+<button class="mc-button mc-button-text mc-clickable mc-button-raised" onclick="javascript:mc.openDialog('#falling-dialog')">open dialog</button>
+<br />
+
+<h1 class="mc-title" alt="bottom-dialog">Bottom dialogs</h1>
+<p class="mc-text">Adding the class "<b>mc-bottom-dialog</b>" to the mc-dialog will make the dialogs appear from the bottom up.</p>
+<p class="mc-text">In this case, we have added a new button to the footer, but it is too big, so we placed the "<b>mc-complete-button</b>" class on the mc-footer to make each button to fill all the width.</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-dialog mc-bottom-dialog"&gt;</li>
+		<ul>
+			<li>&lt;div class="mc-content"&gt;</li>
+				<ul>
+					<li>&lt;h1 class="mc-title"&gt;&lt;/h1&gt;</li>
+					<li>&lt;p class="mc-text"&gt;&lt;/p&gt;</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+			<li>&lt;div class="mc-footer mc-complete-button"&gt;</li>
+				<ul>
+					<li>&lt;span class="mc-button mc-button-text mc-clickable"&gt;Let me think about it&lt;/span&gt;</li>
+					<li>&lt;span class="mc-button mc-button-text mc-clickable"&gt;Accept&lt;/span&gt;</li>
+					<li>&lt;span class="mc-button mc-button-text mc-clickable"&gt;Close&lt;/span&gt;</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+		</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+<br />
+<button class="mc-button mc-button-text mc-clickable mc-button-raised" onclick="javascript:mc.openDialog('#bottom-dialog')">open dialog</button>
+<br />
+
+<h1 class="mc-title" alt="tooltips">Tooltips</h1>
+<p class="mc-text">Another way to display aditional information is using tooltips. For using them, you only need to add, just place an "<b>mc-tooltip</b>" next to the item you want to bind with.</p>
+<p class="mc-text">To bind those elements, add the <b>mc-tooltip="foo"</b> attribute to the item, and the <b>mc-item="foo"</b> to the tooltip.</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;span class="mc-button mc-button-icon" mc-action="send" mc-tooltip="sendButton"&gt;&lt;/span&gt;</li>
+	<li>&lt;div class="mc-tooltip" mc-item="sendButton"&gt;</li>
+		<ul>
+			<li>&lt;span&gt;Here the explanation&lt;/span&gt;</li>
+		</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+<br />
+<span class="mc-button mc-button-icon mc-clickable mc-button-raised" mc-action="send" mc-tooltip="sendButton"></span>
+<div class="mc-tooltip" mc-item="sendButton">Here the explanation</div>
+<br />

@@ -1,0 +1,150 @@
+<p class="mc-text">Floating windows are a good way to have some content displayed permanently on the screen, while the user navigates between sections.</p>
+<p class="mc-text">They are useful to show adds, chats, even multimedia content. So we have prepeared this module to be used with our framework.</p>
+
+<h1 class="mc-title" alt="common-windows">Common windows</h1>
+<p class="mc-text">First of all, we have to set the common styles with the "<b>mc-floating-window</b>" class.</p>
+<p class="mc-text">This content is prepeared to have one "<b>mc-window-header</b>",  one "<b>mc-window-content</b>" and  one "<b>mc-window-footer</b>", and it will be displayed on the bottom right corner.</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-floating-window" &gt;</li>
+		<ul>
+			<li>&lt;div class="mc-window-header" &gt;</li>
+				<ul>
+					<li>&lt;h1 class="mc-title" &gt;&lt;/h1&gt;</li>
+					<li>&lt;h2 class="mc-note" &gt;&lt;/h2&gt;</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+			<li>&lt;div class="mc-window-content" &gt;</li>
+				<ul>
+					<li>&lt;p class="mc-text" &gt;&lt;/p&gt;</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+			<li>&lt;div class="mc-window-footer" &gt;</li>
+				<ul>
+					<li>&lt;p class="mc-note" &gt;&lt;/p&gt;</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+		</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+
+<p class="mc-note">This module have to be placed <b>before</b> the mc-content, and you only can set 1 floating window at time.</p>
+<br />
+<span class="mc-button mc-button-text mc-button-raised mc-clickable" data-ng-click="openFloatingWindow()">Demo</span>
+
+<h1 class="mc-title" alt="chat-windows">Chat windows</h1>
+<p class="mc-text">Of course, we have set a few layouts to modify the floating windows' appearance. By using the <b>mc-layout="chat"</b> attribute on the "<b>mc-floating-window</b>" element, you will have available some special content for it.</p>
+<h2 class="mc-subtitle">On your "mc-window-content"</h2>
+<ul class="mc-list">
+	<li>You will be able to set as "<b>mc-message</b>" elements as you want. This messages allows you to place an image and a "mc-text" into it.</li>
+	<li>You also can add the "<b>mc-own</b>" class to an "<b>mc-message</b>" element, so it'll display differently to indicate you have written this message.</li>
+</ul>
+<h2 class="mc-subtitle">On your "mc-window-footer"</h2>
+<ul class="mc-list">
+	<li>You can add an &lt;input type="text" /&gt; and a "<b>mc-button-icon</b>".</li>
+</ul>
+<br />
+<br />
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-floating-window" mc-layout="chat" &gt;</li>
+		<ul>
+			<li>&lt;div class="mc-window-header" &gt; ... &lt;/div&gt;</li>
+			<li>&lt;div class="mc-window-content" &gt;</li>
+				<ul>
+					<li>&lt;div class="mc-window-message" &gt;</li>
+						<ul>
+							<li>&lt;img src="" /&gt;</li>
+							<li>&lt;p class="mc-text" &gt;...&lt;/p&gt;</li>
+						</ul>
+					<li>&lt;/div&gt;</li>
+					<li>&lt;div class="mc-window-message mc-own" &gt;</li>
+						<ul>
+							<li>&lt;img src="" /&gt;</li>
+							<li>&lt;p class="mc-text" &gt;...&lt;/p&gt;</li>
+						</ul>
+					<li>&lt;/div&gt;</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+			<li>&lt;div class="mc-window-footer" &gt;</li>
+				<ul>
+					<li>&lt;input type="text" /&gt;</li>
+					<li>&lt;button class="mc-button mc-button-icon" mc-action="send"&gt;&lt;/button&gt;</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+		</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+<br />
+<span class="mc-button mc-button-text mc-button-raised mc-clickable" data-ng-click="openFloatingWindow('chat')">Demo</span>
+
+<h1 class="mc-title" alt="multimedia-windows">Multimedia windows</h1>
+<p class="mc-text">Multimedia players used to be a hard component to design and develop. That's why we have paid so much attention to this component. By using the <b>mc-layout="multimedia"</b> attribute on the "<b>mc-floating-window</b>" element, you will have available some special content for it.</p>
+<h2 class="mc-subtitle">On your "mc-window-content"</h2>
+<ul class="mc-list">
+	<li> you will be able to set an "<b>img</b>" element, that will occupy all available space to show the cover of the album/track.</li>
+	<li>Another option is to place an <b>mc-layout="list"</b> attribute on the "<b>mc-window-content</b>", and create a list into it, so you will be able to display a beautifull playlist.</li>
+</ul>
+<h2 class="mc-subtitle">On your "mc-window-footer"</h2>
+<ul class="mc-list">
+	<li>You will need to set a "<b>mc-slider</b>" to modify the timming of the track (advance or go back).</li>
+	<li>You also will need to set a "<b>audio</b>" tag, to reproduce the track.</li>
+	<li>Finally, you can place between 2 and 6 "<b>mc-button-icon</b>" to display your controls.</li>
+</ul>
+<br />
+<br />
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-floating-window" mc-layout="multimedia" &gt;</li>
+		<ul>
+			<li>&lt;div class="mc-window-header" &gt; ... &lt;/div&gt;</li>
+			<li>&lt;div class="mc-window-content" mc-layout="list"&gt;</li>
+				<ul>
+					<li>&lt;div class="mc-list-item" &gt;</li>
+						<ul>
+							<li>&lt;p class="mc-title" &gt;...&lt;/p&gt;</li>
+							<li>&lt;p class="mc-note" &gt;...&lt;/p&gt;</li>
+						</ul>
+					<li>&lt;/div&gt;</li>
+					<li>&lt;div class="mc-list-item" &gt; ... &lt;/div&gt;</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+			<li>&lt;div class="mc-window-footer" &gt;</li>
+				<ul>
+					<li>&lt;div class="mc-slider" &gt; ... &lt;/div&gt;</li>
+					<li>&lt;audio src=""&gt;&lt;/audio&gt;</li>
+					<li>&lt;button class="mc-button mc-button-icon" mc-action="music-prev"&gt;&lt;/button&gt;</li>
+					<li>&lt;button class="mc-button mc-button-icon" mc-action="play"&gt;&lt;/button&gt;</li>
+					<li>&lt;button class="mc-button mc-button-icon" mc-action="music-next"&gt;&lt;/button&gt;</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+		</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+<br />
+<span class="mc-button mc-button-text mc-button-raised mc-clickable" data-ng-click="openFloatingWindow('multimedia')">Demo</span>
+
+<h1 class="mc-title" alt="share-windows">Share windows</h1>
+<p class="mc-text">A new and very common interaction on modern applications is to share the content. So we have enabled an special layout for this purpose.</p>
+<p class="mc-text">Using the <b>mc-layout="share"</b> attribute, you will get an special Floating window. You can place whatever you want, with these particularities in mind.</p>
+<ul class="mc-list">
+	<li><b>mc-button-icons</b>" are bigger than normal.</li>
+	<li>This window doesn't have "<b>mc-window-footer</b>".</li>
+</ul>
+<br />
+<br />
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-floating-window" mc-layout="share" &gt;</li>
+		<ul>
+			<li>&lt;div class="mc-window-header" &gt; ... &lt;/div&gt;</li>
+			<li>&lt;div class="mc-window-content"&gt;</li>
+				<ul>
+					<li>&lt;p class="mc-text" &gt;...&lt;/p&gt;</li>
+					<li>&lt;div class="mc-input" &gt;...&lt;/div&gt;</li>
+					<li>&lt;button class="mc-button mc-button-icon" mc-action=""&gt;&lt;/button&gt;</li>
+					<li>&lt;button class="mc-button mc-button-icon" mc-action=""&gt;&lt;/button&gt;</li>
+					<li>&lt;button class="mc-button mc-button-icon" mc-action=""&gt;&lt;/button&gt;</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+		</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+<br />
+<span class="mc-button mc-button-text mc-button-raised mc-clickable" data-ng-click="openFloatingWindow('share')">Demo</span>

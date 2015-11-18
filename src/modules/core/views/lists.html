@@ -1,0 +1,320 @@
+<p class="mc-text">Lists are used to enumerate things, so they are really useful for us.</p>
+
+<h1 class="mc-title" alt="normal-list">Normal list</h1>
+<p class="mc-text">To start, normal list with the "<b>mc-list</b>" class. This will set the styles for your list, so it's going to look good.</p>
+<br />
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;ul class="mc-list" &gt;</li>
+		<ul>
+			<li>&lt;li&gt;&lt;/li&gt;</li>
+			<li>...</li>
+		</ul>
+	<li>&lt;/ul&gt;</li>
+</ul>
+<br />
+<ul class="mc-list">
+	<li>This</li>
+	<li>Is a</li>
+	<li>Normal</li>
+	<li>List</li>
+</ul>
+<br />
+
+<h1 class="mc-title" alt="clean-list">Clean list</h1>
+<p class="mc-text">Sometimes, you don't want to show the circles before the text, so here you can add the "mc-list-clean" class.</p>
+<br />
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;ul class="mc-list mc-list-clean" &gt;</li>
+		<ul>
+			<li>&lt;li&gt;&lt;/li&gt;</li>
+			<li>...</li>
+		</ul>
+	<li>&lt;/ul&gt;</li>
+</ul>
+<br />
+<ul class="mc-list mc-list-clean">
+	<li>This</li>
+	<li>Is a</li>
+	<li>Clean</li>
+	<li>List</li>
+</ul>
+<br />
+
+<h1 class="mc-title" alt="list-layout">List layout</h1>
+<p class="mc-text">List layout is an amazing modification of a normal list, where you can display things such as friends, albums, events, folders, etc.</p>
+<p class="mc-text">Simply use the <b>mc-layout="list"</b> attribute on any item, and place the "<b>mc-list-item</b>" class for each list item you have. Automatically, you will have an amazing and beautiful list.</p>
+<div>
+	<div class="mc-card">
+		<div class="mc-content">
+			<br />
+			<ul class="mc-list mc-list-clean mc-code">
+				<li>&lt;ul mc-layout="list" &gt;</li>
+					<ul>
+						<li>&lt;li class="mc-list-item"&gt;&lt;/li&gt;</li>
+						<li>...</li>
+					</ul>
+				<li>&lt;/ul&gt;</li>
+			</ul>
+			<br />
+			<br />
+		</div>
+	</div>
+	
+	<div class="mc-card">
+		<div class="mc-content">
+			<ul mc-layout="list">
+				<li class="mc-list-item">This</li>
+				<li class="mc-list-item">Is a</li>
+				<li class="mc-list-item">Clean</li>
+				<li class="mc-list-item">List</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<p class="mc-text">Into your list, you can write plain text, or you can use MC items to make them look really good. For example, you can use a normal "<b>img</b>", a "<b>mc-title</b>", and a "<b>mc-text</b>" or a "<b>mc-note</b>".</p>
+<div>
+	<div class="mc-card">
+		<div class="mc-content">
+			<br />
+			<ul class="mc-list mc-list-clean mc-code">
+				<li>&lt;ul mc-layout="list" &gt;</li>
+					<ul>
+						<li>&lt;li class="mc-list-item"&gt;</li>
+							<ul>
+								<li>&lt;img src="" /&gt;</li>
+								<li>&lt;h1 class="mc-title"&gt;My title&lt;/li&gt;</li>
+								<li>&lt;p class="mc-text | mc-note"&gt;My text&lt;/li&gt;</li>
+							</ul>
+						<li>&lt;/li&gt;</li>
+					</ul>
+				<li>&lt;/ul&gt;</li>
+			</ul>
+			<br />
+			<br />
+		</div>
+	</div>
+	<div class="mc-card">
+		<div class="mc-content">
+			<ul mc-layout="list">
+				<li class="mc-list-item">
+					<img src="images/material-01.jpg" />
+					<h1 class="mc-title">First Album</h1>
+					<p class="mc-text">Material design wallpapers</p>
+				</li>
+				<li class="mc-list-item">
+					<img src="images/material-02.jpg" />
+					<h1 class="mc-title">Second Album</h1>
+					<p class="mc-note">Material design images for profile</p>
+				</li>
+				<li class="mc-list-item">
+					<img src="images/material-03.jpg" />
+					<h1 class="mc-title">Third Album</h1>
+				</li>
+				<li class="mc-list-item">
+					<h1 class="mc-title">Go to the shopping</h1>
+					<p class="mc-note">Buy some beer</p>
+				</li>
+				<li class="mc-list-item">
+					<h1 class="mc-title">Dance tonight</h1>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<p class="mc-text">If you prefer, you can use our "<b>mc-action</b>" attribute to display an icon before the text.</p>
+<div>
+	<div class="mc-card">
+		<div class="mc-content">
+			<br />
+			<ul class="mc-list mc-list-clean mc-code">
+				<li>&lt;ul mc-layout="list" &gt;</li>
+					<ul>
+						<li>&lt;li class="mc-list-item" mc-action="send"&gt;</li>
+							<ul>
+								<li>&lt;h1 class="mc-subtitle"&gt;  &lt;/li&gt;</li>
+								<li>&lt;p class="mc-text | mc-note"&gt;  &lt;/li&gt;</li>
+							</ul>
+						<li>&lt;/li&gt;</li>
+					</ul>
+				<li>&lt;/ul&gt;</li>
+			</ul>
+			<br />
+			<br />
+		</div>
+	</div>
+	<div class="mc-card">
+		<div class="mc-header">
+			<img src="images/material_logo.png" />
+			<h1 class="mc-title">Material CSS</h1>
+			<h2 class="mc-subtitle">Contact</h2>
+		</div>
+		<div class="mc-content">
+			<ul mc-layout="list">
+				<li class="mc-list-item" mc-action="email">
+					<h1 class="mc-title">support@material-css.com</h1>
+					<p class="mc-note">Email</p>
+				</li>
+				<li class="mc-list-item"mc-action="phone">
+					<h1 class="mc-title">+54 9 (223) 534-9101</h1>
+					<p class="mc-note" >Phone</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<p class="mc-text">Besides this, you can use buttons to interact with the items.</p>
+<p class="mc-note">*Remember you have to place <b>first</b> the buttons, and text after buttons.</p>
+<div>
+	<div class="mc-card">
+		<div class="mc-content">
+			<br />
+			<ul class="mc-list mc-list-clean mc-code">
+				<li>&lt;ul mc-layout="list" &gt;</li>
+					<ul>
+						<li>&lt;li class="mc-list-item" mc-action="email"&gt;</li>
+							<ul>
+								<li>&lt;span class="mc-button mc-button-icon" mc-action="send"&gt;  &lt;/span&gt;</li>
+								<li>&lt;h1 class="mc-subtitle"&gt;  &lt;/h1&gt;</li>
+								<li>&lt;p class="mc-text | mc-note"&gt;  &lt;/p&gt;</li>
+							</ul>
+						<li>&lt;/li&gt;</li>
+					</ul>
+				<li>&lt;/ul&gt;</li>
+			</ul>
+			<br />
+			<br />
+		</div>
+	</div>
+	<div class="mc-card">
+		<div class="mc-header">
+			<img src="images/material_logo.png" />
+			<h1 class="mc-title">Material CSS</h1>
+			<h2 class="mc-subtitle">Contact</h2>
+		</div>
+		<div class="mc-content">
+			<ul mc-layout="list">
+				<li class="mc-list-item" mc-action="email">
+					<span class="mc-button mc-button-icon mc-clickable" mc-action="send"></span>
+					<h1 class="mc-title">support@material-css.com</h1>
+					<p class="mc-note">Email</p>
+				</li>
+				<li class="mc-list-item"mc-action="phone">
+					<span class="mc-button mc-button-icon mc-clickable" mc-action="message" ></span>
+					<h1 class="mc-title">+54 9 (223) 534-9101</h1>
+					<p class="mc-note" >Phone</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<p class="mc-text">In order to make lists more awesome, you can use "<b>mc-title</b>" or "<b>mc-subtitle</b>" out of any "<b>mc-list-item</b>". This will divide your list in several sections.</p>
+<p class="mc-note">*Remember you have to place <b>first</b> the buttons, and text after buttons.</p>
+<div>
+	<div class="mc-card">
+		<div class="mc-content">
+			<br />
+			<ul class="mc-list mc-list-clean mc-code">
+				<li>&lt;ul mc-layout="list" &gt;</li>
+					<ul>
+						<li>&lt;h1 class="mc-title | mc-subtitle"&gt;  &lt;/h1&gt;</li>
+						<li>&lt;li class="mc-list-item" mc-action="email"&gt;</li>
+							<ul>
+								<li>&lt;span class="mc-button mc-button-icon" mc-action="send"&gt;  &lt;/span&gt;</li>
+								<li>&lt;h1 class="mc-subtitle"&gt;  &lt;/h1&gt;</li>
+								<li>&lt;p class="mc-text | mc-note"&gt;  &lt;/p&gt;</li>
+							</ul>
+						<li>&lt;/li&gt;</li>
+						<li>&lt;h2 class="mc-title | mc-subtitle"&gt;  &lt;/h2&gt;</li>
+						<li>&lt;li class="mc-list-item" mc-action="email"&gt;</li>
+							<ul>
+								<li>&lt;span class="mc-button mc-button-icon" mc-action="send"&gt;  &lt;/span&gt;</li>
+								<li>&lt;h1 class="mc-subtitle"&gt;  &lt;/h1&gt;</li>
+								<li>&lt;p class="mc-text | mc-note"&gt;  &lt;/p&gt;</li>
+							</ul>
+						<li>&lt;/li&gt;</li>
+					</ul>
+				<li>&lt;/ul&gt;</li>
+			</ul>
+			<br />
+			<br />
+		</div>
+	</div>
+	<div class="mc-card">
+		<div class="mc-header">
+			<img src="images/material_logo.png" />
+			<h1 class="mc-title">Material CSS</h1>
+			<h2 class="mc-subtitle">Contact</h2>
+		</div>
+		<div class="mc-content">
+			<ul mc-layout="list">
+				<h2 class="mc-subtitle">Email</h2>
+				<li class="mc-list-item" mc-action="email">
+					<span class="mc-button mc-button-icon mc-clickable" mc-action="send" mc-tooltip="1"></span>
+					<div class="mc-tooltip" mc-item="1">Send email</div>
+					<h1 class="mc-title">info@material-css.com</h1>
+					<p class="mc-note">General info about the Framework</p>
+				</li>
+				<li class="mc-list-item" mc-action="email">
+					<span class="mc-button mc-button-icon mc-clickable" mc-action="send" mc-tooltip="2"></span>
+					<div class="mc-tooltip" mc-item="2">Send email</div>
+					<h1 class="mc-title">support@material-css.com</h1>
+					<p class="mc-note">Support and Help</p>
+				</li>
+				<h2 class="mc-subtitle">Phone</h2>
+				<li class="mc-list-item"mc-action="phone">
+					<span class="mc-button mc-button-icon mc-clickable" mc-action="message" mc-tooltip="3"></span>
+					<div class="mc-tooltip" mc-item="3">Call this number</div>
+					<h1 class="mc-title">+54 9 (223) 534-9101</h1>
+					<p class="mc-note" >Phone</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<h1 class="mc-title" alt="autocomplete">Autocomplete</h1>
+<p class="mc-text">The autocomplete is an very special item. It is a powerful tool to make quick actions, not just give some autocomplete suggestions. You can use it for display a menu with quick actions when entering a data (like a name, or an ID). </p>
+<p class="mc-text">Just place an item with the "<b>mc-autocomplete</b>" class into your mc-input, next to your input and your mc-label. This will prepeare the container for the autocomplete menu.</p>
+<p class="mc-text">Inside of it, you can place an item with the <b>mc-layout="list"</b>, as we show previously, with all its "<b>mc-list-item</b>" into it, and you will have a perfect autocomplete menu.</p>
+<br />
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-input" &gt;</li>
+		<ul>
+			<li>&lt;input type="text" /&gt;</li>
+			<li>&lt;label class="mc-label"&gt;Autocomplete label&lt;/label&gt;</li>
+			<li>&lt;div class="mc-autocomplete" &gt;</li>
+				<ul>
+					<li>&lt;div mc-layout="list" &gt;</li>
+					<ul>
+						<li>&lt;div class="mc-list-item" &gt; &lt;p class="mc-text" &gt; Option 1 &lt;/p&gt; &lt;/div&gt;</li>
+						<li>&lt;div class="mc-list-item" &gt; &lt;p class="mc-text" &gt; Option 2 &lt;/p&gt; &lt;/div&gt;</li>
+					</ul>
+					<li>&lt;/div&gt;</li>
+				</ul>
+			<li>&lt;/div&gt;</li>
+		</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+<br />
+<br />
+
+<div class="mc-input">
+	<input type="text" value="Mater"/>
+	<label class="mc-label mc-floating-label">Autocomplete label</label>
+	<div class="mc-autocomplete">
+		<div mc-layout="list" >
+			<div class="mc-list-item"> <p class="mc-text" > Material-CSS </p> </div>
+			<div class="mc-list-item"> <p class="mc-text" > Material Design </p> </div>
+		</div>
+	</div>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />

@@ -1,11 +1,15 @@
 'use strict';
 
 var gulp = require('gulp');
+var angularFilesort = require('gulp-angular-filesort');
 var cached = require('gulp-cached');
 var clean = require('gulp-clean');
 var compass = require('gulp-compass');
 var concat = require('gulp-concat');
+var del = require('del');
 var filter = require('gulp-filter');
+var footer = require('gulp-footer');
+var header = require('gulp-header');
 var inject = require('gulp-inject');
 var jshint = require('gulp-jshint');
 var mainBowerFiles = require('main-bower-files');
@@ -19,22 +23,25 @@ var webserver = require('gulp-webserver');
 
 var devEnv = './src';
 var prodEnv = './dist';
-var htmlGlob = './src/templates/**/*.html';
+var bowerGlob = './bower_components';
+var libGlob = './src/lib/**/*.js';
+var libCSSGlob = './src/lib/**/*.css';
+var htmlGlob = './src/modules/**/*.html';
 var sassGlob = './src/**/*.scss';
-var jsGlob = './src/controllers/**/*.js';
+var jsGlob = './src/modules/**/*.js';
 
 // Parse all ./src files into ./dist folder
-gulp.task('build', ['index', 'html', 'sass', 'js']);
+gulp.task('build', ['index', 'html', 'sass', 'vendorCSS', 'js', 'vendorJS', 'vendorFonts']);
 
 // Inject dependencies on index.html and launc webserver
 gulp.task('default', ['inject', 'webserver']);
 
 // Clean production directory
 gulp.task('clean', function(){
-  gulp.src(prodEnv + '/*', {read: false})
-    .pipe(clean());
+  gulp.src([prodEnv + '/*', '!' + prodEnv + '/web.config'], {read: false})
+	.pipe(clean());
 
-  console.log("Cleaning...");
+	console.log("Cleaning...");
 });
 
 // Parse index.html file and save it into ./dist/
@@ -47,11 +54,15 @@ gulp.task('index', function() {
 
 // Parse html files and save them into ./dist/templates
 gulp.task('html', function() {
-  gulp.src(htmlGlob, {base: devEnv + '/modules'})
-    .pipe(rename(function(path) {
-      path.dirname += '/../';
-    }))
-    .pipe(gulp.dest(prodEnv+'/templates'));
+  gulp.src(htmlGlob, {base: 'src/modules'})
+   .pipe(rename(function(path) {
+      var singleRoute = path.dirname;
+      var pos = singleRoute.indexOf("\/");
+      if (pos < 0) { pos = singleRoute.indexOf("\\"); }
+      var finalPath = singleRoute.substring(0, pos);
+      path.dirname = finalPath;
+   }))
+   .pipe(gulp.dest(prodEnv + '/templates'));
 
   console.log("Moving HTML files...");
 });
@@ -67,22 +78,55 @@ gulp.task('sass', function () {
       comments: true
     }));
 
-	gulp.src(devEnv + '/images/*.*')
+	gulp.src(devEnv + '/images/**/*.*')
 		.pipe(gulp.dest(prodEnv + '/images'));
 
-	gulp.src(devEnv + '/fonts/*.*')
+	gulp.src(devEnv + '/fonts/**/*.*')
 		.pipe(gulp.dest(prodEnv + '/fonts'));
 
   console.log("Moving CSS files...");
 });
 
-// Parse js files and save them into ./dist/js
-gulp.task('js', function(){
-  gulp.src(jsGlob)
-    .pipe(rename({dirname:'js'}))
+// Copy all vendor CSS files into ./dist/css
+gulp.task('vendorCSS', function(){
+  gulp.src([bowerGlob + '/**/*.css', '!**/*.min.css'])
+    .pipe(rename({dirname:'css', extname: '-v.css'}))
     .pipe(gulp.dest(prodEnv));
 
+  gulp.src(libCSSGlob)
+    .pipe(rename({dirname:'css'}))
+    .pipe(gulp.dest(prodEnv));
+});
+
+// Parse js files and save them into ./dist/js
+gulp.task('js', function(){
+  gulp.src(jsGlob, {base: 'src/modules'})
+   .pipe(rename(function(path) {
+      var singleRoute = path.dirname;
+      var pos = singleRoute.indexOf("\/");
+      if (pos < 0) { pos = singleRoute.indexOf("\\"); }
+      var finalPath = singleRoute.substring(0, pos);
+      path.dirname = finalPath;
+   }))
+   .pipe(gulp.dest(prodEnv + '/js'));
+
   console.log("Moving JS files...");
+});
+
+// Copy all vendor JS files into ./dist/lib
+gulp.task('vendorJS', function(){
+  gulp.src(mainBowerFiles(['**/*.js', '!**/index.*']))
+    .pipe(gulp.dest(prodEnv + '/lib'));
+
+  gulp.src([libGlob])
+    .pipe(gulp.dest(prodEnv + '/lib'));
+});
+
+// Copy all vendor CSS files into ./dist/css
+gulp.task('vendorFonts', function(){
+  gulp.src([bowerGlob + '/**/*.ttf', bowerGlob + '/**/*.woff'])
+    .pipe(rename({dirname:'fonts'}))
+    .pipe(gulp.dest(prodEnv));
 });
 
 // Inject files into ./dist/index.html
@@ -94,14 +138,14 @@ gulp.task('inject', function(){
         prodEnv + '/lib/angular.js',
         prodEnv + '/lib/*.js',
         prodEnv + '/js/core.js',
-        prodEnv + '/js/*.js'
+        prodEnv + '/js/**/*.js'
       ]), {ignorePath: 'dist', addRootSlash: false}
     ))
     .pipe(inject(
       gulp.src([
         prodEnv + '/**/*-v.css',
-        prodEnv + '/css/master.css',
-        prodEnv + '/css/master.min.css'
+        prodEnv + '/css/main.css',
+        prodEnv + '/css/main.min.css'
       ]), {ignorePath: 'dist', addRootSlash: false}
     ))
     .pipe(gulp.dest(prodEnv));
@@ -148,14 +192,13 @@ gulp.task('watcher', function(){
   gulp.watch([devEnv + '/**/*.scss'], ['sass']);
   gulp.watch([devEnv + '/**/*.js'], ['js']);
   gulp.watch([devEnv + '/**/*.html'], ['html']);
-})
+});
 
 // Launch webserver
 gulp.task('webserver', ['watcher'], function() {
   gulp.src(prodEnv)
     .pipe(webserver({
       host: '0.0.0.0',
-      port: 8081,
       livereload: true,
       open: true
     }));

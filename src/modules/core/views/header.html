@@ -1,0 +1,59 @@
+<p class="mc-text">The header have important colors, texts and icons that will define your app's identity, so it's a key element on your website.</p>
+
+<h1 class="mc-title" alt="header-bar">Header bar</h1>
+<p class="mc-text">To start, just add an element with "<b>mc-header</b>" class into your app's "<b>body</b>". This will set the space for your main panel.</p>
+<p class="mc-text">You can add several lines to your header by adding a "<b>mc-header-line</b>" element class to its children.</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;header class="mc-header"&gt;</li>
+		<ul>
+			<li>&lt;div class="mc-header-line"&gt;&lt;/div&gt;</li>
+			<li>&lt;div class="mc-header-line"&gt;&lt;/div&gt;</li>
+		</ul>
+	<li>&lt;/header&gt;</li>
+</ul>
+<br />
+
+<h1 class="mc-title" alt="header-content">Header content</h1>
+<p class="mc-text">You can place <b>Icon Buttons</b> and <b>Titles</b> into this bar. Also you can place a div with the "<b>mc-right</b>" class to place the icons on the right side.</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;header class="mc-header"&gt;</li>
+	<ul>
+		<li>&lt;div class="mc-header-line"&gt;</li>
+		<ul>
+			<li>&lt;span class="mc-button-icon" mc-action="menu"&gt;&lt;/span&gt;</li>
+			<li>&lt;p class="mc-title"&gt; Bars &lt;/p&gt;</li>
+			<li>&lt;div class="mc-right"&gt;</li>
+			<ul>
+				<li>&lt;span class="mc-button-icon" mc-action="download"&gt;&lt;/span&gt;</li>
+				<li>&lt;span class="mc-button-icon" mc-action="share"&gt;&lt;/span&gt;</li>
+			</ul>
+			<li>&lt;/div&gt;</li>
+		</ul>
+		<li>&lt;/div&gt;</li>
+	</ul>
+	<li>&lt;/header&gt;</li>
+</ul>
+<br />
+
+<h1 class="mc-title" alt="tabs">Tabs</h1>
+<p class="mc-text">Tabs are designed to navigate between sections on the same catergory. To add a tabs bar, just place an element with the class "<b>mc-tabs-bar</b>" like direct children of your "<b>mc-header</b>".</p>
+<p class="mc-text">Then, place as "<b>mc-tab</b>" as you want into it.</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;header class="mc-header"&gt;</li>
+	<ul>
+		<li>&lt;div class="mc-header-line"&gt;</li>
+		<ul>
+			<li>...</li>
+		</ul>
+		<li>&lt;/div&gt;</li>
+		<li>&lt;div class="mc-tabs-bar"&gt;</li>
+		<ul>
+			<li>&lt;a href="#" class="mc-tab"&gt;Tab name&lt;/a&gt;</li>
+			<li>&lt;a href="#" class="mc-tab"&gt;Tab name&lt;/a&gt;</li>
+		</ul>
+		<li>&lt;/div&gt;</li>
+	</ul>
+	<li>&lt;/header&gt;</li>
+</ul>
+<br />
+<p class="mc-note">If you add the "<b>mc-selected</b>" class, the tab will display an indicator line on its bottom.</p>

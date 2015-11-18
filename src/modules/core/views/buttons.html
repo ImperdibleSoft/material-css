@@ -1,0 +1,68 @@
+<p class="mc-text">We have some button types prepeared for implementing instantly. With the class <b>"mc-button"</b> we set the common styles for all buttons, so this is mandatory.</p>
+
+<h1 class="mc-title" alt="icon-buttons">Icon Buttons</h1>
+<p class="mc-text">Adding the class "<b>mc-button-icon</b>" the button will be set as a round button, and it will be prepeared for implementing an icon into it.</p>
+<p class="mc-text">Adding the attribute "<b>mc-action</b>" an icon will be placed into it. In this case, we have set <b>mc-action="add"</b>.</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;a class="mc-button mc-button-icon" mc-action="add"&gt;&lt;/a&gt;</li>
+</ul>
+<br />
+<span class="mc-button mc-button-icon" mc-action="add"></span>
+<br />
+
+<h1 class="mc-title" alt="text-buttons">Text Buttons</h1>
+<p class="mc-text">Adding the class "<b>mc-button-text</b>" the button will be set as a rectangular button, that will resize automatically depending on the content.</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;a class="mc-button mc-button-text"&gt;Delete&lt;/a&gt;</li>
+</ul>
+<br />
+<span class="mc-button mc-button-text">Delete</span>
+<br />
+
+<h1 class="mc-title" alt="comb-buttons">Combined Buttons</h1>
+<p class="mc-text">Adding the class "<b>mc-button-comb</b>" the button will be set as a rectangular button, that will resize automatically depending on the content and will leave space for the icon specified on the "<b>mc-action</b>" attribute (like explained for Icon Buttons).</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;a class="mc-button mc-button-comb" mc-action="share"&gt;Share&lt;/a&gt;</li>
+</ul>
+<br />
+<span class="mc-button mc-button-comb" mc-action="share">share</span>
+<br />
+
+<h1 class="mc-title" alt="float-buttons">Floating Buttons</h1>
+<p class="mc-text">Floating buttons are used to display some main functions on your app, like create an email, add a contact, etc...</p>
+<p class="mc-text">If you want to add floating buttons, append to the "<b>body</b>" of your web an element with the "<b>mc-floating</b>" class. Then, just place some "<b>Icon Buttons</b>" on it, and they will be displayed properly.</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;div class="mc-floating"&gt;</li>
+	<ul>
+		<li>&lt;a class="mc-button mc-button-icon" mc-action="scroll-top"&gt;&lt;/a&gt;</li>
+		<li>&lt;a class="mc-button mc-button-icon" mc-action="scroll-down"&gt;&lt;/a&gt;</li>
+	</ul>
+	<li>&lt;/div&gt;</li>
+</ul>
+<br />
+
+<h1 class="mc-title" alt="button-effects">Button Effects</h1>
+<p class="mc-text">You also can make a button clickable, so you will see a deep effect when clicking the button. Just add the "<b>mc-clickable</b>" to the button.</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;a class="mc-button mc-button-icon mc-clickable" mc-action="add"&gt;&lt;/a&gt;</li>
+	<li>&lt;a class="mc-button mc-button-text mc-clickable"&gt;Delete&lt;/a&gt;</li>
+	<li>&lt;a class="mc-button mc-button-comb mc-clickable" mc-action="share"&gt;Share&lt;/a&gt;</li>
+</ul>
+<br />
+<span class="mc-button mc-button-icon mc-clickable" mc-action="add"></span>
+<span class="mc-button mc-button-text mc-clickable">delete</span>
+<span class="mc-button mc-button-comb mc-clickable" mc-action="share">share</span>
+<br />
+
+<h1 class="mc-title" alt="button-shadow">Button Shadow</h1>
+<p class="mc-text">If you want buttons with shadow, just add the class "<b>mc-button-raised</b>" to the button.</p>
+<ul class="mc-list mc-list-clean mc-code">
+	<li>&lt;a class="mc-button mc-button-icon mc-clickable mc-raised" mc-action="add"&gt;&lt;/a&gt;</li>
+	<li>&lt;a class="mc-button mc-button-text mc-clickable mc-raised"&gt;Delete&lt;/a&gt;</li>
+	<li>&lt;a class="mc-button mc-button-comb mc-clickable mc-raised" mc-action="share"&gt;Share&lt;/a&gt;</li>
+</ul>
+<br />
+<span class="mc-button mc-button-icon mc-clickable mc-button-raised" mc-action="add"></span>
+<span class="mc-button mc-button-text mc-clickable mc-button-raised">delete</span>
+<span class="mc-button mc-button-comb mc-clickable mc-button-raised" mc-action="share">share</span>
+<br />
