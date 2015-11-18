@@ -1,59 +1,10 @@
-
-// PCs, Tablets, Mobiles and Smartwatches
-@media screen and (max-width: $max-pcs){
-
-  // Tablets, Mobiles and Smartwatches
-  @media screen and (max-width: $max-tablets){
-
-    // Mobiles and Smartwatches
-    @media screen and (max-width: $max-mobiles){
-
-    }
-  }
-}
-
-// Mobiles, Tablets, PCs and TVs
-@media screen and (min-width: $min-mobiles){
-
-  // Tablets, PCs and TVs
-  @media screen and (min-width: $min-tablets){
-
-    // PCs and TVs
-    @media screen and (min-width: $min-pcs){
-
-    }
-  }
-}
-
-// Smartwatches
-@media screen and (max-width: $max-watches){
-
-}
-
-// Only Mobiles
-@media screen and (min-width: $min-mobiles) and (max-width: $max-mobiles){
-
-  // Landscape
-  @media screen and (orientation: landscape){
-
-  }
-}
-
-// Only Tablets
-@media screen and (min-width: $min-tablets) and (max-width: $max-tablets){
-
-  // Landscape
-  @media screen and (orientation: landscape){
-
-  }
-}
-
-// Only PCs
-@media screen and (min-width: $min-pcs) and (max-width: $max-pcs){
-
-}
-
-// Only TVs
-@media screen and (min-width: $min-tvs){
-
-}
+/*
+@import "partials/forms/text";
+@import "partials/forms/dropdowns";
+@import "partials/forms/checkboxes";
+@import "partials/forms/radiobuttons";
+@import "partials/forms/switchers";
+@import "partials/forms/sliders";
+@import "partials/forms/progress";
+@import "partials/forms/spinners";
+*/
