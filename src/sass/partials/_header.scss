@@ -238,6 +238,9 @@ body{
   // Landscape
   @media screen and (orientation: landscape){
 
+    body[mc-layout="front"] > .mc-header{
+      height: 200px;
+    }
   }
 }
 

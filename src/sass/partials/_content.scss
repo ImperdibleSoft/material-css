@@ -99,7 +99,13 @@ body{
 
   // Landscape
   @media screen and (orientation: landscape){
-
+    body[mc-layout="front"] > .mc-content{
+      width: 80%;
+      top: 0px;
+      left: 10%;
+      margin-top: 0px;
+      padding-top: 130px;
+    }
   }
 }
 

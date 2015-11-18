@@ -1,4 +1,133 @@
 
+/*	DIALOGS	*/
+.mc-dialog{
+  position: fixed;
+  display: block;
+  float: none;
+
+  width: 500px;
+  height: auto;
+  max-height: calc(100% - 100px);
+  top: 50px;
+  left: 50%;
+  margin-left: -250px;
+
+  background: white;
+  border-radius: 2px;
+  box-sizing: border-box;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  z-index: 0;
+
+  transition: 0.2s all;
+  -webkit-transition: 0.2s all;
+  -mozz-transition: 0.2s all;
+}
+.mc-dialog .mc-container{
+  position: relative;
+  display: block;
+  float: left;
+
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+}
+.mc-dialog.mc-falling-dialog:not(.mc-opened){
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  margin: 0px;
+
+  opacity: 0;
+}
+.mc-dialog.mc-bottom-dialog:not(.mc-opened){
+  top: 100%;
+
+  opacity: 0;
+}
+.mc-dialog.mc-opened{
+  top: 50px;
+  left: 50%;
+  margin-left: -250px;
+
+  opacity: 1;
+  z-index: 400;
+}
+.mc-dialog .mc-content, .mc-dialog .mc-footer{
+  position: relative;
+  display: block;
+  float: left;
+
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  margin: 0px;
+
+  box-sizing: border-box;
+}
+.mc-dialog .mc-content{
+  max-height: calc(100% - 48px);
+  padding: 24px;
+  padding-bottom: 0px;
+  margin-bottom: 48px;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: 0s all;
+  -webkit-transition: 0s all;
+  -mozz-transition: 0s all;
+  z-index: 50;
+}
+.mc-dialog .mc-content .mc-title, .mc-dialog .mc-content .mc-subtitle, .mc-dialog .mc-content .mc-text, .mc-dialog .mc-content .mc-note{
+  padding: 5px 0px;
+
+  text-align: left;
+}
+.mc-dialog .mc-content .mc-text{
+  text-align: justify;
+}
+.mc-dialog .mc-content img{
+  position: relative;
+  display: block;
+  float: none;
+
+  width: 50%;
+  margin: 0px auto;
+  padding: 0px;
+}
+.mc-dialog .mc-footer{
+  position: absolute;
+  float: left;
+
+  top: auto;
+  bottom: 0px;
+  padding: 5px 16px;
+
+  background-color: white;
+  border: none;
+  z-index: 100;
+}
+.mc-dialog .mc-footer .mc-button{
+  float: right;
+
+  padding: 10px;
+  padding-top: 11px;
+  margin: 0px;
+
+  color: #9E9E9E;
+
+  background: transparent;
+}
+.mc-dialog .mc-footer .mc-button:hover{
+  color: #212121;
+}
+.mc-dialog .mc-footer.mc-complete-button .mc-button{
+  width: 100%;
+
+  text-align: right;
+}
+
 // PCs, Tablets, Mobiles and Smartwatches
 @media screen and (max-width: $max-pcs){
 
@@ -28,10 +157,44 @@
 // Smartwatches
 @media screen and (max-width: $max-watches){
 
+  .mc-dialog, .mc-dialog.mc-falling-dialog, .mc-dialog.mc-bottom-dialog{
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    top: 0px;
+    left: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+
+    overflow-y: auto;
+
+    .mc-content{
+      max-height: none!important;
+      margin-bottom: 0px!important;
+    }
+    .mc-footer{
+      position: relative;
+
+      top: 0px;
+      bottom: initial;
+
+      text-align: center;
+
+      .mc-button{
+        float: none;
+      }
+    }
+  }
 }
 
 // Only Mobiles
 @media screen and (min-width: $min-mobiles) and (max-width: $max-mobiles){
+
+  .mc-dialog, .mc-dialog.mc-falling-dialog, .mc-dialog.mc-bottom-dialog{
+    width: calc(100% - 80px);
+    left: 0px;
+    margin-left: 40px;
+  }
 
   // Landscape
   @media screen and (orientation: landscape){
