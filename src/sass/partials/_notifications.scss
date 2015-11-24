@@ -10,61 +10,67 @@
   bottom: 20px;
 
   z-index: 400;
-}
-.mc-notification-container .mc-notification{
-  position: relative;
-  display: block;
-  float: left;
 
-  min-width: 300px;
-  max-width: 570px;
-  width: auto;
-  height: auto;
-  margin-bottom: 10px;
+  .mc-notification{
+    position: relative;
+    display: block;
+    float: left;
 
-  background: #323232;
-  border-radius: 3px;
-  box-sizing: border-box;
-  clear: both;
-}
-.mc-notification-container .mc-notification .mc-button{
-  position: relative;
-  display: inline-block;
-  float: right;
-}
-.mc-notification-container .mc-notification .mc-title, .mc-notification-container .mc-notification .mc-subtitle, .mc-notification-container .mc-notification .mc-text, .mc-notification-container .mc-notification .mc-note{
-  max-width: 100%;
-  padding: 16px;
-  margin: 0px;
+    min-width: 300px;
+    max-width: 570px;
+    width: auto;
+    height: auto;
+    margin-bottom: 10px;
 
-  color: #FFFFFF;
+    background: #323232;
+    border-radius: 3px;
+    box-sizing: border-box;
+    clear: both;
 
-  border: none;
-}
-.mc-notification-container .mc-notification .mc-title, .mc-notification-container .mc-notification .mc-subtitle, .mc-notification-container .mc-notification .mc-text{
-  font-size: 14px;
-}
-.mc-notification-container .mc-notification .mc-button-comb + .mc-title, .mc-notification-container .mc-notification .mc-button-comb + .mc-subtitle, .mc-notification-container .mc-notification .mc-button-comb + .mc-text, .mc-notification-container .mc-notification .mc-button-comb + .mc-note{
-  max-width: 440px;
-}
-.mc-notification-container .mc-notification .mc-button-text + .mc-title, .mc-notification-container .mc-notification .mc-button-text + .mc-subtitle, .mc-notification-container .mc-notification .mc-button-text + .mc-text, .mc-notification-container .mc-notification .mc-button-text + .mc-note{
-  max-width: 470px;
-}
-.mc-notification-container .mc-notification .mc-button-icon + .mc-title, .mc-notification-container .mc-notification .mc-button-icon + .mc-subtitle, .mc-notification-container .mc-notification .mc-button-icon + .mc-text, .mc-notification-container .mc-notification .mc-button-icon + .mc-note{
-  max-width: 522px;
-}
-.mc-notification-container .mc-notification .mc-button{
-  float: right;
+    .mc-button{
+      position: relative;
+      display: inline-block;
+      float: right;
 
-  margin: 5px;
+      margin: 5px;
 
-  color: #ffffff;
-  font-weight: normal;
+      color: #ffffff;
+      font-weight: normal;
 
-  background-color: transparent;
-}
-.mc-notification-container .mc-notification .mc-button:active{
-  background-color: #515151;
+      background-color: transparent;
+
+      &:active{
+        background-color: #515151;
+      }
+    }
+    .mc-title, .mc-subtitle, .mc-text, .mc-note{
+      max-width: 100%;
+      padding: 16px;
+      margin: 0px;
+
+      color: #FFFFFF;
+
+      border: none;
+    }
+    .mc-title, .mc-subtitle, .mc-text{
+      font-size: 14px;
+    }
+    .mc-button-icon{
+       & + .mc-title, & + .mc-subtitle, & + .mc-text, & + .mc-note{
+        max-width: 552px;
+      }
+    }
+    .mc-button-text{
+       & + .mc-title, & + .mc-subtitle, & + .mc-text, & + .mc-note{
+        max-width: 470px;
+      }
+    }
+    .mc-button-comb{
+       & + .mc-title, & + .mc-subtitle, & + .mc-text, & + .mc-note{
+        max-width: 440px;
+      }
+    }
+  }
 }
 
 // PCs, Tablets, Mobiles and Smartwatches
@@ -125,7 +131,7 @@
   .mc-notification-container{
     .mc-notification{
       min-width: 0px;
-      
+
       .mc-button-text, .mc-button-comb{
         width: auto;
       }
