@@ -238,10 +238,6 @@ body .mc-smartwatch{
 
 // Smartwatches
 @media screen and (max-width: $max-watches){
-  html{
-    overflow: auto;
-  }
-
   .mc-watch{display: inline-block!important;}
 
   .mc-right{
