@@ -38,8 +38,6 @@ body{
   /* -webkit-transform: translate3d(0,0,0); */
 }
 body.mc-noscroll{
-  position:fixed;
-
   overflow:hidden;
 }
 br{
@@ -186,6 +184,7 @@ body .mc-smartwatch{
 @import "partials/content";
 @import "partials/footer";
 @import "partials/dialogs";
+@import "partials/floating-windows";
 /*
 @import "partials/floating-windows";
 @import "partials/layouts";

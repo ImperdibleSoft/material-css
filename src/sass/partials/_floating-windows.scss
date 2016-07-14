@@ -1,4 +1,184 @@
 
+/*	FLOATING WINDOWS	*/
+body {
+  & > .mc-floating-window {
+    position: fixed;
+    display: block;
+    float: left;
+
+    width: 296px;
+    height: auto;
+    max-height: 100%;
+    bottom: -352px;
+    right: 128px;
+    margin: 0px;
+    padding: 0px;
+
+    background-color: #EEEEEE;
+    box-shadow: 0px -1px 3px rgba(0, 0, 0, 0.2);
+    z-index: 350;
+
+    &.mc-opened {
+      bottom: 0px;
+    }
+
+    .mc-title, .mc-subtitle, .mc-text, .mc-note {
+      line-height: inherit;
+    }
+
+    .mc-window-header, .mc-window-content, .mc-window-footer {
+      position: relative;
+      display: block;
+      float: left;
+
+      width: 100%;
+      top: 0px;
+      left: 0px;
+      padding: 0px;
+      margin: 0px;
+
+      background-color: #F9F9F9;
+      box-sizing: border-box;
+    }
+
+    .mc-window-header{
+      height: 56px;
+      padding: 8px;
+
+      background-color: #EEEEEE;
+      background-repeat: no-repeat;
+      background-size: 24px;
+      background-position: 16px;
+
+      cursor: pointer;
+
+      .mc-title, .mc-subtitle, .mc-text, .mc-note{
+        position: relative;
+        display: inline-block;
+        float: left;
+
+        width: 100%;
+        padding: 0px;
+
+        text-align: center;
+        text-transform: none;
+        text-decoration: none;
+        border: 0px;
+      }
+      .mc-title, .mc-subtitle{
+        font-size: 16px;
+      }
+      .mc-text, .mc-note{
+        font-size: 14px;
+      }
+
+      img{
+        position: relative;
+        display: inline-block;
+        float: left;
+
+        width: 40px;
+        height: 40px;
+        padding: 0px;
+        margin: 0px;
+        margin-right: 16px;
+
+        border-radius: 50%;
+        background-color: #ffffff;
+
+        & ~ .mc-title, & ~ .mc-subtitle, & ~ .mc-text, & ~ .mc-note{
+          width: calc(100% - 56px);
+
+          text-align: left;
+        }
+      }
+
+      .mc-button{
+        position: absolute;
+        display: block;
+        float: right;
+
+        right: 8px;
+        top: 10px;
+        margin: 0px;
+
+        background-color: #EEEEEE;
+
+        &:active{
+          background-color: #DDDDDD;
+        }
+
+        & ~ .mc-title, & ~ .mc-subtitle, & ~ .mc-text, & ~ .mc-note{
+          width: calc(100% - 40px);
+
+          text-align: left;
+          word-wrap: break-word;
+        }
+      }
+
+      img ~ .mc-button{
+        & ~ .mc-title, & ~ .mc-subtitle, & ~ .mc-text, & ~ .mc-note{
+          width: calc(100% - 40px - 56px);
+
+          text-align: left;
+          word-wrap: break-word;
+        }
+      }
+
+      &[mc-action]{
+        padding-left: 72px;
+
+        img{
+          display: none;
+        }
+        .mc-title, .mc-subtitle, .mc-text, .mc-note{
+          width: 100%;
+
+          text-align: left;
+        }
+      }
+    }
+    .mc-window-content{
+      height: 296px;
+
+      text-align: center;
+
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+    .mc-window-footer{
+      height: 56px;
+    }
+
+
+    /*	SHARE	*/
+    &[mc-layout="share"]{
+      & > .mc-window-content{
+        height: 352px;
+
+        .mc-button-icon{
+          width: 56px;
+          height: 56px;
+
+          background-color: transparent;
+          background-size: 38px;
+          background-position: 9px 9px;
+        }
+        .mc-input{
+          width: calc(100% - 20px);
+        }
+      }
+      & > .mc-window-footer{
+        display: none;
+      }
+    }
+  }
+
+  &[mc-layout="front"] > .mc-floating-window{
+    right: 24px;
+  }
+}
+
 // PCs, Tablets, Mobiles and Smartwatches
 @media screen and (max-width: $max-pcs){
 
@@ -18,6 +198,16 @@
   // Tablets, PCs and TVs
   @media screen and (min-width: $min-tablets){
 
+    body > .mc-floating-window[mc-layout="share"]{
+      float: none;
+
+      left: 50%;
+      right: auto;
+      top: auto;
+      margin: 0px;
+      margin-left: -148px;
+    }
+
     // PCs and TVs
     @media screen and (min-width: $min-pcs){
 
@@ -32,6 +222,21 @@
 
 // Only Mobiles
 @media screen and (min-width: $min-mobiles) and (max-width: $max-mobiles){
+
+  body {
+    & > .mc-floating-window, &[mc-layout="front"] > .mc-floating-window {
+      width: 100%;
+      max-height: 100%;
+      top: calc(100% - 56px);
+      bottom: auto;
+      left: 0px;
+      right: 0px;
+    }
+    & > .mc-floating-window.mc-opened {
+      top: auto;
+      bottom: 0px;
+    }
+  }
 
   // Landscape
   @media screen and (orientation: landscape){

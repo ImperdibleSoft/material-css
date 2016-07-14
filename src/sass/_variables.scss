@@ -19,6 +19,16 @@ $white: #fff;
 $false-white: #f9f9f9;
 $black: #000;
 
+// Section colors
+$header-bg: #e0e0e0;
+$nav-bg: #eee;
+$buttons-bg: #f0f0f0;
+
+// misc
+$shadow: rgba($black, 0.2);
+$light-border: 1px solid $shadow;
+$default-background: url('images/material-09.jpg');
+
 // Text colors
 $light-text: #f7f7f7;
 $dark-text: #212121;
@@ -44,6 +54,7 @@ $green: #4CAF50;
 $darkgreen: #009688;
 $brown: #795548;
 
+// Special colors
 $imperdiblesoft: #2b8d17;
 $imperdiblesoft-active: #257a14;
 $facebook: #3B5998;
@@ -54,13 +65,3 @@ $twitter: #55ACEE;
 $twitter-active: #88C9F9;
 $spotify: #84BD00;
 $spotify-active: #84BD00;
-
-// Section colors
-$header-bg: #e0e0e0;
-$nav-bg: #eee;
-$buttons-bg: #f0f0f0;
-
-// misc
-$light-border: 1px solid rgba($black, 0.2);
-$shadow: rgba($black, 0.2);
-$default-background: url('images/material-09.jpg');

@@ -1,145 +1,4 @@
 
-/*	FLOATING WINDOWS	*/
-body > .mc-floating-window{
-  position: fixed;
-  display: block;
-  float: left;
-
-  width: 296px;
-  height: auto;
-  max-height: 100%;
-  bottom: -352px;
-  right: 128px;
-  margin: 0px;
-  padding: 0px;
-
-  background-color: #EEEEEE;
-  box-shadow: 0px -1px 3px rgba(0, 0, 0, 0.2);
-  z-index: 350;
-}
-body[mc-layout="front"] > .mc-floating-window{
-  right: 24px;
-}
-body > .mc-floating-window.mc-opened{
-  bottom: 0px;
-}
-body > .mc-floating-window .mc-title, body > .mc-floating-window .mc-subtitle, body > .mc-floating-window .mc-text, body > .mc-floating-window .mc-note{
-  line-height: inherit;
-}
-
-body > .mc-floating-window .mc-window-header, body > .mc-floating-window .mc-window-content, body > .mc-floating-window .mc-window-footer{
-  position: relative;
-  display: block;
-  float: left;
-
-  width: 100%;
-  top: 0px;
-  left: 0px;
-  padding: 0px;
-  margin: 0px;
-
-  background-color: #F9F9F9;
-  box-sizing: border-box;
-}
-
-body > .mc-floating-window .mc-window-header{
-  height: 56px;
-  padding: 8px;
-
-  background-color: #EEEEEE;
-  background-repeat: no-repeat;
-  background-size: 24px;
-  background-position: 16px;
-
-  cursor: pointer;
-}
-body > .mc-floating-window .mc-window-header[mc-action]{
-  padding-left: 72px;
-}
-body > .mc-floating-window .mc-window-header img{
-  position: relative;
-  display: inline-block;
-  float: left;
-
-  width: 40px;
-  height: 40px;
-  padding: 0px;
-  margin: 0px;
-  margin-right: 16px;
-
-  border-radius: 50%;
-  background-color: #ffffff;
-}
-body > .mc-floating-window .mc-window-header[mc-action] img{
-  display: none;
-}
-body > .mc-floating-window .mc-window-header .mc-button{
-  position: absolute;
-  display: block;
-  float: right;
-
-  right: 8px;
-  top: 10px;
-  margin: 0px;
-
-  background-color: #EEEEEE;
-}
-body > .mc-floating-window .mc-window-header .mc-button:active{
-  background-color: #DDDDDD;
-}
-body > .mc-floating-window .mc-window-header .mc-title, body > .mc-floating-window .mc-window-header .mc-subtitle, body > .mc-floating-window .mc-window-header .mc-text, body > .mc-floating-window .mc-window-header .mc-note{
-  position: relative;
-  display: inline-block;
-  float: left;
-
-  width: 100%;
-  padding: 0px;
-
-  text-align: center;
-  text-transform: none;
-  text-decoration: none;
-  border: 0px;
-}
-body > .mc-floating-window .mc-window-header .mc-title, body > .mc-floating-window .mc-window-header .mc-subtitle{
-  font-size: 16px;
-}
-body > .mc-floating-window .mc-window-header .mc-text, body > .mc-floating-window .mc-window-header .mc-note{
-  font-size: 14px;
-}
-body > .mc-floating-window .mc-window-header[mc-action] .mc-title, body > .mc-floating-window .mc-window-header[mc-action] .mc-subtitle, body > .mc-floating-window .mc-window-header[mc-action] .mc-text, body > .mc-floating-window .mc-window-header[mc-action] .mc-note{
-  width: 100%;
-
-  text-align: left;
-}
-body > .mc-floating-window .mc-window-header img ~ .mc-title, body > .mc-floating-window .mc-window-header img ~ .mc-subtitle, body > .mc-floating-window .mc-window-header ~ .mc-text, body > .mc-floating-window .mc-window-header img ~ .mc-note{
-  width: calc(100% - 56px);
-
-  text-align: left;
-}
-body > .mc-floating-window .mc-window-header .mc-button ~ .mc-title, body > .mc-floating-window .mc-window-header .mc-button ~ .mc-subtitle, body > .mc-floating-window .mc-window-header .mc-button ~ .mc-text, body > .mc-floating-window .mc-window-header .mc-button ~ .mc-note{
-  width: calc(100% - 40px);
-
-  text-align: left;
-  word-wrap: break-word;
-}
-body > .mc-floating-window .mc-window-header img ~ .mc-button ~ .mc-title, body > .mc-floating-window .mc-window-header img ~ .mc-button ~ .mc-subtitle, body > .mc-floating-window .mc-window-header img ~ .mc-button ~ .mc-text, body > .mc-floating-window .mc-window-header img ~ .mc-button ~ .mc-note{
-  width: calc(100% - 40px - 56px);
-
-  text-align: left;
-  word-wrap: break-word;
-}
-body > .mc-floating-window .mc-window-content{
-  height: 296px;
-
-  text-align: center;
-
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-body > .mc-floating-window .mc-window-footer{
-  height: 56px;
-}
-
 /*	TOOLTIPS	*/
 .mc-tooltip{
   position: absolute;
@@ -1124,25 +983,6 @@ body > .mc-floating-window .mc-window-footer{
 [mc-layout="multimedia"] > .mc-window-footer > .mc-button-icon:nth-child(3):nth-last-child(6), [mc-layout="multimedia"] > .mc-window-footer > .mc-button-icon:nth-child(3):nth-last-child(6) ~ .mc-button-icon{
   margin-left: calc((100% - 228px) / 12);
   margin-right: calc((100% - 228px) / 12);
-}
-
-/*	SHARE	*/
-body > .mc-floating-window[mc-layout="share"] > .mc-window-content{
-  height: 352px;
-}
-body > .mc-floating-window[mc-layout="share"] > .mc-window-content .mc-button-icon{
-  width: 56px;
-  height: 56px;
-
-  background-color: transparent;
-  background-size: 38px;
-  background-position: 9px 9px;
-}
-body > .mc-floating-window[mc-layout="share"] > .mc-window-content .mc-input{
-  width: calc(100% - 20px);
-}
-body > .mc-floating-window[mc-layout="share"] > .mc-window-footer{
-  display: none;
 }
 
 /*	INPUTS BACKGROUNDS	*/
@@ -2922,19 +2762,6 @@ body > .mc-floating-window[mc-layout="share"] > .mc-window-footer{
     max-height: calc(95% - 60px);
   }
 
-  body > .mc-floating-window, body[mc-layout="front"] > .mc-floating-window{
-    width: 100%;
-    max-height: 100%;
-    top: calc(100% - 56px);
-    bottom: auto;
-    left: 0px;
-    right: 0px;
-  }
-  body > .mc-floating-window.mc-opened{
-    top: auto;
-    bottom: 0px;
-  }
-
   .mc-menu-blocker{
     display: block;
 
@@ -3107,16 +2934,6 @@ body > .mc-floating-window[mc-layout="share"] > .mc-window-footer{
 
   .mc-splash .mc-content img{
     width: 250px;
-  }
-
-  body > .mc-floating-window[mc-layout="share"]{
-    float: none;
-
-    left: 50%;
-    right: auto;
-    top: auto;
-    margin: 0px;
-    margin-left: -148px;
   }
 
 }
