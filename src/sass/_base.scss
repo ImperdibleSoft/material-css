@@ -179,30 +179,29 @@ body .mc-smartwatch{
 
 // Imports
 // Layouts
-@import "partials/navigation";
-@import "partials/header";
-@import "partials/content";
-@import "partials/footer";
-@import "partials/dialogs";
-@import "partials/floating-windows";
+@import "layouts/navigation";
+@import "layouts/header";
+@import "layouts/content";
+@import "layouts/footer";
+@import "layouts/dialogs";
+@import "layouts/floating-windows";
 /*
-@import "partials/floating-windows";
-@import "partials/layouts";
+@import "layouts/layouts";
 */
 
 // Components
-@import "partials/texts";
-@import "partials/buttons";
-@import "partials/tables";
-@import "partials/cards";
-@import "partials/lists";
-@import "partials/notifications";
-@import "partials/forms";
+@import "components/texts";
+@import "components/buttons";
+@import "components/tables";
+@import "components/cards";
+@import "components/lists";
+@import "components/notifications";
+@import "components/forms";
 
 // Misc
-@import "partials/colors";
+@import "misc/colors";
 /*
-@import "partials/icons";
+@import "misc/icons";
 */
 
 .mc-watch, .mc-mobile, .mc-tablet, .mc-pc, .mc-tv{
