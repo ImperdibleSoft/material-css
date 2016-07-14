@@ -203,11 +203,6 @@ body{
         height: 48px;
       }
     }
-    &[mc-layout="front"] > .mc-header{
-      *{
-        display: none;
-      }
-    }
     & > .mc-header{
       & > .mc-header-line{
         & > *{
